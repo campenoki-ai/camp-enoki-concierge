@@ -205,7 +205,17 @@
     document.body.appendChild(panelEl);
   }
 
-  document.addEventListener("DOMContentLoaded", build);
+  /** Lets a shared link auto-open the chat, e.g. "?chat=open" — handy for a
+   *  Facebook/QR link that should land guests straight in the concierge. */
+  function openIfLinkedDirectly() {
+    const params = new URLSearchParams(location.search);
+    if (params.get("chat") === "open") openPanel();
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    build();
+    openIfLinkedDirectly();
+  });
 
   global.CampEnokiChat = { open: openPanel, close: closePanel };
 })(window);
