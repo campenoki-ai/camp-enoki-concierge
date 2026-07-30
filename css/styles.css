@@ -125,6 +125,9 @@ section { padding: 64px 0; }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
+/* For content whose item count varies (e.g. Rates can be 1 promo or 6 cottages) —
+   cards keep a sane width instead of stretching thin or leaving a lone card marooned. */
+.grid-auto { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); align-items: start; }
 @media (max-width: 900px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; } }
 
@@ -145,6 +148,18 @@ section { padding: 64px 0; }
 .rate-card .price { color: var(--accent); font-weight: 700; font-size: 1.3rem; margin: 6px 20px 0; }
 .rate-card .price small { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
 .rate-card .meta { margin: 6px 20px 18px; color: var(--text-muted); font-size: 0.88rem; }
+.rate-desc { margin: 0 20px 20px; }
+.rate-desc-text {
+  margin: 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;
+  white-space: pre-line; /* respects real line breaks the owner types, e.g. one bullet per line */
+}
+.rate-desc-text.clamped {
+  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+}
+.rate-desc-toggle {
+  background: none; border: none; color: var(--brand); font-weight: 600; font-size: 0.82rem;
+  cursor: pointer; padding: 8px 0 0; text-decoration: underline;
+}
 
 .gallery-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px; }
 .gallery-tab {

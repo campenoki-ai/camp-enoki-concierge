@@ -307,7 +307,7 @@
         { key: "extraPaxFee", label: "Extra pax fee (₱)", type: "number" },
         { key: "overnight", label: "Overnight rate (₱)", type: "number" },
         { key: "daytour", label: "Day tour rate (₱)", type: "number" },
-        { key: "image", label: "Photo (Media tab id)", type: "text" },
+        { key: "image", label: "Rates Photo", type: "image" },
       ],
       store: {
         getAll: D.getRates,

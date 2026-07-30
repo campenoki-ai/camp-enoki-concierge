@@ -84,6 +84,28 @@
     });
   }
 
+  const RATE_DESCRIPTION_CLAMP = 220;
+
+  /** Renders a rate's description with real line breaks (if the admin used any)
+   *  and a "Show more" toggle for long promo-style text, so one chatty rate
+   *  card doesn't tower over its neighbors in the grid. */
+  function renderRateDescription(text) {
+    if (!text) return null;
+    const wrap = el("div", { class: "rate-desc" });
+    const body = el("p", { class: "rate-desc-text" }, text);
+    wrap.appendChild(body);
+    if (text.length > RATE_DESCRIPTION_CLAMP) {
+      body.classList.add("clamped");
+      const toggle = el("button", { class: "rate-desc-toggle", type: "button" }, "Show more");
+      toggle.addEventListener("click", () => {
+        const expanded = body.classList.toggle("clamped") === false;
+        toggle.textContent = expanded ? "Show less" : "Show more";
+      });
+      wrap.appendChild(toggle);
+    }
+    return wrap;
+  }
+
   async function renderRates() {
     const mount = document.getElementById("ratesGrid");
     if (!mount) return;
@@ -94,18 +116,21 @@
     ]);
     const media = Object.fromEntries(mediaList.map((m) => [m.id, m]));
     mount.innerHTML = "";
+    mount.className = "grid grid-auto";
     rates.forEach((r) => {
-      const img = media[r.image];
+      // r.image is normally a Media-tab id (looked up below), but Admin's Rates
+      // photo field also accepts a direct upload/URL — fall back to using it as-is.
+      const imgSrc = media[r.image]?.src || (r.image && r.image !== "" ? r.image : null);
       const meta = settings.offerDayTour
         ? `Day tour: ₱${r.daytour.toLocaleString()} · Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`
         : `Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`;
       mount.appendChild(
         el("div", { class: "card rate-card" }, [
-          img ? el("img", { src: img.src, alt: r.name }) : null,
+          imgSrc ? el("img", { src: imgSrc, alt: r.name }) : null,
           el("h3", {}, r.name),
           el("div", { class: "price" }, [`₱${r.overnight.toLocaleString()} `, el("small", {}, "/ night")]),
           el("div", { class: "meta" }, meta),
-          el("p", { style: "margin:0 20px 20px;color:var(--text-muted);font-size:.88rem" }, r.description),
+          renderRateDescription(r.description),
         ])
       );
     });
