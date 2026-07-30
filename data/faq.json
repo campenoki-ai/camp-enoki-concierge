@@ -411,5 +411,22 @@
     "videos": [],
     "buttons": [],
     "priority": 7
+  },
+  {
+    "priority": 5,
+    "keywords": [
+      "distance sa beach",
+      "beach front",
+      "gaano kalayo sa beach"
+    ],
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "language": "auto",
+    "category": "",
+    "question": "Gaano kalayo sa beach?",
+    "answer": "Ang beach po ay mga 45seconds walk from Camp Enoki.  See this video po\n\nhttps://drive.google.com/file/d/1nYPDywtJYwTxr_nhlDfhuVB8VW5pCPrj/view",
+    "answer_tl": "Ang beach po ay mga 45seconds walk from Camp Enoki.  See this video po\n\nhttps://drive.google.com/file/d/1nYPDywtJYwTxr_nhlDfhuVB8VW5pCPrj/view",
+    "id": "faq-ms7s3cy0uwxg"
   }
 ]
