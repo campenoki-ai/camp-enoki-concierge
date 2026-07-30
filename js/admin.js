@@ -858,8 +858,11 @@
 
   /** Reads the file's current sha (required by GitHub to update it), then
    *  writes the new content. A 404 on the GET means the file doesn't exist
-   *  yet, so we create it (no sha needed). */
-  async function publishOneFile(cfg, target, content) {
+   *  yet, so we create it (no sha needed). Retries once on a sha-mismatch —
+   *  GitHub's Contents API has a brief eventual-consistency window right
+   *  after a write, so re-reading and re-publishing a file moments after its
+   *  own previous publish can otherwise fail with a spurious conflict. */
+  async function publishOneFile(cfg, target, content, isRetry = false) {
     const base = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${target.path}`;
     const headers = { Authorization: `Bearer ${cfg.token}`, Accept: "application/vnd.github+json" };
 
@@ -883,6 +886,8 @@
     });
     if (!putRes.ok) {
       const detail = await putRes.json().catch(() => ({}));
+      const isShaConflict = /does not match|sha/i.test(detail.message || "");
+      if (isShaConflict && !isRetry) return publishOneFile(cfg, target, content, true);
       throw new Error(`Failed to publish ${target.path}: ${detail.message || putRes.status}`);
     }
   }
