@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Camp Enoki — Nature Resort & Getaway</title>
+<meta name="description" content="Camp Enoki resort — teepee huts, riverside swimming, and the Enoki AI Concierge to help with rates, availability, directions, amenities, and booking." />
+<meta name="theme-color" content="#0c3992" />
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-logo">🏕️</span>
+      <span id="brandName">Camp Enoki</span>
+    </a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="#attractions">Nearby</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="btn btn-primary btn-sm" data-open-booking>Book Now</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 id="heroTitle">Your riverside escape at Camp Enoki</h1>
+        <p id="heroSubtitle">Teepee huts, cool river waters, and bonfire nights — book your overnight stay or day tour, or ask our Enoki AI Concierge anything.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-open-booking>Book Now</button>
+          <a class="btn btn-outline" href="#rates">See Rates</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="images/aerial-1.svg" alt="Camp Enoki aerial view" />
+      </div>
+    </div>
+  </section>
+
+  <section id="amenities">
+    <div class="wrap">
+      <h2 class="section-title">Amenities</h2>
+      <p class="section-sub">Everything you need for a relaxing stay by the river.</p>
+      <div class="grid grid-4" id="amenitiesGrid"></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-sub">A look around Camp Enoki.</p>
+      <div class="gallery-tabs" id="galleryTabs"></div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <section id="rates">
+    <div class="wrap">
+      <h2 class="section-title">Rates</h2>
+      <p class="section-sub">Choose overnight or day tour. A downpayment confirms your booking (non-refundable — see our cancellation policy).</p>
+      <div class="grid grid-4" id="ratesGrid"></div>
+    </div>
+  </section>
+
+  <section id="attractions">
+    <div class="wrap">
+      <h2 class="section-title">Nearby Attractions</h2>
+      <p class="section-sub">Make the most of your trip with these nearby spots.</p>
+      <div class="grid grid-4" id="attractionsGrid"></div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="wrap">
+      <h2 class="section-title">What Guests Say</h2>
+      <div class="grid grid-3" id="reviewsGrid"></div>
+      <p style="margin-top:20px">
+        <a class="btn btn-outline btn-sm" href="https://drive.google.com/drive/folders/1k8JHJHO5PK9kFqcwMkbS06wpeqVtQdl6?usp=sharing" target="_blank" rel="noopener">See more guest feedback</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-sub">Have a question? Chat with our Enoki AI Concierge or reach us directly.</p>
+      <div class="contact-block">
+        <div class="contact-item"><span class="icon">📍</span><div id="contactAddress">Camp Enoki<br />Riverside, Philippines</div></div>
+        <div class="contact-item"><span class="icon">📱</span><div id="contactPhone">0947 998 4309</div></div>
+        <div class="contact-item"><span class="icon">✉️</span><div id="contactEmail">hello@campenoki.example</div></div>
+        <div class="contact-item hidden" id="contactFacebookItem"><span class="icon">📘</span><div><a id="contactFacebookLink" href="#" target="_blank" rel="noopener">Facebook Page</a></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">&copy; <span id="year"></span> <span id="footerResortName">Camp Enoki</span>. All rights reserved.</div>
+</footer>
+
+<script src="js/data-store.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/faq-engine.js"></script>
+<script src="js/ai-adapter.js"></script>
+<script src="js/booking-wizard.js"></script>
+<script src="js/chat-widget.js"></script>
+<script src="js/main.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("service-worker.js").catch(() => {}));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+[
+  { "id": "pool", "name": "Swimming Pool", "icon": "🏊", "description": "Open-air pool for all ages." },
+  { "id": "river", "name": "Riverside Deck", "icon": "🏞️", "description": "Shallow river access with a sandy stretch." },
+  { "id": "kitchen", "name": "Common Kitchen", "icon": "🍳", "description": "Shared cooking area with gas stove and sink." },
+  { "id": "cr", "name": "Hot & Cold Shower CRs", "icon": "🚿", "description": "Clean comfort rooms with hot and cold shower." },
+  { "id": "parking", "name": "Free Parking", "icon": "🚗", "description": "Secure on-site parking for all guests." },
+  { "id": "bonfire", "name": "Bonfire Pit", "icon": "🔥", "description": "Nightly bonfire spot, great for stories and s'mores." },
+  { "id": "wifi", "name": "Common-Area WiFi", "icon": "📶", "description": "WiFi available in the common area." },
+  { "id": "playground", "name": "Kids' Playground", "icon": "🛝", "description": "Safe play area for the little ones." }
+]

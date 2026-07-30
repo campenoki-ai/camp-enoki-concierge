@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#e2f0e0"/>
+  <rect y="220" width="400" height="80" fill="#7bb87a"/>
+  <circle cx="200" cy="235" r="18" fill="#e8802e"/>
+  <circle cx="200" cy="235" r="10" fill="#f5c451"/>
+  <polygon points="200,235 190,205 210,205" fill="#3a3a3a"/>
+  <circle cx="80" cy="180" r="26" fill="#4c8a52"/>
+  <rect x="76" y="200" width="8" height="20" fill="#5b3a29"/>
+  <circle cx="330" cy="170" r="30" fill="#4c8a52"/>
+  <rect x="326" y="195" width="8" height="25" fill="#5b3a29"/>
+  <text x="200" y="270" font-family="Verdana, sans-serif" font-size="18" fill="#2f5d3a" text-anchor="middle">Common Grounds & Bonfire</text>
+</svg>

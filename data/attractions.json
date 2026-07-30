@@ -1,0 +1,26 @@
+[
+  {
+    "id": "falls1",
+    "name": "Hidden Falls",
+    "distance": "15 minutes by tricycle",
+    "description": "A short scenic hike leads to a cool freshwater falls, great for a half-day side trip."
+  },
+  {
+    "id": "viewpoint1",
+    "name": "Sunrise Ridge Viewpoint",
+    "distance": "20 minutes by car",
+    "description": "Popular sunrise/sunset spot with panoramic views of the valley."
+  },
+  {
+    "id": "market1",
+    "name": "Local Public Market",
+    "distance": "10 minutes by car",
+    "description": "Fresh produce, grilled street food, and local delicacies to bring home."
+  },
+  {
+    "id": "eatery1",
+    "name": "Farm-to-Table Eatery",
+    "distance": "5 minutes by car",
+    "description": "Casual restaurant serving local dishes, good for a meal before or after your stay."
+  }
+]

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Camp Enoki — Admin</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="icons/icon-192.png" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="admin-body">
+
+<div class="auth-gate" id="authGate">
+  <div class="auth-gate-box">
+    <div style="font-size:2.2rem">🔒</div>
+    <h2>Admin Login</h2>
+    <p style="color:var(--text-muted);font-size:.88rem">
+      Heads up: this is a client-side password gate (no server), meant to keep this page from being stumbled
+      into by search engines or casual visitors — not a substitute for real server-side auth. Anyone with
+      real intent to bypass it, could.
+    </p>
+    <input type="password" id="authPasswordInput" placeholder="Password" autocomplete="current-password" />
+    <button class="btn btn-primary btn-block" id="authSubmitBtn">Unlock</button>
+    <div id="authError" style="color:#c0392b;font-size:.85rem;min-height:1.2em;margin-top:8px"></div>
+  </div>
+</div>
+
+<div id="adminContent" class="hidden">
+
+<header class="admin-header">
+  <div class="wrap">
+    <div class="brand" style="color:#fff">🏕️ Camp Enoki — Admin</div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <a class="btn btn-sm" style="background:#fff;color:var(--brand)" href="index.html">Back to site</a>
+      <button class="btn btn-sm btn-ghost" style="color:#fff" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="notice info">
+    Everything below is fully editable — every section on the public site (and the AI concierge's behavior) is driven from here.
+  </div>
+
+  <div class="admin-tabs" id="adminTabs">
+    <button class="admin-tab active" data-tab="settings">Site Settings</button>
+    <button class="admin-tab" data-tab="policies">Policies</button>
+    <button class="admin-tab" data-tab="rates">Rates</button>
+    <button class="admin-tab" data-tab="amenities">Amenities</button>
+    <button class="admin-tab" data-tab="attractions">Attractions</button>
+    <button class="admin-tab" data-tab="reviews">Reviews</button>
+    <button class="admin-tab" data-tab="media">Media</button>
+    <button class="admin-tab" data-tab="faq">FAQ</button>
+    <button class="admin-tab" data-tab="ai">AI Concierge</button>
+    <button class="admin-tab" data-tab="bookings">Bookings</button>
+    <button class="admin-tab" data-tab="unanswered">Unanswered</button>
+    <button class="admin-tab" data-tab="security">Security</button>
+  </div>
+
+  <section class="tab-panel" data-panel="settings">
+    <h2 class="section-title" style="margin-bottom:10px">Site Settings</h2>
+    <p class="section-sub">Resort name, hero text, and contact info shown across the public site.</p>
+    <div id="settingsForm"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="policies">
+    <h2 class="section-title" style="margin-bottom:10px">Policies</h2>
+    <p class="section-sub">Check-in/out times, payment, and the cancellation policy text used by the FAQ + concierge.</p>
+    <div id="policiesForm"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="rates">
+    <h2 class="section-title" style="margin-bottom:10px">Rates</h2>
+    <div id="rates-toolbar"></div>
+    <div id="rates-table"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="amenities">
+    <h2 class="section-title" style="margin-bottom:10px">Amenities</h2>
+    <div id="amenities-toolbar"></div>
+    <div id="amenities-table"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="attractions">
+    <h2 class="section-title" style="margin-bottom:10px">Nearby Attractions</h2>
+    <div id="attractions-toolbar"></div>
+    <div id="attractions-table"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="reviews">
+    <h2 class="section-title" style="margin-bottom:10px">Reviews</h2>
+    <div id="reviews-toolbar"></div>
+    <div id="reviews-table"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="media">
+    <h2 class="section-title" style="margin-bottom:10px">Media Library</h2>
+    <p class="section-sub">Photos/videos used in the Gallery and attached to FAQ answers. Upload a real photo or paste an image URL.</p>
+    <div id="media-toolbar"></div>
+    <div id="media-table"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="faq">
+    <h2 class="section-title" style="margin-bottom:10px">FAQ Knowledge Base</h2>
+    <div class="admin-toolbar">
+      <input type="search" id="faqSearch" placeholder="Search FAQ by question, category, or keyword..." />
+      <button class="btn btn-primary btn-sm" id="addFaqBtn">+ Add FAQ</button>
+      <button class="btn btn-outline btn-sm" id="exportBtn">Export JSON</button>
+      <label class="btn btn-outline btn-sm" style="cursor:pointer">
+        Import JSON
+        <input type="file" id="importInput" accept="application/json" style="display:none" />
+      </label>
+    </div>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="faqTable">
+        <thead>
+          <tr><th>Question</th><th>Category</th><th>Priority</th><th>Lang</th><th>Media</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="faqTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="ai">
+    <h2 class="section-title" style="margin-bottom:10px">AI Concierge</h2>
+    <p class="section-sub">Wire up a real Claude-backed proxy so the concierge can answer beyond the FAQ list. See <code>server/README.md</code> to deploy the proxy first.</p>
+    <div id="aiForm"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="bookings">
+    <h2 class="section-title" style="margin-bottom:10px">Booking Requests</h2>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="bookingTable">
+        <thead>
+          <tr><th>Ref</th><th>Guest</th><th>Mobile</th><th>Date</th><th>Type</th><th>Pax</th><th>Pets</th><th>Requests</th><th></th></tr>
+        </thead>
+        <tbody id="bookingTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="unanswered">
+    <h2 class="section-title" style="margin-bottom:10px">Unanswered Questions</h2>
+    <p class="section-sub" style="margin-bottom:14px">Questions the FAQ engine couldn't match — use these to grow the knowledge base.</p>
+    <div class="admin-table-wrap">
+      <table class="admin-table" id="unansweredTable">
+        <thead><tr><th>Question</th><th>When</th></tr></thead>
+        <tbody id="unansweredTableBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="security">
+    <h2 class="section-title" style="margin-bottom:10px">Security</h2>
+    <p class="section-sub">Change the Admin Mode password. Remember: this is a client-side gate, not real server-side auth (see the login screen's note).</p>
+    <div id="securityForm"></div>
+  </section>
+</main>
+
+</div>
+
+<div class="modal-overlay" id="faqModalOverlay">
+  <div class="modal-box" id="faqModalBox"></div>
+</div>
+
+<div class="modal-overlay" id="itemModalOverlay">
+  <div class="modal-box" id="itemModalBox"></div>
+</div>
+
+<script src="js/data-store.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

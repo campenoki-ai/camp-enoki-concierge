@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#cfeaf3"/>
+  <path d="M0,160 Q200,120 400,160 L400,210 Q200,175 0,210 Z" fill="#4f9dbd"/>
+  <path d="M0,210 Q200,180 400,210 L400,300 L0,300 Z" fill="#eddcae"/>
+  <circle cx="90" cy="245" r="6" fill="#c9b27a"/>
+  <circle cx="150" cy="260" r="5" fill="#c9b27a"/>
+  <circle cx="260" cy="250" r="7" fill="#c9b27a"/>
+  <text x="200" y="270" font-family="Verdana, sans-serif" font-size="18" fill="#2f5d3a" text-anchor="middle">Sandy Riverbank</text>
+</svg>

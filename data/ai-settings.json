@@ -1,0 +1,6 @@
+{
+  "enabled": false,
+  "mode": "local-first",
+  "proxyUrl": "",
+  "systemPromptOverride": ""
+}

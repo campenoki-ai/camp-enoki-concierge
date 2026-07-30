@@ -1,0 +1,30 @@
+[
+  {
+    "id": "r1",
+    "name": "Marife S.",
+    "rating": 5,
+    "comment": "Ang sarap i-relax dito, malinis ang paligid at ang bait ng staff. Babalik kami!",
+    "date": "2026-05-12"
+  },
+  {
+    "id": "r2",
+    "name": "John P.",
+    "rating": 5,
+    "comment": "Great spot for a family reunion. The Exclusive house fit all 15 of us comfortably.",
+    "date": "2026-04-03"
+  },
+  {
+    "id": "r3",
+    "name": "Cristy A.",
+    "rating": 4,
+    "comment": "Maganda ang view sa river, sulit ang bayad. Sana mas maaga ang check-in pero okay naman overall.",
+    "date": "2026-03-21"
+  },
+  {
+    "id": "r4",
+    "name": "Ramon D.",
+    "rating": 5,
+    "comment": "Booked Hut 3 for a couple's getaway — quiet, clean, and the bonfire at night was perfect.",
+    "date": "2026-02-14"
+  }
+]

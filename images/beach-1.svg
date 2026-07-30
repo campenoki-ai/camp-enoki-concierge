@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#bfe3f0"/>
+  <circle cx="330" cy="60" r="30" fill="#f5c451"/>
+  <path d="M0,180 Q200,140 400,180 L400,220 Q200,180 0,220 Z" fill="#5aa9c9"/>
+  <path d="M0,220 Q200,190 400,220 L400,300 L0,300 Z" fill="#e8d6a8"/>
+  <text x="200" y="270" font-family="Verdana, sans-serif" font-size="18" fill="#2f5d3a" text-anchor="middle">Riverside Swimming Spot</text>
+</svg>

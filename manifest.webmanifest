@@ -1,0 +1,15 @@
+{
+  "name": "Camp Enoki — Resort & AI Concierge",
+  "short_name": "Camp Enoki",
+  "description": "Camp Enoki resort site with the Enoki AI Concierge for rates, availability, directions, amenities, and booking.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fbfaf6",
+  "theme_color": "#0c3992",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#eaf3ec"/>
+  <rect y="230" width="400" height="70" fill="#8bc48a"/>
+  <rect x="100" y="140" width="200" height="90" fill="#f4e3c1"/>
+  <polygon points="90,140 200,70 310,140" fill="#2f5d3a"/>
+  <rect x="180" y="180" width="40" height="50" fill="#5b3a29"/>
+  <rect x="120" y="160" width="30" height="30" fill="#a9c9e8"/>
+  <rect x="250" y="160" width="30" height="30" fill="#a9c9e8"/>
+  <text x="200" y="270" font-family="Verdana, sans-serif" font-size="18" fill="#2f5d3a" text-anchor="middle">The Exclusive</text>
+</svg>
