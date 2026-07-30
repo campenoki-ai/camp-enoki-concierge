@@ -18,10 +18,7 @@
     "answer": "Overnight packages start at ₱3,500 for the Teepee Huts (good for 4 pax) and go up to ₱12,000 for the Exclusive accommodation (good for 15 pax). Rates include use of common grounds and basic amenities. Check the Rates section on this page for the full breakdown per accommodation.",
     "answer_tl": "Ang overnight package ay nagsisimula sa ₱3,500 para sa Teepee Huts (pang-4 pax) hanggang ₱12,000 para sa Exclusive (pang-15 pax). Kasama na sa rate ang paggamit ng common grounds at basic amenities. Tingnan ang Rates section sa page na ito para sa buong listahan.",
     "language": "auto",
-    "images": [
-      "teepee-1",
-      "exclusive-1"
-    ],
+    "images": [],
     "videos": [],
     "buttons": [
       {
@@ -47,9 +44,7 @@
     "answer": "We no longer offer day tour packages — Camp Enoki is overnight stays only for now. Check out our overnight rates below!",
     "answer_tl": "Wala na po kaming day tour package — overnight stay na lang po ang alok ng Camp Enoki sa ngayon. Tingnan na lang ang aming overnight rates sa baba!",
     "language": "auto",
-    "images": [
-      "beach-1"
-    ],
+    "images": [],
     "videos": [],
     "buttons": [
       {
@@ -107,9 +102,7 @@
     "answer": "Camp Enoki is nestled by the river with easy access from the highway. Tap the button below to open directions in Google Maps.",
     "answer_tl": "Ang Camp Enoki ay nasa tabing-ilog, madaling puntahan mula sa highway. Pindutin ang button sa baba para sa directions sa Google Maps.",
     "language": "auto",
-    "images": [
-      "aerial-1"
-    ],
+    "images": [],
     "videos": [],
     "buttons": [
       {
@@ -138,9 +131,7 @@
     "answer": "Camp Enoki offers a swimming pool, riverside deck, common cooking area with gas stove, comfort rooms with hot and cold shower, free parking, and a bonfire pit. See the Amenities section for the full list.",
     "answer_tl": "May swimming pool, riverside deck, common cooking area na may gas stove, CR na may hot at cold shower, libreng parking, at bonfire pit. Tingnan ang Amenities section para sa buong listahan.",
     "language": "auto",
-    "images": [
-      "grounds-1"
-    ],
+    "images": [],
     "videos": [],
     "buttons": [
       {
@@ -166,10 +157,7 @@
     "answer": "Here are our teepee huts — cozy tent-style accommodations good for small groups, each with fan, sleeping mats, and a private outdoor seating area.",
     "answer_tl": "Eto ang aming teepee huts — cozy tent-style na tirahan na bagay sa maliit na grupo, may fan, sleeping mats, at sariling outdoor seating area.",
     "language": "auto",
-    "images": [
-      "teepee-1",
-      "teepee-2"
-    ],
+    "images": [],
     "videos": [],
     "buttons": [],
     "priority": 10
@@ -190,10 +178,7 @@
     "answer": "Our riverside area has a shallow swimming spot great for kids, plus a sandy stretch perfect for lounging and photos.",
     "answer_tl": "Ang riverside area namin ay may mababaw na swimming spot na bagay sa mga bata, at may buhanginan din na maganda para sa relax at picture-picture.",
     "language": "auto",
-    "images": [
-      "beach-1",
-      "beach-2"
-    ],
+    "images": [],
     "videos": [],
     "buttons": [],
     "priority": 10

@@ -1,54 +1,5 @@
 [
   {
-    "id": "teepee-1",
-    "category": "Teepee Huts",
-    "type": "image",
-    "src": "images/teepee-1.svg",
-    "caption": "Teepee Hut 1 — garden-facing deck"
-  },
-  {
-    "id": "teepee-2",
-    "category": "Teepee Huts",
-    "type": "image",
-    "src": "images/teepee-2.svg",
-    "caption": "Teepee Hut 2 — cozy interior"
-  },
-  {
-    "id": "exclusive-1",
-    "category": "Exclusive House",
-    "type": "image",
-    "src": "images/exclusive-1.svg",
-    "caption": "The Exclusive house"
-  },
-  {
-    "id": "beach-1",
-    "category": "Beach & River",
-    "type": "image",
-    "src": "images/beach-1.svg",
-    "caption": "Riverside swimming spot"
-  },
-  {
-    "id": "beach-2",
-    "category": "Beach & River",
-    "type": "image",
-    "src": "images/beach-2.svg",
-    "caption": "Sandy riverbank"
-  },
-  {
-    "id": "grounds-1",
-    "category": "Grounds",
-    "type": "image",
-    "src": "images/grounds-1.svg",
-    "caption": "Common grounds & bonfire pit"
-  },
-  {
-    "id": "aerial-1",
-    "category": "Grounds",
-    "type": "image",
-    "src": "images/aerial-1.svg",
-    "caption": "Camp Enoki aerial view"
-  },
-  {
     "id": "resort-photo-1",
     "category": "Resort Photos",
     "type": "image",
