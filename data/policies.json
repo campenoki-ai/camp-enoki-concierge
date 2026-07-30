@@ -8,7 +8,10 @@
   "petsAllowed": true,
   "petPolicy": "Well-behaved pets are welcome. Please keep them leashed in common areas and clean up after them.",
   "idRequirements": "Please present one valid government ID upon check-in for the guest under whose name the booking was made.",
-  "paymentChannels": ["GCash", "Bank Transfer"],
+  "paymentChannels": [
+    "GCash",
+    "Bank Transfer"
+  ],
   "gcashNumber": "0947 998 4309",
   "extraGuestFeeOvernight": 150,
   "extraGuestFeeDaytour": 100,
