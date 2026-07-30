@@ -3,7 +3,13 @@
     "id": "pool",
     "name": "Swimming Pool",
     "icon": "🏊",
-    "description": "It is a fresh water dipping pool and we refill the pool for every guest.   No harsh chemicals which is safe for human and pets."
+    "description": "Open-air pool for all ages."
+  },
+  {
+    "id": "river",
+    "name": "Riverside Deck",
+    "icon": "🏞️",
+    "description": "Shallow river access with a sandy stretch."
   },
   {
     "id": "kitchen",
@@ -12,39 +18,33 @@
     "description": "Shared cooking area with gas stove and sink."
   },
   {
+    "id": "cr",
+    "name": "Hot & Cold Shower CRs",
+    "icon": "🚿",
+    "description": "Clean comfort rooms with hot and cold shower."
+  },
+  {
     "id": "parking",
     "name": "Free Parking",
     "icon": "🚗",
-    "description": "Free parking for all guests. Can fit 2 to cars in front and 2 cars in front of our gate. "
+    "description": "Secure on-site parking for all guests."
   },
   {
     "id": "bonfire",
     "name": "Bonfire Pit",
     "icon": "🔥",
-    "description": "Nightly bonfire spot, great for stories and s'mores. \n\n...Update:  Due to LGU policy, Bonfire is no longer allowed. "
+    "description": "Nightly bonfire spot, great for stories and s'mores."
   },
   {
     "id": "wifi",
-    "name": "Fiber Internet powered by Converge",
+    "name": "Common-Area WiFi",
     "icon": "📶",
-    "description": "Converge 300mbps WiFi available in the common area."
+    "description": "WiFi available in the common area."
   },
   {
-    "name": "Videoke",
-    "icon": "𝄞⨾𓍢ִ໋",
-    "description": "Rental for videoke is available for only P1000.",
-    "id": "amenity-ms74hmntj847"
-  },
-  {
-    "name": "ATV and UTV",
-    "icon": "🚘",
-    "description": "ATV and UTV are available for only P500 and P800 for 30minutes respectively. ",
-    "id": "amenity-ms74ilevd5d9"
-  },
-  {
-    "name": "Kayak",
-    "icon": "🚣🏽",
-    "description": "Inflatable are available with us and you can use this on the river right next to the property.  This is for only P500 per kayak. ",
-    "id": "amenity-ms74jgehje5b"
+    "id": "playground",
+    "name": "Kids' Playground",
+    "icon": "🛝",
+    "description": "Safe play area for the little ones."
   }
 ]
