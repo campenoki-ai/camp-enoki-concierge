@@ -415,6 +415,30 @@
         importJson: D.importMediaJson,
       },
     },
+    galleryFolders: {
+      label: "gallery folder",
+      columns: [
+        { label: "Tab name", key: "name" },
+        { label: "Drive folder link", key: "folderUrl" },
+      ],
+      fields: [
+        { key: "name", label: "Tab name (shown in the Gallery)", type: "text" },
+        {
+          key: "folderUrl",
+          label: "Google Drive folder link",
+          type: "text",
+          hint: 'Paste the folder\'s share link (folder must be shared "Anyone with the link"). Every photo/video inside it shows up under this tab automatically — add/remove files in Drive and the site updates on its own, no re-publishing needed. Requires the Drive API key set in Site Settings.',
+        },
+      ],
+      store: {
+        getAll: D.getGalleryFolders,
+        add: D.addGalleryFolder,
+        update: D.updateGalleryFolder,
+        remove: D.deleteGalleryFolder,
+        exportJson: D.exportGalleryFoldersJson,
+        importJson: D.importGalleryFoldersJson,
+      },
+    },
   };
 
   const sectionSearch = {};
@@ -729,6 +753,12 @@
           type: "checkbox",
           hint: "Off = day tour pricing/booking option is hidden site-wide (per-accommodation day tour rates in the Rates tab are kept, just hidden, so you can turn this back on later without re-entering them).",
         },
+        {
+          key: "driveApiKey",
+          label: "Google Drive API key (for Gallery Folders)",
+          type: "text",
+          hint: 'Needed for the "Gallery" tab\'s Drive-folder tabs to work. Get one at console.cloud.google.com → APIs & Services → enable "Google Drive API" → Credentials → Create API key. Restrict it (Application restrictions → Websites → your site\'s URL) since this key ships in the public site. It only needs read access to your own public folders, so a leaked key is low-risk if restricted.',
+        },
       ],
     });
   }
@@ -853,6 +883,7 @@
     { path: "data/attractions.json", getFn: () => D.getAttractions(), resetFn: D.resetAttractionsOverlay },
     { path: "data/reviews.json", getFn: () => D.getReviews(), resetFn: D.resetReviewsOverlay },
     { path: "data/media.json", getFn: () => D.getMediaItems(), resetFn: D.resetMediaOverlay },
+    { path: "data/gallery-folders.json", getFn: () => D.getGalleryFolders(), resetFn: D.resetGalleryFoldersOverlay },
     { path: "data/faq.json", getFn: () => D.getFaqs(), resetFn: D.resetFaqOverlay },
   ];
 

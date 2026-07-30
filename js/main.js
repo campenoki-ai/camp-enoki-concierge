@@ -154,11 +154,60 @@
     });
   }
 
+  function driveFolderId(url) {
+    const m = (url || "").match(/\/folders\/([a-zA-Z0-9_-]+)/) || (url || "").match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    return m ? m[1] : null;
+  }
+
+  /** Live-lists a public Drive folder's contents via the Drive API v3 (API-key-only
+   *  access works for folders shared "Anyone with the link" — no OAuth needed) and
+   *  maps each file into the same shape as a manually-added Media item, tagged with
+   *  the admin-chosen tab name as its category. Fails soft: a bad key/folder/quota
+   *  just means that one tab comes up empty, never breaks the rest of the Gallery. */
+  async function fetchDriveFolderMedia(folder, apiKey) {
+    const folderId = driveFolderId(folder.folderUrl);
+    if (!folderId || !apiKey) return [];
+    try {
+      const q = encodeURIComponent(`'${folderId}' in parents and trashed = false`);
+      const fields = encodeURIComponent("files(id,name,mimeType)");
+      const res = await fetch(`https://www.googleapis.com/drive/v3/files?q=${q}&fields=${fields}&pageSize=200&key=${apiKey}`);
+      if (!res.ok) {
+        console.warn(`Gallery folder "${folder.name}": Drive API returned ${res.status}`);
+        return [];
+      }
+      const data = await res.json();
+      return (data.files || [])
+        .filter((f) => (f.mimeType || "").startsWith("image/") || (f.mimeType || "").startsWith("video/"))
+        .map((f) => {
+          const isVideo = f.mimeType.startsWith("video/");
+          return {
+            id: `drive-${f.id}`,
+            category: folder.name,
+            type: isVideo ? "video" : "image",
+            src: isVideo ? `https://drive.google.com/file/d/${f.id}/preview` : `https://drive.google.com/thumbnail?id=${f.id}&sz=w1000`,
+            caption: f.name,
+          };
+        });
+    } catch (e) {
+      console.warn(`Gallery folder "${folder.name}" failed to load:`, e);
+      return [];
+    }
+  }
+
   async function renderGallery() {
     const tabsMount = document.getElementById("galleryTabs");
     const gridMount = document.getElementById("galleryGrid");
     if (!tabsMount || !gridMount) return;
-    const mediaList = await window.CampEnokiData.getMediaItems();
+    const [mediaList, folders, settings] = await Promise.all([
+      window.CampEnokiData.getMediaItems(),
+      window.CampEnokiData.getGalleryFolders(),
+      window.CampEnokiData.getSettings(),
+    ]);
+
+    if (settings.driveApiKey && folders.length) {
+      const folderResults = await Promise.all(folders.map((f) => fetchDriveFolderMedia(f, settings.driveApiKey)));
+      folderResults.forEach((items) => mediaList.push(...items));
+    }
 
     // Group media items by category (order of first appearance) instead of a separate gallery.json.
     const categories = [];

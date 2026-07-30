@@ -17,6 +17,7 @@
     settings: "data/settings.json",
     aiSettings: "data/ai-settings.json",
     adminAuth: "data/admin-auth.json",
+    galleryFolders: "data/gallery-folders.json",
   };
 
   const LS_FAQ_OVERLAY = "ce_faq_overlay";
@@ -257,6 +258,7 @@
   const attractionsStore = makeListStore("attractions", "attraction");
   const reviewsStore = makeListStore("reviews", "review");
   const mediaStore = makeListStore("media", "media");
+  const galleryFoldersStore = makeListStore("galleryFolders", "gfolder");
   const policiesStore = makeSingletonStore("policies");
   const settingsStore = makeSingletonStore("settings");
   const aiSettingsStore = makeSingletonStore("aiSettings");
@@ -340,6 +342,14 @@
     exportMediaJson: mediaStore.exportJson,
     importMediaJson: mediaStore.importJson,
     resetMediaOverlay: mediaStore.resetOverlay,
+    // Gallery folders (Drive folder -> auto-populated gallery tab)
+    getGalleryFolders: galleryFoldersStore.getAll,
+    addGalleryFolder: galleryFoldersStore.add,
+    updateGalleryFolder: galleryFoldersStore.update,
+    deleteGalleryFolder: galleryFoldersStore.remove,
+    exportGalleryFoldersJson: galleryFoldersStore.exportJson,
+    importGalleryFoldersJson: galleryFoldersStore.importJson,
+    resetGalleryFoldersOverlay: galleryFoldersStore.resetOverlay,
     // Policies / Settings / AI settings (singletons)
     getPolicies: policiesStore.get,
     updatePolicies: policiesStore.update,

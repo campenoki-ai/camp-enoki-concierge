@@ -56,6 +56,7 @@
     <button class="admin-tab" data-tab="attractions">Attractions</button>
     <button class="admin-tab" data-tab="reviews">Reviews</button>
     <button class="admin-tab" data-tab="media">Media</button>
+    <button class="admin-tab" data-tab="galleryFolders">Gallery</button>
     <button class="admin-tab" data-tab="faq">FAQ</button>
     <button class="admin-tab" data-tab="ai">AI Concierge</button>
     <button class="admin-tab" data-tab="bookings">Bookings</button>
@@ -105,6 +106,16 @@
     <p class="section-sub">Photos/videos used in the Gallery and attached to FAQ answers. Upload a real photo or paste an image URL.</p>
     <div id="media-toolbar"></div>
     <div id="media-table"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="galleryFolders">
+    <h2 class="section-title" style="margin-bottom:10px">Gallery Folders</h2>
+    <p class="section-sub">
+      Add a whole Google Drive folder as its own Gallery tab — name it anything ("Activities", "Rooms", whatever), paste
+      the folder link, and every photo/video inside shows up automatically. Needs the Drive API key set in Site Settings.
+    </p>
+    <div id="galleryFolders-toolbar"></div>
+    <div id="galleryFolders-table"></div>
   </section>
 
   <section class="tab-panel hidden" data-panel="faq">

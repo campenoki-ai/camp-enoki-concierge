@@ -8,5 +8,6 @@
   "contactAddress": "Camp Enoki, Riverside, Philippines",
   "facebookUrl": "",
   "offerDayTour": false,
-  "bookingUrl": "https://digitalnomadinph.github.io/camp-enoki-app/"
+  "bookingUrl": "https://digitalnomadinph.github.io/camp-enoki-app/",
+  "driveApiKey": ""
 }
