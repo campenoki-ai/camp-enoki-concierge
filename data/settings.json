@@ -1,12 +1,12 @@
 {
   "resortName": "Camp Enoki",
-  "tagline": "\"Here's to sunsets, laughter and endless Memories\"",
+  "tagline": "Your riverside escape",
   "heroTitle": "Camp Enoki",
   "heroSubtitle": "Province feels, unwind and reset, bonfire nights, beach adventures, kayak experience, sunset cravings — book your overnight stay ask our Enoki AI Concierge anything.",
   "contactPhone": "0947 998 4309",
-  "contactEmail": "campenoki@gmail.com",
-  "contactAddress": "Purok 1 Coastal Road Brgy Sto.Nino San Felipe Zambales",
-  "facebookUrl": "https://www.facebook.com/CampEnoki",
+  "contactEmail": "hello@campenoki.example",
+  "contactAddress": "Camp Enoki, Riverside, Philippines",
+  "facebookUrl": "",
   "offerDayTour": false,
   "bookingUrl": "https://digitalnomadinph.github.io/camp-enoki-app/"
 }
