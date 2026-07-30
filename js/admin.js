@@ -342,6 +342,7 @@
     attractions: {
       label: "attraction",
       columns: [
+        { label: "Photo", key: "photo", isImage: true },
         { label: "Name", key: "name" },
         { label: "Distance", key: "distance" },
         { label: "Description", key: "description" },
@@ -350,6 +351,13 @@
         { key: "name", label: "Name", type: "text" },
         { key: "distance", label: "Distance (e.g. '15 minutes by car')", type: "text" },
         { key: "description", label: "Description", type: "textarea" },
+        { key: "photo", label: "Photo", type: "image" },
+        {
+          key: "video",
+          label: "Video (optional)",
+          type: "text",
+          hint: "Paste a Google Drive share link (Anyone with the link) — shown instead of the photo if both are set.",
+        },
       ],
       store: {
         getAll: D.getAttractions,
@@ -582,7 +590,9 @@
         inputNode = el("input", { type: field.type === "number" ? "number" : "text", value: current ?? "" });
       }
       inputs[field.key] = inputNode;
-      box.appendChild(el("div", { class: "form-row" }, [el("label", {}, field.label), inputNode]));
+      const row = el("div", { class: "form-row" }, [el("label", {}, field.label), inputNode]);
+      if (field.hint) row.appendChild(el("div", { style: "font-size:.78rem;color:var(--text-muted);margin-top:4px" }, field.hint));
+      box.appendChild(row);
     });
 
     const saveBtn = el("button", { class: "btn btn-primary" }, isEdit ? "Save Changes" : "Add");

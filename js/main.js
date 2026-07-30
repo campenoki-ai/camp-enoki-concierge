@@ -27,9 +27,18 @@
     return /drive\.google\.com/.test(src || "");
   }
 
+  /** Accepts whatever share-link format Drive hands out (.../view?usp=sharing,
+   *  .../file/d/<id>/edit, ?id=<id>, an existing /preview link, etc.) and
+   *  normalizes it to the embeddable /preview form. Non-Drive URLs pass through. */
+  function driveEmbedUrl(url) {
+    if (!isDriveUrl(url)) return url;
+    const match = (url || "").match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || (url || "").match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    return match ? `https://drive.google.com/file/d/${match[1]}/preview` : url;
+  }
+
   function mediaEl(m) {
     if (m.type === "video" && isDriveUrl(m.src)) {
-      return el("iframe", { src: m.src, allow: "autoplay", allowfullscreen: "true", frameborder: "0", class: "gallery-video-frame" });
+      return el("iframe", { src: driveEmbedUrl(m.src), allow: "autoplay", allowfullscreen: "true", frameborder: "0", class: "gallery-video-frame" });
     }
     if (m.type === "video") {
       return el("video", { src: m.src, controls: "controls" });
@@ -183,6 +192,16 @@
     if (categories[0]) renderGrid(byCategory.get(categories[0]));
   }
 
+  function attractionMediaEl(a) {
+    if (a.video) {
+      return isDriveUrl(a.video)
+        ? el("iframe", { src: driveEmbedUrl(a.video), allow: "autoplay", allowfullscreen: "true", frameborder: "0", class: "attraction-media" })
+        : el("video", { src: a.video, controls: "controls", class: "attraction-media" });
+    }
+    if (a.photo) return el("img", { src: a.photo, alt: a.name, class: "attraction-media" });
+    return null;
+  }
+
   async function renderAttractions() {
     const mount = document.getElementById("attractionsGrid");
     if (!mount) return;
@@ -191,6 +210,7 @@
     items.forEach((a) => {
       mount.appendChild(
         el("div", { class: "card attraction-card" }, [
+          attractionMediaEl(a),
           el("div", { class: "card-body" }, [el("h3", {}, a.name), el("span", { class: "distance" }, a.distance), el("p", {}, a.description)]),
         ])
       );

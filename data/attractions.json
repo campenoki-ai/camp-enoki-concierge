@@ -1,26 +1,34 @@
 [
   {
     "id": "falls1",
-    "name": "Hidden Falls",
+    "name": "Lubong Nangoloan Falls",
     "distance": "15 minutes by tricycle",
-    "description": "A short scenic hike leads to a cool freshwater falls, great for a half-day side trip."
+    "description": "A scenic freshwater falls near the resort — ask our staff and we can arrange a visit for you.",
+    "photo": "",
+    "video": "https://drive.google.com/file/d/1M5ZjUGaSQtd5NPIv3Po1yfk1QgG8SkDh/preview"
   },
   {
     "id": "viewpoint1",
     "name": "Sunrise Ridge Viewpoint",
     "distance": "20 minutes by car",
-    "description": "Popular sunrise/sunset spot with panoramic views of the valley."
+    "description": "Popular sunrise/sunset spot with panoramic views of the valley.",
+    "photo": "",
+    "video": ""
   },
   {
     "id": "market1",
     "name": "Local Public Market",
     "distance": "10 minutes by car",
-    "description": "Fresh produce, grilled street food, and local delicacies to bring home."
+    "description": "Fresh produce, grilled street food, and local delicacies to bring home.",
+    "photo": "",
+    "video": ""
   },
   {
     "id": "eatery1",
     "name": "Farm-to-Table Eatery",
     "distance": "5 minutes by car",
-    "description": "Casual restaurant serving local dishes, good for a meal before or after your stay."
+    "description": "Casual restaurant serving local dishes, good for a meal before or after your stay.",
+    "photo": "",
+    "video": ""
   }
 ]
