@@ -21,6 +21,22 @@
     return node;
   }
 
+  /** Google Drive doesn't serve a directly-streamable file URL for <video src>,
+   *  it needs its own embedded player frame — a plain <video> tag just 404s. */
+  function isDriveUrl(src) {
+    return /drive\.google\.com/.test(src || "");
+  }
+
+  function mediaEl(m) {
+    if (m.type === "video" && isDriveUrl(m.src)) {
+      return el("iframe", { src: m.src, allow: "autoplay", allowfullscreen: "true", frameborder: "0", class: "gallery-video-frame" });
+    }
+    if (m.type === "video") {
+      return el("video", { src: m.src, controls: "controls" });
+    }
+    return el("img", { src: m.src, alt: m.caption || "" });
+  }
+
   function initTheme() {
     const saved = localStorage.getItem(THEME_KEY);
     if (saved) document.documentElement.setAttribute("data-theme", saved);
@@ -116,11 +132,7 @@
     function renderGrid(items) {
       gridMount.innerHTML = "";
       items.forEach((m) => {
-        gridMount.appendChild(
-          el("figure", { class: "gallery-item" }, [
-            m.type === "video" ? el("video", { src: m.src, controls: "controls" }) : el("img", { src: m.src, alt: m.caption || "" }),
-          ])
-        );
+        gridMount.appendChild(el("figure", { class: "gallery-item" }, [mediaEl(m)]));
       });
     }
 

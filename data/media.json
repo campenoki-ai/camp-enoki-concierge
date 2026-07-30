@@ -22,5 +22,19 @@
   { "id": "resort-photo-14", "category": "Resort Photos", "type": "image", "src": "https://drive.google.com/thumbnail?id=1Sbpft1epx22gyQiv0ddJdMvz1OqGOxkN&sz=w1000", "caption": "Resort Photo 14" },
   { "id": "resort-photo-15", "category": "Resort Photos", "type": "image", "src": "https://drive.google.com/thumbnail?id=1sbcN9essmiSMDbR8iUx8Gylqw4aREcGY&sz=w1000", "caption": "Resort Photo 15" },
   { "id": "resort-photo-16", "category": "Resort Photos", "type": "image", "src": "https://drive.google.com/thumbnail?id=1Pk0XwcmECXdu3Eo0ZUsVelsKAL7rbHNQ&sz=w1000", "caption": "Resort Photo 16" },
-  { "id": "resort-photo-17", "category": "Resort Photos", "type": "image", "src": "https://drive.google.com/thumbnail?id=1zApQQqLNeCO9eD7_1NwKeUJOWKsk3Uuo&sz=w1000", "caption": "Resort Photo 17" }
+  { "id": "resort-photo-17", "category": "Resort Photos", "type": "image", "src": "https://drive.google.com/thumbnail?id=1zApQQqLNeCO9eD7_1NwKeUJOWKsk3Uuo&sz=w1000", "caption": "Resort Photo 17" },
+  { "id": "resort-video-1", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1LOvUIrJVse4X8Hxkbuye0cmznwVQ_GvM/preview", "caption": "Distance to the beach" },
+  { "id": "resort-video-2", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1KjDpl76cjxsTqyKqHMwwQ3Og7UUfbarM/preview", "caption": "Camp Enoki vlog" },
+  { "id": "resort-video-3", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1Ko9L6a4ReGUswHySLEFWL0071uOYKw6f/preview", "caption": "Resort ad" },
+  { "id": "resort-video-4", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1goHRYiJqB05WuNWMKCN-Rq4s8qynV30e/preview", "caption": "Resort ad" },
+  { "id": "resort-video-5", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1nYPDywtJYwTxr_nhlDfhuVB8VW5pCPrj/preview", "caption": "Distance to the beach (2)" },
+  { "id": "resort-video-6", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1KCQ-uqi2_3C2jEo1KNn9ouxQAImpXCOu/preview", "caption": "Walk path to the beach" },
+  { "id": "resort-video-7", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1t8wjftXIkzIRzmp8Ou525TqbbLdZiO8L/preview", "caption": "Camp Enoki story" },
+  { "id": "resort-video-8", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1hrbSJfa-R9Y0y7GpCDA1cPfgOXCpwpDR/preview", "caption": "End of the coastal road by the river" },
+  { "id": "resort-video-9", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/15j3ph_nbD5l8IB--pxPm_mA3tqHNy-Sz/preview", "caption": "Inside the resort" },
+  { "id": "resort-video-10", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1X3AQIfg9k8actoTnQMJfs3zM5Dej8C1x/preview", "caption": "Resort clip" },
+  { "id": "resort-video-11", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1miqDVAq2IcxiRSnqkfEGBmKDm1hFohDW/preview", "caption": "Resort clip" },
+  { "id": "resort-video-12", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1HBUr7IY3_GRt4zzlA7L0STQBd-ObDxap/preview", "caption": "Resort clip" },
+  { "id": "resort-video-13", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1yOuh1D3InnAsDAvIaSn6uWNbLvetWWeL/preview", "caption": "Resort ad" },
+  { "id": "resort-video-14", "category": "Videos of Resort", "type": "video", "src": "https://drive.google.com/file/d/1SZNzpgb4KIqgZ4xz-ojRDYGzPYu3koU_/preview", "caption": "Resort highlights" }
 ]

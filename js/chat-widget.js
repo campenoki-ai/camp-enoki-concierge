@@ -31,12 +31,19 @@
     scrollToBottom();
   }
 
+  function isDriveUrl(src) {
+    return /drive\.google\.com/.test(src || "");
+  }
+
   function renderMedia(mediaList) {
     if (!mediaList || !mediaList.length) return null;
     const wrap = el("div", { class: "msg-media" });
     for (const m of mediaList) {
       const fig = el("figure", { style: "margin:0 0 8px" });
-      if (m.type === "video") {
+      if (m.type === "video" && isDriveUrl(m.src)) {
+        // Drive doesn't serve a directly-streamable file URL — needs its own embedded player frame.
+        fig.appendChild(el("iframe", { src: m.src, allow: "autoplay", allowfullscreen: "true", frameborder: "0", style: "width:100%;height:200px;border-radius:10px" }));
+      } else if (m.type === "video") {
         fig.appendChild(el("video", { src: m.src, controls: "controls", playsinline: "true" }));
       } else {
         fig.appendChild(el("img", { src: m.src, alt: m.caption || "" }));
