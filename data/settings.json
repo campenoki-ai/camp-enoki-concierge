@@ -7,5 +7,6 @@
   "contactEmail": "hello@campenoki.example",
   "contactAddress": "Camp Enoki, Riverside, Philippines",
   "facebookUrl": "",
-  "offerDayTour": false
+  "offerDayTour": false,
+  "bookingUrl": "https://digitalnomadinph.github.io/camp-enoki-app/"
 }

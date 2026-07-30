@@ -68,7 +68,11 @@
 
   function initBookButtons() {
     document.querySelectorAll("[data-open-booking]").forEach((btn) => {
-      btn.addEventListener("click", () => window.CampEnokiBooking?.open());
+      btn.addEventListener("click", async () => {
+        const settings = await window.CampEnokiData.getSettings();
+        if (settings.bookingUrl) window.open(settings.bookingUrl, "_blank", "noopener");
+        else window.CampEnokiBooking?.open();
+      });
     });
   }
 

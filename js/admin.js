@@ -664,6 +664,12 @@
         { key: "contactAddress", label: "Contact address", type: "textarea" },
         { key: "facebookUrl", label: "Facebook page URL (optional)", type: "text" },
         {
+          key: "bookingUrl",
+          label: "Booking site URL",
+          type: "text",
+          hint: "Every \"Book Now\" button/link on the site (and the concierge chat's booking button) sends guests here instead of a built-in form.",
+        },
+        {
           key: "offerDayTour",
           label: "Offer day tours",
           type: "checkbox",

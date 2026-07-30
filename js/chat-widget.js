@@ -54,13 +54,15 @@
     return wrap;
   }
 
-  function runButtonAction(btn) {
+  async function runButtonAction(btn) {
     if (btn.action === "scroll") {
       const target = document.querySelector(btn.target);
       if (target) target.scrollIntoView({ behavior: "smooth" });
       closePanel();
     } else if (btn.action === "open-booking") {
-      global.CampEnokiBooking?.open();
+      const settings = await global.CampEnokiData.getSettings();
+      if (settings.bookingUrl) window.open(settings.bookingUrl, "_blank", "noopener");
+      else global.CampEnokiBooking?.open();
     } else if (btn.action === "map") {
       window.open(btn.target, "_blank", "noopener");
     }
