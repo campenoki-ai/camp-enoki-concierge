@@ -387,6 +387,7 @@
       label: "media item",
       columns: [
         { label: "Preview", key: "src", isImage: true },
+        { label: "ID (use this in a FAQ's image/video field)", key: "id", isCode: true },
         { label: "Category", key: "category" },
         { label: "Type", key: "type" },
         { label: "Caption", key: "caption" },
@@ -444,6 +445,9 @@
         const cells = config.columns.map((c) => {
           if (c.isImage) {
             return el("td", {}, item[c.key] ? el("img", { class: "image-field-preview", src: item[c.key], alt: "" }) : "—");
+          }
+          if (c.isCode) {
+            return el("td", {}, el("code", {}, item[c.key] ?? "—"));
           }
           const val = item[c.key];
           return el("td", {}, val === undefined || val === null || val === "" ? "—" : `${c.prefix || ""}${val}`);
