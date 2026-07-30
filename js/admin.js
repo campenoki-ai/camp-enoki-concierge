@@ -815,6 +815,162 @@
   }
 
   // ===================================================================
+  // Publish: commits the current merged content straight to the site's
+  // GitHub repo, so it goes live for every visitor instead of sitting in
+  // this one browser's localStorage. Uses a GitHub Personal Access Token
+  // the user generates and pastes in themselves — stored only in this
+  // browser's localStorage, sent only to api.github.com, never bundled
+  // into any export/content flow.
+  // ===================================================================
+  const PUBLISH_CONFIG_KEY = "ce_publish_config";
+
+  function getPublishConfig() {
+    try {
+      return JSON.parse(localStorage.getItem(PUBLISH_CONFIG_KEY)) || {};
+    } catch {
+      return {};
+    }
+  }
+
+  function savePublishConfig(cfg) {
+    localStorage.setItem(PUBLISH_CONFIG_KEY, JSON.stringify(cfg));
+  }
+
+  function utf8ToBase64(str) {
+    const bytes = new TextEncoder().encode(str);
+    let binary = "";
+    bytes.forEach((b) => (binary += String.fromCharCode(b)));
+    return btoa(binary);
+  }
+
+  const PUBLISH_TARGETS = [
+    { path: "data/settings.json", getFn: () => D.getSettings(), resetFn: D.resetSettingsOverlay },
+    { path: "data/policies.json", getFn: () => D.getPolicies(), resetFn: D.resetPoliciesOverlay },
+    { path: "data/ai-settings.json", getFn: () => D.getAiSettings(), resetFn: D.resetAiSettingsOverlay },
+    { path: "data/admin-auth.json", getFn: () => D.getAdminAuth(), resetFn: D.resetAdminAuthOverlay },
+    { path: "data/rates.json", getFn: () => D.getRates(), resetFn: D.resetRatesOverlay },
+    { path: "data/amenities.json", getFn: () => D.getAmenities(), resetFn: D.resetAmenitiesOverlay },
+    { path: "data/attractions.json", getFn: () => D.getAttractions(), resetFn: D.resetAttractionsOverlay },
+    { path: "data/reviews.json", getFn: () => D.getReviews(), resetFn: D.resetReviewsOverlay },
+    { path: "data/media.json", getFn: () => D.getMediaItems(), resetFn: D.resetMediaOverlay },
+    { path: "data/faq.json", getFn: () => D.getFaqs(), resetFn: D.resetFaqOverlay },
+  ];
+
+  /** Reads the file's current sha (required by GitHub to update it), then
+   *  writes the new content. A 404 on the GET means the file doesn't exist
+   *  yet, so we create it (no sha needed). */
+  async function publishOneFile(cfg, target, content) {
+    const base = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${target.path}`;
+    const headers = { Authorization: `Bearer ${cfg.token}`, Accept: "application/vnd.github+json" };
+
+    let sha;
+    const getRes = await fetch(`${base}?ref=${encodeURIComponent(cfg.branch)}`, { headers });
+    if (getRes.ok) {
+      sha = (await getRes.json()).sha;
+    } else if (getRes.status !== 404) {
+      throw new Error(`Couldn't read ${target.path} (${getRes.status})`);
+    }
+
+    const putRes = await fetch(base, {
+      method: "PUT",
+      headers: { ...headers, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message: `Publish content update from Admin (${target.path})`,
+        content: utf8ToBase64(content),
+        branch: cfg.branch,
+        ...(sha ? { sha } : {}),
+      }),
+    });
+    if (!putRes.ok) {
+      const detail = await putRes.json().catch(() => ({}));
+      throw new Error(`Failed to publish ${target.path}: ${detail.message || putRes.status}`);
+    }
+  }
+
+  function renderPublishForm() {
+    const mount = document.getElementById("publishForm");
+    const cfg = getPublishConfig();
+    const form = el("div", { class: "settings-form" });
+
+    const ownerInput = el("input", { type: "text", value: cfg.owner || "campenoki-ai", placeholder: "GitHub username/org" });
+    const repoInput = el("input", { type: "text", value: cfg.repo || "camp-enoki-concierge", placeholder: "repo name" });
+    const branchInput = el("input", { type: "text", value: cfg.branch || "main", placeholder: "main" });
+    const tokenInput = el("input", { type: "password", value: cfg.token || "", autocomplete: "off", placeholder: "github_pat_..." });
+
+    form.appendChild(singletonRow("GitHub repo owner", ownerInput));
+    form.appendChild(singletonRow("Repo name", repoInput));
+    form.appendChild(singletonRow("Branch", branchInput));
+    form.appendChild(
+      singletonRow(
+        "Personal Access Token",
+        el("div", {}, [
+          tokenInput,
+          el(
+            "div",
+            { style: "font-size:.78rem;color:var(--text-muted);margin-top:6px" },
+            'Generate at github.com -> Settings -> Developer settings -> Fine-grained tokens. Scope it to ONLY this repo, permission "Contents: Read and write". Treat it like a password — anyone with access to this browser could read it from local storage.'
+          ),
+        ])
+      )
+    );
+
+    const saveConfigBtn = el("button", { class: "btn btn-outline" }, "Save Connection");
+    saveConfigBtn.addEventListener("click", () => {
+      savePublishConfig({ owner: ownerInput.value.trim(), repo: repoInput.value.trim(), branch: branchInput.value.trim() || "main", token: tokenInput.value.trim() });
+      configNote.textContent = "Connection saved ✓";
+      configNote.style.color = "var(--brand)";
+      setTimeout(() => (configNote.textContent = ""), 2500);
+    });
+    const configNote = el("span", { style: "margin-left:12px;font-size:.85rem" }, "");
+    form.appendChild(el("div", { class: "form-actions", style: "justify-content:flex-start" }, [saveConfigBtn, configNote]));
+
+    const log = el("div", { class: "admin-table-wrap", style: "padding:14px;font-family:ui-monospace,monospace;font-size:.82rem;max-height:260px;overflow-y:auto;margin-top:18px" }, "Not published yet this session.");
+    const publishBtn = el("button", { class: "btn btn-primary", style: "margin-top:6px" }, "Publish to Live Site");
+    publishBtn.addEventListener("click", async () => {
+      const current = getPublishConfig();
+      if (!current.owner || !current.repo || !current.token) {
+        alert("Fill in and save the GitHub connection details above first.");
+        return;
+      }
+      publishBtn.disabled = true;
+      publishBtn.textContent = "Publishing...";
+      log.innerHTML = "";
+      const lines = [];
+      const addLine = (text) => {
+        lines.push(text);
+        log.innerText = lines.join("\n");
+        log.scrollTop = log.scrollHeight;
+      };
+
+      let successCount = 0;
+      for (const target of PUBLISH_TARGETS) {
+        try {
+          addLine(`Publishing ${target.path}...`);
+          const data = await target.getFn();
+          await publishOneFile(current, target, JSON.stringify(data, null, 2));
+          if (target.resetFn) target.resetFn();
+          addLine(`  done.`);
+          successCount++;
+        } catch (e) {
+          addLine(`  FAILED: ${e.message}`);
+        }
+      }
+      addLine(
+        successCount === PUBLISH_TARGETS.length
+          ? `\nAll ${successCount} files published. GitHub Pages will rebuild in about a minute — then it's live for everyone.`
+          : `\n${successCount}/${PUBLISH_TARGETS.length} files published. Check the FAILED lines above (usually a token permission or repo-name issue).`
+      );
+      publishBtn.disabled = false;
+      publishBtn.textContent = "Publish to Live Site";
+    });
+
+    mount.innerHTML = "";
+    mount.appendChild(form);
+    mount.appendChild(publishBtn);
+    mount.appendChild(log);
+  }
+
+  // ===================================================================
   // Bookings / Unanswered (read-only, unchanged from Phase 1)
   // ===================================================================
   function renderBookings() {
@@ -866,6 +1022,7 @@
       renderPoliciesForm();
       renderAiForm();
       renderSecurityForm();
+      renderPublishForm();
       renderBookings();
       renderUnanswered();
     });

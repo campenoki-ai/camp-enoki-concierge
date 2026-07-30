@@ -44,6 +44,8 @@
 <main class="admin-main">
   <div class="notice info">
     Everything below is fully editable — every section on the public site (and the AI concierge's behavior) is driven from here.
+    <strong>Your edits save instantly to THIS browser only.</strong> Guests on other devices won't see them until you hit
+    <strong>Publish</strong> (last tab) — that's the one step that makes changes actually go live for everyone.
   </div>
 
   <div class="admin-tabs" id="adminTabs">
@@ -59,6 +61,7 @@
     <button class="admin-tab" data-tab="bookings">Bookings</button>
     <button class="admin-tab" data-tab="unanswered">Unanswered</button>
     <button class="admin-tab" data-tab="security">Security</button>
+    <button class="admin-tab" data-tab="publish" style="font-weight:800">Publish</button>
   </div>
 
   <section class="tab-panel" data-panel="settings">
@@ -158,6 +161,17 @@
     <h2 class="section-title" style="margin-bottom:10px">Security</h2>
     <p class="section-sub">Change the Admin Mode password. Remember: this is a client-side gate, not real server-side auth (see the login screen's note).</p>
     <div id="securityForm"></div>
+  </section>
+
+  <section class="tab-panel hidden" data-panel="publish">
+    <h2 class="section-title" style="margin-bottom:10px">Publish</h2>
+    <p class="section-sub">
+      Everything you edit in the tabs above saves instantly, but only in THIS browser — that's why it doesn't show up for
+      guests or on other devices. Publish commits the current content straight into the site's files on GitHub, which makes
+      it live for everyone within about a minute. This needs a GitHub Personal Access Token you generate yourself below —
+      it's stored only in this browser and is never sent anywhere except directly to GitHub's own API.
+    </p>
+    <div id="publishForm"></div>
   </section>
 </main>
 

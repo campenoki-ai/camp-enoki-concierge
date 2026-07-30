@@ -307,6 +307,7 @@
     deleteRate: ratesStore.remove,
     exportRatesJson: ratesStore.exportJson,
     importRatesJson: ratesStore.importJson,
+    resetRatesOverlay: ratesStore.resetOverlay,
     // Amenities
     getAmenities: amenitiesStore.getAll,
     addAmenity: amenitiesStore.add,
@@ -314,6 +315,7 @@
     deleteAmenity: amenitiesStore.remove,
     exportAmenitiesJson: amenitiesStore.exportJson,
     importAmenitiesJson: amenitiesStore.importJson,
+    resetAmenitiesOverlay: amenitiesStore.resetOverlay,
     // Attractions
     getAttractions: attractionsStore.getAll,
     addAttraction: attractionsStore.add,
@@ -321,6 +323,7 @@
     deleteAttraction: attractionsStore.remove,
     exportAttractionsJson: attractionsStore.exportJson,
     importAttractionsJson: attractionsStore.importJson,
+    resetAttractionsOverlay: attractionsStore.resetOverlay,
     // Reviews
     getReviews: reviewsStore.getAll,
     addReview: reviewsStore.add,
@@ -328,6 +331,7 @@
     deleteReview: reviewsStore.remove,
     exportReviewsJson: reviewsStore.exportJson,
     importReviewsJson: reviewsStore.importJson,
+    resetReviewsOverlay: reviewsStore.resetOverlay,
     // Media (gallery + FAQ image/video attachments)
     getMediaItems: mediaStore.getAll,
     addMediaItem: mediaStore.add,
@@ -335,15 +339,20 @@
     deleteMediaItem: mediaStore.remove,
     exportMediaJson: mediaStore.exportJson,
     importMediaJson: mediaStore.importJson,
+    resetMediaOverlay: mediaStore.resetOverlay,
     // Policies / Settings / AI settings (singletons)
     getPolicies: policiesStore.get,
     updatePolicies: policiesStore.update,
+    resetPoliciesOverlay: policiesStore.resetOverlay,
     getSettings: settingsStore.get,
     updateSettings: settingsStore.update,
+    resetSettingsOverlay: settingsStore.resetOverlay,
     getAiSettings: aiSettingsStore.get,
     updateAiSettings: aiSettingsStore.update,
+    resetAiSettingsOverlay: aiSettingsStore.resetOverlay,
     getAdminAuth: adminAuthStore.get,
     updateAdminAuth: adminAuthStore.update,
+    resetAdminAuthOverlay: adminAuthStore.resetOverlay,
     // Bookings
     getBookings,
     saveBooking,
