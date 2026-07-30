@@ -144,11 +144,21 @@ section { padding: 64px 0; }
 .amenity-card h3 { margin: 0 0 6px; font-size: 1.02rem; }
 .amenity-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
 
-.rate-card h3 { margin: 14px 20px 0; font-size: 1.15rem; }
-.rate-card .price { color: var(--accent); font-weight: 700; font-size: 1.3rem; margin: 6px 20px 0; }
+.rates-list { display: flex; flex-direction: column; gap: 20px; }
+.rate-card { display: flex; flex-direction: row; align-items: stretch; }
+.rate-card-info { flex: 1; min-width: 0; padding: 20px; }
+.rate-card-photo { width: 260px; flex-shrink: 0; }
+.rate-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--sand); }
+@media (max-width: 700px) {
+  .rate-card { flex-direction: column-reverse; }
+  .rate-card-photo { width: 100%; height: 200px; }
+}
+
+.rate-card h3 { margin: 0; font-size: 1.15rem; }
+.rate-card .price { color: var(--accent); font-weight: 700; font-size: 1.3rem; margin: 6px 0 0; }
 .rate-card .price small { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
-.rate-card .meta { margin: 6px 20px 18px; color: var(--text-muted); font-size: 0.88rem; }
-.rate-desc { margin: 0 20px 20px; }
+.rate-card .meta { margin: 6px 0 14px; color: var(--text-muted); font-size: 0.88rem; }
+.rate-desc { margin: 0; }
 .rate-desc-text {
   margin: 0; color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;
   white-space: pre-line; /* respects real line breaks the owner types, e.g. one bullet per line */

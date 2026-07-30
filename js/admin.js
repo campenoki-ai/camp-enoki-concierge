@@ -494,27 +494,59 @@
     mount.appendChild(el("div", { class: "admin-toolbar" }, [search, addBtn, exportBtn, importLabel]));
   }
 
+  const UPLOAD_MAX_DIMENSION = 1400;
+  const UPLOAD_JPEG_QUALITY = 0.82;
+
+  /** A raw phone photo can be several MB — as a data URL that blows through
+   *  localStorage's ~5-10MB-per-origin quota fast (the site's only storage,
+   *  since it's static hosting with no backend). Downscale + re-encode as
+   *  JPEG client-side before it ever becomes a data URL. */
+  function compressImageFile(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = () => reject(reader.error || new Error("Could not read the file"));
+      reader.onload = () => {
+        const img = new Image();
+        img.onerror = () => reject(new Error("Could not decode the image"));
+        img.onload = () => {
+          const scale = Math.min(1, UPLOAD_MAX_DIMENSION / Math.max(img.width, img.height));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.round(img.width * scale);
+          canvas.height = Math.round(img.height * scale);
+          canvas.getContext("2d").drawImage(img, 0, 0, canvas.width, canvas.height);
+          resolve(canvas.toDataURL("image/jpeg", UPLOAD_JPEG_QUALITY));
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
   function imageFieldInput(field, currentValue) {
     const wrap = el("div", { style: "display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap" });
     const urlInput = el("input", { type: "text", value: currentValue || "", placeholder: "images/photo.jpg or paste a URL" });
     const preview = el("img", { class: "image-field-preview", src: currentValue || "", style: currentValue ? "" : "display:none" });
     const fileInput = el("input", { type: "file", accept: "image/*" });
-    fileInput.addEventListener("change", () => {
+    const status = el("div", { style: "font-size:.78rem;color:var(--text-muted);margin-top:4px" });
+    fileInput.addEventListener("change", async () => {
       const file = fileInput.files[0];
       if (!file) return;
-      const reader = new FileReader();
-      reader.onload = () => {
-        urlInput.value = reader.result;
-        preview.src = reader.result;
+      status.textContent = "Compressing image...";
+      try {
+        const dataUrl = await compressImageFile(file);
+        urlInput.value = dataUrl;
+        preview.src = dataUrl;
         preview.style.display = "";
-      };
-      reader.readAsDataURL(file);
+        status.textContent = `Ready (${Math.round(dataUrl.length / 1024)} KB after compression)`;
+      } catch (e) {
+        status.textContent = "Couldn't process that image: " + e.message;
+      }
     });
     urlInput.addEventListener("input", () => {
       preview.src = urlInput.value;
       preview.style.display = urlInput.value ? "" : "none";
     });
-    wrap.appendChild(el("div", { style: "flex:1;min-width:200px" }, [urlInput, el("div", { style: "margin-top:6px" }, fileInput)]));
+    wrap.appendChild(el("div", { style: "flex:1;min-width:200px" }, [urlInput, el("div", { style: "margin-top:6px" }, fileInput), status]));
     wrap.appendChild(preview);
     wrap.getValue = () => urlInput.value;
     return wrap;
@@ -561,8 +593,20 @@
         const raw = node.getValue ? node.getValue() : node.value;
         patch[field.key] = field.type === "number" ? parseFloat(raw) || 0 : raw;
       });
-      if (isEdit) await config.store.update(item.id, patch);
-      else await config.store.add(patch);
+      try {
+        if (isEdit) await config.store.update(item.id, patch);
+        else await config.store.add(patch);
+      } catch (e) {
+        // Most likely cause: browser storage quota exceeded — this site's only
+        // storage is localStorage, so a big enough photo can fill it (~5-10MB total).
+        const quota = e.name === "QuotaExceededError";
+        alert(
+          quota
+            ? "Save failed: browser storage is full. Try a smaller photo, or remove an old one first (Media/Rates photos all share the same limited storage on this static site)."
+            : "Save failed: " + e.message
+        );
+        return; // keep the modal open so nothing typed is lost
+      }
       closeItemModal();
       renderSectionTable(sectionKey);
     });

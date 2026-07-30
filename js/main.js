@@ -120,7 +120,10 @@
     ]);
     const media = Object.fromEntries(mediaList.map((m) => [m.id, m]));
     mount.innerHTML = "";
-    mount.className = "grid grid-auto";
+    // Rates reads better as one full-width card per row (details | photo) than a
+    // multi-column grid — a real promo entry is often a paragraph, not a caption,
+    // and a narrow grid column squeezes both the text and the photo.
+    mount.className = "rates-list";
     rates.forEach((r) => {
       // r.image is normally a Media-tab id (looked up below), but Admin's Rates
       // photo field also accepts a direct upload/URL — fall back to using it as-is.
@@ -130,11 +133,13 @@
         : `Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`;
       mount.appendChild(
         el("div", { class: "card rate-card" }, [
-          imgSrc ? el("img", { src: imgSrc, alt: r.name }) : null,
-          el("h3", {}, r.name),
-          el("div", { class: "price" }, [`₱${r.overnight.toLocaleString()} `, el("small", {}, "/ night")]),
-          el("div", { class: "meta" }, meta),
-          renderRateDescription(r.description),
+          el("div", { class: "rate-card-info" }, [
+            el("h3", {}, r.name),
+            el("div", { class: "price" }, [`₱${r.overnight.toLocaleString()} `, el("small", {}, "/ night")]),
+            el("div", { class: "meta" }, meta),
+            renderRateDescription(r.description),
+          ]),
+          imgSrc ? el("div", { class: "rate-card-photo" }, el("img", { src: imgSrc, alt: r.name })) : null,
         ])
       );
     });
