@@ -74,7 +74,7 @@ button { font-family: inherit; }
 }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.15rem; color: var(--brand); text-decoration: none; }
-.brand-logo { width: 34px; height: 34px; border-radius: 50%; background: var(--brand); display: grid; place-items: center; color: #fff; font-size: 1.1rem; }
+.brand-logo { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; flex-shrink: 0; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
 .nav-links { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
 .nav-links a { text-decoration: none; font-weight: 500; color: var(--text-muted); font-size: 0.95rem; transition: color .15s; }
 .nav-links a:hover { color: var(--brand); }
