@@ -659,6 +659,12 @@
         { key: "contactEmail", label: "Contact email", type: "text" },
         { key: "contactAddress", label: "Contact address", type: "textarea" },
         { key: "facebookUrl", label: "Facebook page URL (optional)", type: "text" },
+        {
+          key: "offerDayTour",
+          label: "Offer day tours",
+          type: "checkbox",
+          hint: "Off = day tour pricing/booking option is hidden site-wide (per-accommodation day tour rates in the Rates tab are kept, just hidden, so you can turn this back on later without re-entering them).",
+        },
       ],
     });
   }

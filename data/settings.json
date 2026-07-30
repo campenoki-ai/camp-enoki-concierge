@@ -2,9 +2,10 @@
   "resortName": "Camp Enoki",
   "tagline": "Your riverside escape",
   "heroTitle": "Your riverside escape at Camp Enoki",
-  "heroSubtitle": "Teepee huts, cool river waters, and bonfire nights — book your overnight stay or day tour, or ask our Enoki AI Concierge anything.",
+  "heroSubtitle": "Teepee huts, cool river waters, and bonfire nights — book your overnight stay, or ask our Enoki AI Concierge anything.",
   "contactPhone": "0947 998 4309",
   "contactEmail": "hello@campenoki.example",
   "contactAddress": "Camp Enoki, Riverside, Philippines",
-  "facebookUrl": ""
+  "facebookUrl": "",
+  "offerDayTour": false
 }

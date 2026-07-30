@@ -9,6 +9,7 @@
   let overlayEl, boxEl;
   let step = 1;
   let state = defaultState();
+  let dayTourEnabled = false;
 
   function defaultState() {
     return {
@@ -53,19 +54,24 @@
     const dateInput = el("input", { type: "date", value: state.date });
     dateInput.addEventListener("input", (e) => (state.date = e.target.value));
 
-    const overnightRadio = el("input", { type: "radio", name: "stayType", value: "overnight" });
-    overnightRadio.checked = state.stayType === "overnight";
-    overnightRadio.addEventListener("change", () => (state.stayType = "overnight"));
-    const daytourRadio = el("input", { type: "radio", name: "stayType", value: "daytour" });
-    daytourRadio.checked = state.stayType === "daytour";
-    daytourRadio.addEventListener("change", () => (state.stayType = "daytour"));
+    const rows = [fieldRow("Preferred date", dateInput)];
 
-    const toggle = el("div", { class: "pill-toggle" }, [
-      el("label", {}, [overnightRadio, el("span", {}, "Overnight")]),
-      el("label", {}, [daytourRadio, el("span", {}, "Day Tour")]),
-    ]);
+    if (dayTourEnabled) {
+      const overnightRadio = el("input", { type: "radio", name: "stayType", value: "overnight" });
+      overnightRadio.checked = state.stayType === "overnight";
+      overnightRadio.addEventListener("change", () => (state.stayType = "overnight"));
+      const daytourRadio = el("input", { type: "radio", name: "stayType", value: "daytour" });
+      daytourRadio.checked = state.stayType === "daytour";
+      daytourRadio.addEventListener("change", () => (state.stayType = "daytour"));
 
-    return [fieldRow("Preferred date", dateInput), fieldRow("Stay type", toggle)];
+      const toggle = el("div", { class: "pill-toggle" }, [
+        el("label", {}, [overnightRadio, el("span", {}, "Overnight")]),
+        el("label", {}, [daytourRadio, el("span", {}, "Day Tour")]),
+      ]);
+      rows.push(fieldRow("Stay type", toggle));
+    }
+
+    return rows;
   }
 
   function numberField(labelText, key, min = 0) {
@@ -198,9 +204,11 @@
     );
   }
 
-  function open() {
+  async function open() {
     state = defaultState();
     step = 1;
+    const settings = await global.CampEnokiData.getSettings();
+    dayTourEnabled = !!settings.offerDayTour;
     overlayEl.classList.add("open");
     renderBody();
   }

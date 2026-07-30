@@ -71,17 +71,24 @@
   async function renderRates() {
     const mount = document.getElementById("ratesGrid");
     if (!mount) return;
-    const [rates, mediaList] = await Promise.all([window.CampEnokiData.getRates(), window.CampEnokiData.getMediaItems()]);
+    const [rates, mediaList, settings] = await Promise.all([
+      window.CampEnokiData.getRates(),
+      window.CampEnokiData.getMediaItems(),
+      window.CampEnokiData.getSettings(),
+    ]);
     const media = Object.fromEntries(mediaList.map((m) => [m.id, m]));
     mount.innerHTML = "";
     rates.forEach((r) => {
       const img = media[r.image];
+      const meta = settings.offerDayTour
+        ? `Day tour: ₱${r.daytour.toLocaleString()} · Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`
+        : `Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`;
       mount.appendChild(
         el("div", { class: "card rate-card" }, [
           img ? el("img", { src: img.src, alt: r.name }) : null,
           el("h3", {}, r.name),
           el("div", { class: "price" }, [`₱${r.overnight.toLocaleString()} `, el("small", {}, "/ night")]),
-          el("div", { class: "meta" }, `Day tour: ₱${r.daytour.toLocaleString()} · Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`),
+          el("div", { class: "meta" }, meta),
           el("p", { style: "margin:0 20px 20px;color:var(--text-muted);font-size:.88rem" }, r.description),
         ])
       );
@@ -179,6 +186,12 @@
     setText("heroTitle", s.heroTitle);
     setText("heroSubtitle", s.heroSubtitle);
     setText("footerResortName", s.resortName);
+    setText(
+      "ratesSubtitle",
+      s.offerDayTour
+        ? "Choose overnight or day tour. A downpayment confirms your booking (non-refundable — see our cancellation policy)."
+        : "Overnight stays only. A downpayment confirms your booking (non-refundable — see our cancellation policy)."
+    );
     if (s.contactAddress) document.getElementById("contactAddress").innerHTML = s.contactAddress.replace(/\n/g, "<br />");
     setText("contactPhone", s.contactPhone);
     setText("contactEmail", s.contactEmail);
