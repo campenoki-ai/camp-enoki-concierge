@@ -1,42 +1,12 @@
 [
   {
-    "id": "exclusive",
-    "name": "Exclusive",
-    "description": "Our largest accommodation — a private house good for big families or barkada groups, with its own living area.",
-    "capacity": 15,
-    "extraPaxFee": 150,
-    "overnight": 12000,
-    "daytour": 6000,
-    "image": "exclusive-1"
-  },
-  {
-    "id": "hut1",
-    "name": "Hut 1",
-    "description": "Spacious teepee-style hut with a private deck facing the garden.",
-    "capacity": 8,
-    "extraPaxFee": 150,
-    "overnight": 6500,
-    "daytour": 3500,
-    "image": "teepee-1"
-  },
-  {
-    "id": "hut2",
-    "name": "Hut 2",
-    "description": "Cozy teepee hut, great for small families.",
-    "capacity": 6,
-    "extraPaxFee": 150,
+    "id": "rainy-season-exclusive",
+    "name": "Rainy Season Exclusive",
+    "description": "White Season Promo\nP5000 15pax.\nUntil September 30\n\n📅 1-minute walk to the beach\n🌊 Pwede rin maligo sa ilog\n🛟 We can arrage visit to Nangoloan Falls\n\n🏞️ DIPPING POOL\n💧 Laging bagong palit ang tubig\n🚫 No chlorine, no chemicals\n🐶 Safe for humans & pets\n\n🏕️ ACCOMMODATIONS\n⛺ 3 Teepee Huts (Air-Conditioned)\n• Good for 3 pax each\n• 4-inch foam mattress\n• With blanket, bed cover & pillow\n🏕️ Camping Tents\n• 1 Large Tent good for 8, 2 Medium Tents good for 4-6pax each and 1 small tent good for 3-4pax.\n• With Uratex foam\n• With Fan",
+    "capacity": 20,
+    "extraPaxFee": 0,
     "overnight": 5000,
-    "daytour": 2500,
-    "image": "teepee-2"
-  },
-  {
-    "id": "hut3",
-    "name": "Hut 3",
-    "description": "Our most affordable teepee hut, perfect for couples or small barkada.",
-    "capacity": 4,
-    "extraPaxFee": 150,
-    "overnight": 3500,
-    "daytour": 1500,
-    "image": "teepee-2"
+    "daytour": 0,
+    "image": ""
   }
 ]
