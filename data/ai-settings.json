@@ -1,6 +1,6 @@
 {
-  "enabled": false,
+  "enabled": true,
   "mode": "local-first",
-  "proxyUrl": "",
+  "proxyUrl": "https://camp-enoki-ai.campenoki.workers.dev/",
   "systemPromptOverride": ""
 }
