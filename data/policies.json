@@ -1,19 +1,19 @@
 {
   "checkinTime": "2:00 PM",
   "checkoutTime": "12:00 NN",
-  "daytourEnd": "6:00 PM",
+  "daytourEnd": "",
   "downpaymentNonRefundable": true,
   "rebookWindowDaysBeforeCheckin": 7,
   "rebookValidMonths": 6,
   "petsAllowed": true,
   "petPolicy": "Well-behaved pets are welcome. Please keep them leashed in common areas and clean up after them.",
-  "idRequirements": "Please present one valid government ID upon check-in for the guest under whose name the booking was made.",
+  "idRequirements": "Not required",
   "paymentChannels": [
     "GCash",
     "Bank Transfer"
   ],
   "gcashNumber": "0947 998 4309",
-  "extraGuestFeeOvernight": 150,
-  "extraGuestFeeDaytour": 100,
+  "extraGuestFeeOvernight": 300,
+  "extraGuestFeeDaytour": 300,
   "policyText": "CAMP ENOKI CANCELLATION & REBOOKING POLICY\n\nReservation Confirmation\n- Booking is confirmed only upon receipt of down payment.\n\nCancellation Policy\n- ALL down payments are NON-REFUNDABLE.\n- Cancellations for any reason will forfeit the down payment.\n- No-shows will forfeit all payments made.\n\nRebooking Policy\n- One-time rebooking is allowed if requested at least 7 days before check-in.\n- Subject to availability.\n- Must be used within 6 months from the original booking date.\n- Price difference (if any) will be shouldered by the guest.\n\nWeather Policy\n- Camp Enoki is a pool resort and remains open during rain or unfavorable weather.\n- Weather conditions are NOT valid reasons for cancellation, refund, or rebooking.\n\nEarly Check-Out\n- No refunds or credits for early check-out or unused stay.\n\nManagement reserves the right to update policies when necessary."
 }
