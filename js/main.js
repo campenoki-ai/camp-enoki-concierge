@@ -207,11 +207,15 @@
     if (!mount) return;
     const items = await window.CampEnokiData.getAttractions();
     mount.innerHTML = "";
+    // Matches the Rates section's row layout (details | media) for a consistent
+    // page feel, instead of a multi-column grid that squeezed video/photo down.
+    mount.className = "attractions-list";
     items.forEach((a) => {
+      const media = attractionMediaEl(a);
       mount.appendChild(
         el("div", { class: "card attraction-card" }, [
-          attractionMediaEl(a),
-          el("div", { class: "card-body" }, [el("h3", {}, a.name), el("span", { class: "distance" }, a.distance), el("p", {}, a.description)]),
+          el("div", { class: "attraction-card-info" }, [el("h3", {}, a.name), el("span", { class: "distance" }, a.distance), el("p", {}, a.description)]),
+          media ? el("div", { class: "attraction-media-wrap" }, media) : null,
         ])
       );
     });

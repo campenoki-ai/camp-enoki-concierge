@@ -186,8 +186,17 @@ section { padding: 64px 0; }
 .gallery-item img { height: 160px; width: 100%; object-fit: cover; }
 .gallery-item .gallery-video-frame { width: 100%; height: 260px; display: block; background: #000; }
 
-.attraction-media { width: 100%; height: 340px; object-fit: cover; display: block; border: none; background: #000; }
-.attraction-card .card-body { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.attractions-list { display: flex; flex-direction: column; gap: 20px; }
+.attraction-card { display: flex; flex-direction: row; align-items: stretch; }
+.attraction-card-info { flex: 1 1 0; min-width: 0; padding: 20px; display: flex; flex-direction: column; gap: 4px; text-align: left; }
+.attraction-media-wrap { width: 42%; max-width: 420px; flex-shrink: 0; padding: 20px 20px 20px 0; }
+.attraction-media { width: 100%; height: 100%; min-height: 260px; object-fit: cover; display: block; border: none; border-radius: var(--radius-sm); background: #000; }
+@media (max-width: 700px) {
+  .attraction-card { flex-direction: column-reverse; }
+  .attraction-media-wrap { width: 100%; max-width: none; padding: 16px 16px 0; }
+  .attraction-media { min-height: 220px; }
+}
+
 .attraction-card h3 { margin: 0; font-size: 1.05rem; }
 .attraction-card .distance { color: var(--accent); font-size: 0.85rem; font-weight: 600; }
 .attraction-card p { margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem; }
