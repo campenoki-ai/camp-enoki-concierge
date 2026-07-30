@@ -145,13 +145,17 @@ section { padding: 64px 0; }
 .amenity-card p { margin: 0; color: var(--text-muted); font-size: 0.9rem; }
 
 .rates-list { display: flex; flex-direction: column; gap: 20px; }
-.rate-card { display: flex; flex-direction: row; align-items: stretch; }
-.rate-card-info { flex: 1; min-width: 0; padding: 20px; }
-.rate-card-photo { width: 260px; flex-shrink: 0; }
-.rate-card-photo img { width: 100%; height: 100%; object-fit: cover; display: block; background: var(--sand); }
+.rate-card { display: flex; flex-direction: row; align-items: flex-start; }
+.rate-card-info { flex: 1 1 0; min-width: 0; padding: 20px; }
+/* Rates photos are often a full designed promo poster (pricing, contact info, logos
+   baked into the graphic), not a candid scenery shot — cropping it (object-fit:cover)
+   can cut off real content, so it gets real width and shows at its natural aspect
+   ratio instead of being squeezed into a slim fixed-width column. */
+.rate-card-photo { width: 42%; max-width: 420px; flex-shrink: 0; padding: 20px 20px 20px 0; }
+.rate-card-photo img { width: 100%; height: auto; display: block; border-radius: var(--radius-sm); background: var(--sand); }
 @media (max-width: 700px) {
   .rate-card { flex-direction: column-reverse; }
-  .rate-card-photo { width: 100%; height: 200px; }
+  .rate-card-photo { width: 100%; max-width: none; padding: 16px 16px 0; }
 }
 
 .rate-card h3 { margin: 0; font-size: 1.15rem; }
@@ -182,8 +186,8 @@ section { padding: 64px 0; }
 .gallery-item img { height: 160px; width: 100%; object-fit: cover; }
 .gallery-item .gallery-video-frame { width: 100%; height: 260px; display: block; background: #000; }
 
-.attraction-media { width: 100%; height: 170px; object-fit: cover; display: block; border: none; background: var(--sand); }
-.attraction-card .card-body { display: flex; flex-direction: column; gap: 4px; }
+.attraction-media { width: 100%; height: 340px; object-fit: cover; display: block; border: none; background: #000; }
+.attraction-card .card-body { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
 .attraction-card h3 { margin: 0; font-size: 1.05rem; }
 .attraction-card .distance { color: var(--accent); font-size: 0.85rem; font-weight: 600; }
 .attraction-card p { margin: 4px 0 0; color: var(--text-muted); font-size: 0.9rem; }
