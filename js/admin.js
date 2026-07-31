@@ -691,9 +691,34 @@
     return el("div", { class: "form-row" }, [el("label", {}, label), inputNode]);
   }
 
-  async function renderSingletonForm({ containerId, fields, getFn, updateFn, saveLabel }) {
+  async function renderSingletonForm({ containerId, fields, getFn, updateFn, saveLabel, resetFn }) {
     const mount = document.getElementById(containerId);
-    const current = await getFn();
+    let current;
+    try {
+      current = await getFn();
+    } catch (e) {
+      console.error(`renderSingletonForm(${containerId}) failed to load:`, e);
+      mount.innerHTML = "";
+      const box = el("div", { style: "border:1px solid #c0392b;border-radius:8px;padding:16px" });
+      box.appendChild(el("div", { style: "font-weight:600;margin-bottom:8px" }, "This section couldn't load — its saved data in this browser looks corrupted."));
+      box.appendChild(
+        el(
+          "div",
+          { style: "font-size:.85rem;color:var(--text-muted);margin-bottom:12px" },
+          "Nothing already Published to the live site is affected by this. If you made edits here that you never clicked Publish for, discarding will lose just those — otherwise this only resets this browser's copy back to what's already live."
+        )
+      );
+      if (resetFn) {
+        const resetBtn = el("button", { class: "btn btn-outline btn-sm" }, "Discard this browser's local changes & reload");
+        resetBtn.addEventListener("click", async () => {
+          await resetFn();
+          location.reload();
+        });
+        box.appendChild(resetBtn);
+      }
+      mount.appendChild(box);
+      return;
+    }
     const inputs = {};
     const form = el("div", { class: "settings-form" });
 
@@ -751,6 +776,7 @@
       containerId: "settingsForm",
       getFn: D.getSettings,
       updateFn: D.updateSettings,
+      resetFn: D.resetSettingsOverlay,
       fields: [
         { key: "resortName", label: "Resort name", type: "text" },
         { key: "tagline", label: "Tagline", type: "text" },
@@ -787,6 +813,7 @@
       containerId: "policiesForm",
       getFn: D.getPolicies,
       updateFn: D.updatePolicies,
+      resetFn: D.resetPoliciesOverlay,
       fields: [
         { key: "checkinTime", label: "Check-in time", type: "text" },
         { key: "checkoutTime", label: "Check-out time", type: "text" },
@@ -811,6 +838,7 @@
       containerId: "aiForm",
       getFn: D.getAiSettings,
       updateFn: D.updateAiSettings,
+      resetFn: D.resetAiSettingsOverlay,
       fields: [
         { key: "enabled", label: "Enable live AI", type: "checkbox", hint: "Off = FAQ engine only (Phase 1 behavior)" },
         {

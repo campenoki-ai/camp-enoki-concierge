@@ -35,11 +35,22 @@
     if (cache[name]) return cache[name];
     const path = FILES[name];
     if (!path) throw new Error(`Unknown data file: ${name}`);
-    const res = await fetch(path, { cache: "no-cache" });
-    if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
-    const json = await res.json();
-    cache[name] = json;
-    return json;
+    // One retry after a beat — a single flaky-connection fetch failure (common on
+    // rural mobile data) shouldn't blank a whole Admin tab with no explanation.
+    let lastErr;
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const res = await fetch(path, { cache: "no-cache" });
+        if (!res.ok) throw new Error(`Failed to load ${path}: ${res.status}`);
+        const json = await res.json();
+        cache[name] = json;
+        return json;
+      } catch (e) {
+        lastErr = e;
+        if (attempt === 0) await new Promise((r) => setTimeout(r, 600));
+      }
+    }
+    throw lastErr;
   }
 
   function readJson(key, fallback) {
