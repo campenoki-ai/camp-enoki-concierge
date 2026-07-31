@@ -24,6 +24,11 @@
   const LS_BOOKINGS = "ce_bookings";
   const LS_UNANSWERED = "ce_unanswered";
 
+  // Per-page-load cache of fetched base JSON. IMPORTANT: any code path that can
+  // make the on-disk/remote file diverge from what's cached here (currently just
+  // resetOverlay(), called after a successful Publish) MUST delete cache[name] —
+  // otherwise a stale in-memory copy keeps getting re-merged with the (now empty)
+  // overlay, which can silently re-publish old content on a later Publish click.
   const cache = {};
 
   async function load(name) {
@@ -139,6 +144,7 @@
 
   function resetFaqOverlay() {
     setOverlay(emptyOverlay());
+    delete cache.faq; // force the next load() to re-fetch — see note on `cache` above load()
   }
 
   /**
@@ -222,6 +228,7 @@
 
     function resetOverlay() {
       saveOverlay(emptyOverlay());
+      delete cache[name]; // force the next load() to re-fetch — see note on `cache` above load()
     }
 
     return { getAll, add, update, remove, exportJson, importJson, resetOverlay };
@@ -248,6 +255,7 @@
 
     function resetOverlay() {
       localStorage.removeItem(lsKey);
+      delete cache[name]; // force the next load() to re-fetch — see note on `cache` above load()
     }
 
     return { get, update, resetOverlay };
