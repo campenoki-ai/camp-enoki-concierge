@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "name": "Photos",
+    "folderUrl": "https://drive.google.com/drive/folders/1Poi60r6dQwKcqjtzYeTbFaJlVibRrriQ",
+    "id": "gfolder-ms8svd5u0wb1"
+  },
+  {
+    "name": "Videos",
+    "folderUrl": "https://drive.google.com/drive/folders/1eCgc9msDRm7zZn4RsQtXyBcTurY1Cjtc",
+    "id": "gfolder-ms8svv16phe4"
+  },
+  {
+    "name": "Activities",
+    "folderUrl": "https://drive.google.com/drive/folders/1ySaWSu9JI384Ui05K1v3Uz_I1NeGtSWH",
+    "id": "gfolder-ms8swfig3vzk"
+  },
+  {
+    "name": "Survey and Feedback",
+    "folderUrl": "https://drive.google.com/drive/folders/1k8JHJHO5PK9kFqcwMkbS06wpeqVtQdl6",
+    "id": "gfolder-ms8sx4s14ij7"
+  }
+]
