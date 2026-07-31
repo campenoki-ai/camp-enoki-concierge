@@ -32,6 +32,27 @@
     return keys.map((k) => byId.get(k)).filter(Boolean);
   }
 
+  function isDriveUrl(src) {
+    return /drive\.google\.com/.test(src || "");
+  }
+
+  /** Same normalization as main.js's driveEmbedUrl — a raw Drive share link
+   *  isn't directly embeddable, it needs the /preview form. */
+  function driveEmbedUrl(url) {
+    if (!isDriveUrl(url)) return url;
+    const match = (url || "").match(/\/file\/d\/([a-zA-Z0-9_-]+)/) || (url || "").match(/[?&]id=([a-zA-Z0-9_-]+)/);
+    return match ? `https://drive.google.com/file/d/${match[1]}/preview` : url;
+  }
+
+  /** A FAQ's own directly-uploaded photo / pasted video link (as opposed to
+   *  the images/videos media-id arrays, which point at the shared Media tab). */
+  function entryOwnMedia(entry) {
+    const media = [];
+    if (entry.video) media.push({ type: "video", src: driveEmbedUrl(entry.video) });
+    if (entry.photo) media.push({ type: "image", src: entry.photo });
+    return media;
+  }
+
   async function localProvider(query) {
     const { detectLanguage, t, pickAnswer } = global.CampEnokiI18n;
     const lang = detectLanguage(query);
@@ -43,7 +64,7 @@
       return {
         type: "answer",
         text: pickAnswer(entry, lang),
-        media: await resolveMedia([...(entry.images || []), ...(entry.videos || [])]),
+        media: [...entryOwnMedia(entry), ...(await resolveMedia([...(entry.images || []), ...(entry.videos || [])]))],
         buttons: entry.buttons || [],
         lang,
       };

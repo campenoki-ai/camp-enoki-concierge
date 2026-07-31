@@ -148,7 +148,7 @@
       return;
     }
     filtered.forEach((f) => {
-      const mediaCount = (f.images?.length || 0) + (f.videos?.length || 0);
+      const mediaCount = (f.images?.length || 0) + (f.videos?.length || 0) + (f.photo ? 1 : 0) + (f.video ? 1 : 0);
       const editBtn = el("button", { class: "btn btn-outline btn-sm" }, "Edit");
       editBtn.addEventListener("click", () => openFaqModal(f));
       const delBtn = el("button", { class: "btn btn-ghost btn-sm" }, "Delete");
@@ -190,6 +190,8 @@
       question: entry?.question || "",
       answer: entry?.answer || "",
       answer_tl: entry?.answer_tl || "",
+      photo: entry?.photo || "",
+      video: entry?.video || "",
       images: (entry?.images || []).join(", "),
       videos: (entry?.videos || []).join(", "),
       priority: entry?.priority ?? 5,
@@ -210,6 +212,8 @@
     const questionInput = el("input", { type: "text", value: fields.question, placeholder: "What guests might ask" });
     const answerInput = el("textarea", {}, fields.answer);
     const answerTlInput = el("textarea", {}, fields.answer_tl);
+    const photoInput = imageFieldInput({}, fields.photo);
+    const videoInput = el("input", { type: "text", value: fields.video, placeholder: "Paste a Google Drive share link" });
     const imagesInput = el("input", { type: "text", value: fields.images, placeholder: "media ids, comma separated" });
     const videosInput = el("input", { type: "text", value: fields.videos, placeholder: "media ids, comma separated" });
     const priorityInput = el("input", { type: "number", value: String(fields.priority), min: "1", max: "10" });
@@ -219,8 +223,12 @@
     box.appendChild(row("Question", questionInput));
     box.appendChild(row("Answer (English/default)", answerInput));
     box.appendChild(row("Answer (Tagalog, optional)", answerTlInput));
-    box.appendChild(row("Image media ids (optional — see Media tab)", imagesInput));
-    box.appendChild(row("Video media ids (optional)", videosInput));
+    box.appendChild(row("Photo (optional — upload directly)", photoInput));
+    const videoRow = row("Video (optional)", videoInput);
+    videoRow.appendChild(el("div", { style: "font-size:.78rem;color:var(--text-muted);margin-top:4px" }, "Paste a Google Drive share link (\"Anyone with the link\") — shown instead of the photo if both are set."));
+    box.appendChild(videoRow);
+    box.appendChild(row("Image media ids (optional — advanced, see Media tab)", imagesInput));
+    box.appendChild(row("Video media ids (optional — advanced)", videosInput));
     box.appendChild(row("Priority (1-10)", priorityInput));
 
     const saveBtn = el("button", { class: "btn btn-primary" }, isEdit ? "Save Changes" : "Add FAQ");
@@ -231,6 +239,8 @@
         question: questionInput.value.trim(),
         answer: answerInput.value.trim(),
         answer_tl: answerTlInput.value.trim() || undefined,
+        photo: photoInput.getValue().trim(),
+        video: videoInput.value.trim(),
         images: parseList(imagesInput.value),
         videos: parseList(videosInput.value),
         priority: parseInt(priorityInput.value, 10) || 5,
@@ -240,8 +250,17 @@
         alert("Question and Answer are required.");
         return;
       }
-      if (isEdit) await window.CampEnokiData.updateFaq(entry.id, patch);
-      else await window.CampEnokiData.addFaq(patch);
+      try {
+        if (isEdit) await window.CampEnokiData.updateFaq(entry.id, patch);
+        else await window.CampEnokiData.addFaq(patch);
+      } catch (e) {
+        alert(
+          e.name === "QuotaExceededError"
+            ? "Save failed: browser storage is full. Try a smaller photo, or remove an old one first (Media/Rates/Attractions/FAQ photos all share the same limited storage on this static site)."
+            : "Save failed: " + e.message
+        );
+        return;
+      }
       closeFaqModal();
       refreshFaqs();
     });
