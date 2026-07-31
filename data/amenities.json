@@ -3,48 +3,42 @@
     "id": "pool",
     "name": "Swimming Pool",
     "icon": "🏊",
-    "description": "Open-air pool for all ages."
+    "description": "Fresh water pool.  We replace the water for every guest.  No harmful chemicals so it is safe to both human and pets. "
   },
   {
     "id": "river",
-    "name": "Riverside Deck",
+    "name": "River Access",
     "icon": "🏞️",
-    "description": "Shallow river access with a sandy stretch."
+    "description": "Shallow river access good for Kayak activities.  Rent our inflatable kayak for only P500 per kayak. "
   },
   {
     "id": "kitchen",
-    "name": "Common Kitchen",
+    "name": "Kitchen",
     "icon": "🍳",
-    "description": "Shared cooking area with gas stove and sink."
+    "description": "Full outdoor kitchen with appliances that are available for use for free.  If you will be cooking, please add 200 per night.  Meron na rin po plato, baso, kaldero  so lulutuin na lang ang dadalhin. "
   },
   {
     "id": "cr",
-    "name": "Hot & Cold Shower CRs",
+    "name": "Clean CR and Shower Areas",
     "icon": "🚿",
-    "description": "Clean comfort rooms with hot and cold shower."
+    "description": "We have 2 shower area and 1 restroom that is exclusive only for you and not shared. "
   },
   {
     "id": "parking",
     "name": "Free Parking",
     "icon": "🚗",
-    "description": "Secure on-site parking for all guests."
+    "description": "Sa harap ng kalsada kasya ang 2 sasakyan sa aming banketa na ginagawang dedicated parking for us.  Hindi ito nakaharang sa kalsada.  Sa tapat ng gate, kasaya rin ang dalawang sasakyan. "
   },
   {
     "id": "bonfire",
     "name": "Bonfire Pit",
     "icon": "🔥",
-    "description": "Nightly bonfire spot, great for stories and s'mores."
+    "description": "Meron kaming bonfire tin can that you can use however, we do not have wood that we can sell.  We can arrange this prior so our staff can look for wood that you can use. "
   },
   {
     "id": "wifi",
-    "name": "Common-Area WiFi",
+    "name": "Fiber WiFi",
     "icon": "📶",
-    "description": "WiFi available in the common area."
-  },
-  {
-    "id": "playground",
-    "name": "Kids' Playground",
-    "icon": "🛝",
-    "description": "Safe play area for the little ones."
+    "description": "300 Converge Fiber WIFI na good for freelancers, digital nomad or work from home.  It is powered by converge.  Not all resort sa San Felipe ay merong internet and we are proud to say na isa kami sa meron."
   }
 ]

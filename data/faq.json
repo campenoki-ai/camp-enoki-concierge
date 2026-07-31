@@ -107,7 +107,9 @@
     "answer_tl": "📍 Google Maps\nhttps://share.google/KQmm1q3bjL6twypiU\n🚗 How to Get Here\nhttps://www.facebook.com/share/v/1DJ9X9jRL7/",
     "language": "auto",
     "images": [],
-    "videos": [],
+    "videos": [
+      "resort-video-1"
+    ],
     "buttons": [
       {
         "label": "Open in Google Maps",
@@ -136,7 +138,9 @@
     "answer_tl": "✨ Your Own Private Resort with Pool – Exclusive for Your Group Only!\n💙 Rainy Season Promo\n🌙 Overnight Stay\n🕑 Check-in: 2:00 PM\n🕛 Check-out: 12:00 NN (next day)\n🔥 ONLY ₱5,000 (Regular Price: ₱6,500)\n👨‍👩‍👧‍👦 Good for up to 15 guests\n🌿 Why visit during the rainy season?\n✅ Cooler weather\n✅ Cozy glamping vibes\n✅ Peaceful surroundings\n✅ Less crowded tourist spots\n✅ Perfect for families, barkada, couples, WFH & pet lovers\n🏕️ Enjoy the entire property exclusively for your group!\n✔️ No sharing with other guests\n✔️ Peaceful and private\n✔️ Relax at your own pace\n📍 Just 1 minute from the beach & river\n🏖️ Beach access (weather permitting)\n⚠️ During the rainy season, the beach may occasionally be under a red flag, which means swimming is temporarily not allowed for everyone's safety. The good news is you'll still have exclusive access to our private swimming pool, so your getaway can continue rain or shine!\n🌊 River access (subject to weather conditions)\n🏊 PRIVATE DIPPING POOL\n💧 Fresh water every stay\n🚫 No chlorine. No harsh chemicals.\n🐶 Safe for kids and pets\n✨ Gentle on the skin\n🏡 ACCOMMODATIONS\n🔺 3 Air-Conditioned Teepee Huts\n• Good for 3 guests each\n• 4-inch foam mattress\n• Blanket, pillow & bed cover included\n⛺ 2 Camping Tents\n• Good for 2 guests each\n• With Uratex foam\n✨ FREE AMENITIES\n✅ Beach & river access\n✅ Outdoor showers\n✅ Outdoor dining area\n✅ FREE Wi-Fi (Converge Fiber 300 Mbps)\n💻 Perfect for freelancers, WFH & digital nomads\n✅ FREE parking (up to 2 cars)\n✅ FREE 1 gallon of drinking water\n✅ FREE use of griller\n✅ FREE microwave oven & electric kettle\n✅ Gas stove available (LPG only ₱200)\n🐾 Pet-friendly\n🌴 Hammocks, beach chairs, tables & tents\n⚠️ Please Note\nOur air-conditioned teepee huts remain comfortable even during heavy rain. However, our camping tents are traditional outdoor tents, so during heavy rain and strong winds, guests staying in the tents may experience minor inconveniences such as moisture or a few water drips. We regularly maintain our camping equipment and will gladly assist whenever needed. It's all part of the authentic outdoor camping experience.\n🎯 Optional Activities\n🏍️ ATV & UTV Rental\n🍌 Banana Boat",
     "language": "auto",
     "images": [],
-    "videos": [],
+    "videos": [
+      "resort-video-3"
+    ],
     "buttons": [
       {
         "label": "View amenities",
@@ -161,8 +165,12 @@
     "answer": "You can see the photos and videos of our TeePee huts sa gallery tab po natin.  You may also click the link below::\n\nhttps://drive.google.com/file/d/1Ko9L6a4ReGUswHySLEFWL0071uOYKw6f/view?t=2.538",
     "answer_tl": "You can see the photos and videos of our TeePee huts sa gallery tab po natin.  You may also click the link below::\n\nhttps://drive.google.com/file/d/1Ko9L6a4ReGUswHySLEFWL0071uOYKw6f/view?t=2.538",
     "language": "auto",
-    "images": [],
-    "videos": [],
+    "images": [
+      "resort-photo-15"
+    ],
+    "videos": [
+      "resort-video-3"
+    ],
     "buttons": [],
     "priority": 10
   },
@@ -179,11 +187,13 @@
       "dagat"
     ],
     "question": "Show me the beach / river area.",
-    "answer": "Our riverside area has a shallow swimming spot great for kids, plus a sandy stretch perfect for lounging and photos.",
-    "answer_tl": "Ang riverside area namin ay may mababaw na swimming spot na bagay sa mga bata, at may buhanginan din na maganda para sa relax at picture-picture.",
+    "answer": "Ang ilog na malapit sa area ay good for kayak.  Sa dulo naman ng coastal road ay makikita ang dugtungan ng ilog at dagat.  Pwede pong maligo dito.",
+    "answer_tl": "Ang ilog na malapit sa area ay good for kayak.  Sa dulo naman ng coastal road ay makikita ang dugtungan ng ilog at dagat.  Pwede pong maligo dito.",
     "language": "auto",
     "images": [],
-    "videos": [],
+    "videos": [
+      "resort-video-4"
+    ],
     "buttons": [],
     "priority": 10
   },
