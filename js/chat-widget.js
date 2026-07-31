@@ -35,6 +35,23 @@
     return /drive\.google\.com/.test(src || "");
   }
 
+  /** Accepts whatever Facebook Page URL format the owner pasted (facebook.com/Name,
+   *  fb.com/Name/, facebook.com/profile.php?id=123, or just a bare username) and
+   *  builds an m.me deep link that opens a real Messenger thread with the Page,
+   *  pre-filled with the guest's question. */
+  function messengerUrl(facebookUrl, prefillText) {
+    if (!facebookUrl) return null;
+    let id = facebookUrl.trim();
+    const idParam = id.match(/[?&]id=(\d+)/);
+    if (idParam) {
+      id = idParam[1];
+    } else {
+      id = id.replace(/^https?:\/\/(www\.)?(facebook|fb)\.com\//i, "").replace(/\/+$/, "").replace(/^\//, "");
+    }
+    if (!id) return null;
+    return `https://m.me/${encodeURIComponent(id)}${prefillText ? `?text=${encodeURIComponent(prefillText)}` : ""}`;
+  }
+
   function renderMedia(mediaList) {
     if (!mediaList || !mediaList.length) return null;
     const wrap = el("div", { class: "msg-media" });
@@ -89,7 +106,7 @@
     return wrap;
   }
 
-  function addBotResponse(response) {
+  function addBotResponse(response, originalQuery) {
     const bubble = el("div", { class: "msg bot" }, response.text);
     if (response.source === "ai") {
       bubble.appendChild(el("div", { style: "font-size:.7rem;color:var(--text-muted);margin-top:6px" }, "✨ Enoki AI"));
@@ -104,7 +121,7 @@
         renderQuickReplies(response.options, async (opt) => {
           addUserMessage(opt.label);
           const answer = await global.CampEnokiAI.answerById(opt.id);
-          addBotResponse(answer);
+          addBotResponse(answer, opt.label);
         })
       );
     }
@@ -118,10 +135,17 @@
             { label: t("sendToStaffYes", lang), value: "yes" },
             { label: t("sendToStaffNo", lang), value: "no" },
           ],
-          (opt) => {
+          async (opt) => {
             bubble.querySelector(".msg-quick")?.remove();
             if (opt.value === "yes") {
-              bubble.appendChild(el("div", { class: "msg-buttons" }, el("em", {}, t("sentToStaff", lang))));
+              const settings = await global.CampEnokiData.getSettings();
+              const link = messengerUrl(settings.facebookUrl, originalQuery);
+              if (link) {
+                const msgBtn = el("a", { href: link, target: "_blank", rel: "noopener", class: "msg-btn" }, t("continueOnMessenger", lang));
+                bubble.appendChild(el("div", { class: "msg-buttons" }, msgBtn));
+              } else {
+                bubble.appendChild(el("div", { class: "msg-buttons" }, el("em", {}, t("sentToStaff", lang))));
+              }
             }
           }
         )
@@ -142,7 +166,7 @@
     scrollToBottom();
     const response = await global.CampEnokiAI.ask(text);
     typingBubble.remove();
-    addBotResponse(response);
+    addBotResponse(response, text);
   }
 
   function detectDefaultLang() {

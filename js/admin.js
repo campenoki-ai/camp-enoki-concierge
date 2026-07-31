@@ -785,7 +785,12 @@
         { key: "contactPhone", label: "Contact phone", type: "text" },
         { key: "contactEmail", label: "Contact email", type: "text" },
         { key: "contactAddress", label: "Contact address", type: "textarea" },
-        { key: "facebookUrl", label: "Facebook page URL (optional)", type: "text" },
+        {
+          key: "facebookUrl",
+          label: "Facebook page URL (optional)",
+          type: "text",
+          hint: "When the AI concierge can't answer a guest's question, it offers a \"Continue on Messenger\" button that opens a real chat with this Page (pre-filled with their question) — so it lands in your Messenger inbox and phone notifications like any normal message. Paste your Page's URL, e.g. facebook.com/YourPageName.",
+        },
         {
           key: "bookingUrl",
           label: "Booking site URL",
