@@ -198,12 +198,12 @@
     const tabsMount = document.getElementById("galleryTabs");
     const gridMount = document.getElementById("galleryGrid");
     if (!tabsMount || !gridMount) return;
-    const [mediaList, folders, settings] = await Promise.all([
-      window.CampEnokiData.getMediaItems(),
-      window.CampEnokiData.getGalleryFolders(),
-      window.CampEnokiData.getSettings(),
-    ]);
+    const [folders, settings] = await Promise.all([window.CampEnokiData.getGalleryFolders(), window.CampEnokiData.getSettings()]);
 
+    // Gallery tabs are driven entirely by the Drive folders declared in Admin — no
+    // built-in/static category. (The Media library still exists for FAQ image/video
+    // attachments, just no longer feeds the public Gallery grid.)
+    const mediaList = [];
     if (settings.driveApiKey && folders.length) {
       const folderResults = await Promise.all(folders.map((f) => fetchDriveFolderMedia(f, settings.driveApiKey)));
       folderResults.forEach((items) => mediaList.push(...items));
