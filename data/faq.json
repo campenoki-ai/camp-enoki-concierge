@@ -172,7 +172,9 @@
       "resort-video-3"
     ],
     "buttons": [],
-    "priority": 10
+    "priority": 10,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "beach-river",
