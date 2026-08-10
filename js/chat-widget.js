@@ -6,8 +6,67 @@
  */
 (function (global) {
   const WELCOMED_KEY = "ce_chat_welcomed";
+  const CONVERSATION_ID_KEY = "ce_chat_conversation_id";
+  const REPLY_POLL_MS = 8000;
   let panelEl, messagesEl, inputEl, fabEl;
   let open = false;
+  let replyPollTimer = null;
+  const shownReplyRowIds = new Set();
+
+  function conversationId() {
+    let id = sessionStorage.getItem(CONVERSATION_ID_KEY);
+    if (!id) {
+      id = "conv-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+      sessionStorage.setItem(CONVERSATION_ID_KEY, id);
+    }
+    return id;
+  }
+
+  /** Fire-and-forget log of one exchange to the owner's chat-log Google Sheet
+   *  (see server/CHAT_LOG_SETUP.md). Silently does nothing if not configured —
+   *  this must never block or break the chat for a guest. mode:"no-cors"
+   *  because we don't need to read the response, just avoid any CORS friction. */
+  async function logExchange(question, answer, lang) {
+    try {
+      const settings = await global.CampEnokiData.getSettings();
+      if (!settings.chatLogUrl) return;
+      await fetch(settings.chatLogUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify({ conversationId: conversationId(), question, answer, lang }),
+      });
+    } catch (e) {
+      // Best-effort only — never surface this to the guest.
+    }
+  }
+
+  /** Polls the same Sheet for a reply the owner typed into the "Owner Reply"
+   *  column for one of this conversation's rows, and shows it as a new
+   *  message the moment it appears. */
+  async function pollForOwnerReplies() {
+    try {
+      const settings = await global.CampEnokiData.getSettings();
+      if (!settings.chatLogUrl) return;
+      const res = await fetch(`${settings.chatLogUrl}?conversationId=${encodeURIComponent(conversationId())}`);
+      const data = await res.json();
+      for (const reply of data.replies || []) {
+        if (shownReplyRowIds.has(reply.rowId)) continue;
+        shownReplyRowIds.add(reply.rowId);
+        const bubble = el("div", { class: "msg bot" }, reply.text);
+        bubble.appendChild(el("div", { style: "font-size:.7rem;color:var(--text-muted);margin-top:6px" }, "👤 Camp Enoki staff"));
+        messagesEl.appendChild(bubble);
+        scrollToBottom();
+      }
+    } catch (e) {
+      // Best-effort only.
+    }
+  }
+
+  function startReplyPolling() {
+    if (replyPollTimer) return;
+    pollForOwnerReplies();
+    replyPollTimer = setInterval(pollForOwnerReplies, REPLY_POLL_MS);
+  }
 
   function el(tag, attrs = {}, children = []) {
     const node = document.createElement(tag);
@@ -122,6 +181,7 @@
           addUserMessage(opt.label);
           const answer = await global.CampEnokiAI.answerById(opt.id);
           addBotResponse(answer, opt.label);
+          logExchange(opt.label, answer.text, answer.lang);
         })
       );
     }
@@ -167,6 +227,7 @@
     const response = await global.CampEnokiAI.ask(text);
     typingBubble.remove();
     addBotResponse(response, text);
+    logExchange(text, response.text, response.lang);
   }
 
   function detectDefaultLang() {
@@ -188,6 +249,7 @@
     open = true;
     panelEl.classList.add("open");
     showWelcomeIfNeeded();
+    startReplyPolling();
     inputEl.focus();
   }
 

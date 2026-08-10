@@ -809,6 +809,12 @@
           type: "text",
           hint: 'Needed for the "Gallery" tab\'s Drive-folder tabs to work. Get one at console.cloud.google.com → APIs & Services → enable "Google Drive API" → Credentials → Create API key. Restrict it (Application restrictions → Websites → your site\'s URL) since this key ships in the public site. It only needs read access to your own public folders, so a leaked key is low-risk if restricted.',
         },
+        {
+          key: "chatLogUrl",
+          label: "Chat log Google Sheet URL (optional)",
+          type: "text",
+          hint: "Every AI concierge conversation gets logged as a row in a Google Sheet, and anything you type into that row's \"Owner Reply\" column shows up in the guest's chat within ~8 seconds. See server/CHAT_LOG_SETUP.md for the one-time setup (create a Sheet, paste a script, deploy it, paste the resulting URL here). Leave blank to disable — chat still works normally either way.",
+        },
       ],
     });
   }
