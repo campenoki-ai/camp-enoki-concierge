@@ -421,5 +421,22 @@
     "videos": [],
     "buttons": [],
     "priority": 7
+  },
+  {
+    "priority": 5,
+    "keywords": [
+      "hm"
+    ],
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "language": "auto",
+    "category": "rates",
+    "question": "hm",
+    "answer": "Rates differs by season.  During Rainy Season June 1 to September 30, the price is P5500 per night.  Any day after that is P6500 per night",
+    "answer_tl": "Rates differs by season.  During Rainy Season June 1 to September 30, the price is P5500 per night.  Any day after that is P6500 per night",
+    "photo": "",
+    "video": "",
+    "id": "faq-mtk64xaadq8u"
   }
 ]
