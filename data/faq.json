@@ -12,15 +12,11 @@
       "overnight",
       "bayad",
       "package",
-      "sulit",
-      "how much",
-      "hm",
-      "howmuch",
-      "magkano"
+      "sulit"
     ],
     "question": "How much does an overnight stay cost?",
-    "answer": "Ang overnight stay rates po natin ay meron dalawang season.  \n\nFrom June 1 till September 30, ang overnight stay natin ay P5000. \n\nFrom Oct 1 till May 31 and overnight stay ay P6500.\n\nPara sa detailed computation, please click on book now button.",
-    "answer_tl": "Ang overnight stay rates po natin ay meron dalawang season.  \n\nFrom June 1 till September 30, ang overnight stay natin ay P5000. \n\nFrom Oct 1 till May 31 and overnight stay ay P6500.\n\nPara sa detailed computation, please click on book now button.",
+    "answer": "Ang overnight package namin ay P5000 from June 1 to September 30.  P6500 naman from Oct 1 to May 31.",
+    "answer_tl": "Ang overnight package namin ay P5000 from June 1 to September 30.  P6500 naman from Oct 1 to May 31.",
     "language": "auto",
     "images": [],
     "videos": [],
