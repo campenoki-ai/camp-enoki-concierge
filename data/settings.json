@@ -1,14 +1,14 @@
 {
   "resortName": "Camp Enoki",
-  "tagline": "\"Here's to sunsets, laughter and endless Memories\"",
+  "tagline": "Here's to laughter, sunset and memories",
   "heroTitle": "Camp Enoki",
   "heroSubtitle": "Province feels, unwind and reset, bonfire nights, beach adventures, kayak experience, sunset cravings — book your overnight stay ask our Enoki AI Concierge anything.",
   "contactPhone": "0947 998 4309",
   "contactEmail": "campenoki@gmail.com",
-  "contactAddress": "Purok 1 Coastal Road, Brgy Sto.Nino San Felipe Zambales",
+  "contactAddress": "Purok 1 Coastal Road Brgy Sto. Nino San Felipe Zambales",
   "facebookUrl": "https://www.facebook.com/CampEnoki",
   "offerDayTour": false,
   "bookingUrl": "https://digitalnomadinph.github.io/camp-enoki-app/",
-  "driveApiKey": "AIzaSyBX8f-t0DjzKk6uDn4rLZlcnHVzrGKcopo",
+  "driveApiKey": "",
   "chatLogUrl": "https://script.google.com/macros/s/AKfycbyuGFtDhKEvALjf1GbKkFOrTFCMghJgmw3m7B6QUN4Q5UB2UlbmeGexYk7Qim2mfApKxg/exec"
 }
