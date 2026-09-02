@@ -3,42 +3,42 @@
     "id": "pool",
     "name": "Swimming Pool",
     "icon": "🏊",
-    "description": "Fresh water pool.  We replace the water for every guest.  No harmful chemicals so it is safe to both human and pets. "
+    "description": "Fresh water pool and nererefill namin  for every guest.  Walang chemicals so safe for both human and pets. "
   },
   {
     "id": "river",
-    "name": "River Access",
+    "name": "River Access for Kayak",
     "icon": "🏞️",
-    "description": "Shallow river access good for Kayak activities.  Rent our inflatable kayak for only P500 per kayak. "
+    "description": "Sa right side po ng property ay meron ilog kung saan pwede po kayo mag kayak.  P500 lang po ang rental sa inflatable kayak. "
   },
   {
     "id": "kitchen",
     "name": "Kitchen",
     "icon": "🍳",
-    "description": "Full outdoor kitchen with appliances that are available for use for free.  If you will be cooking, please add 200 per night.  Meron na rin po plato, baso, kaldero  so lulutuin na lang ang dadalhin. "
+    "description": "Kumpleto po sa gamit ang kitchen natin sa pagluluto.  Meron lamang tayong P200 fee for LPG.  Microwave overn, electric kettle at griller ay free to use.  Meron na rin po plato at kutsara sa resort. "
   },
   {
     "id": "cr",
-    "name": "Clean CR and Shower Areas",
+    "name": " Shower  and CRs",
     "icon": "🚿",
-    "description": "We have 2 shower area and 1 restroom that is exclusive only for you and not shared. "
+    "description": "Meron po tayong 2 shower areas and 1 cr.  Exclusive lang po ito sa inyo at wlang ibang gagamit."
   },
   {
     "id": "parking",
     "name": "Free Parking",
     "icon": "🚗",
-    "description": "Sa harap ng kalsada kasya ang 2 sasakyan sa aming banketa na ginagawang dedicated parking for us.  Hindi ito nakaharang sa kalsada.  Sa tapat ng gate, kasaya rin ang dalawang sasakyan. "
+    "description": "Sa parking po natin, kasya ang 2 sasakyan sa tabi ng coastal road and another 2 vehicle sa tapat ng gate."
   },
   {
     "id": "bonfire",
     "name": "Bonfire Pit",
     "icon": "🔥",
-    "description": "Meron kaming bonfire tin can that you can use however, we do not have wood that we can sell.  We can arrange this prior so our staff can look for wood that you can use. "
+    "description": "Meron po tayo drum na pwede gamitin for bonfire and smores.  \n\nUpdate: pinagbabawal na po ng LGU ng San Felipe ang pag gawa ng bon fire. "
   },
   {
     "id": "wifi",
-    "name": "Fiber WiFi",
+    "name": "WiFi",
     "icon": "📶",
-    "description": "300 Converge Fiber WIFI na good for freelancers, digital nomad or work from home.  It is powered by converge.  Not all resort sa San Felipe ay merong internet and we are proud to say na isa kami sa meron."
+    "description": "Meron po tayong free wifi.  Ito po ay powered by Converge Fiber Internet.  300Mbps speed na enough for freelancer, work from home and digital nomad."
   }
 ]
