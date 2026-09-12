@@ -1,442 +1,1076 @@
 [
   {
-    "id": "rates-overnight",
+    "question": "How much does an overnight stay cost?",
     "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
+      "hm",
+      "magkano",
+      "how much",
+      "price",
       "rate",
       "rates",
-      "price",
       "presyo",
-      "magkano",
-      "cost",
+      "magkano po",
       "overnight",
-      "bayad",
-      "package",
-      "sulit"
+      "overnight price"
     ],
-    "question": "How much does an overnight stay cost?",
-    "answer": "Ang overnight package namin ay P5000 from June 1 to September 30.  P6500 naman from Oct 1 to May 31.",
-    "answer_tl": "Ang overnight package namin ay P5000 from June 1 to September 30.  P6500 naman from Oct 1 to May 31.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
+    "answer": "🌧️ SEPTEMBER SPECIAL! ₱5,000 ONLY for the whole Camp Enoki Private Villa overnight stay, good for up to 12 pax. 💚"
   },
   {
-    "id": "rates-daytour",
+    "question": "How much is the September Special?",
     "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "september promo",
+      "september special",
+      "september rate",
+      "promo",
+      "special promo",
+      "september"
+    ],
+    "answer": "🌧️ Our SEPTEMBER SPECIAL is only ₱5,000 for the whole private place, overnight, good for up to 12 pax. 🏕️💚"
+  },
+  {
+    "question": "Is the ₱5,000 price for the whole place?",
+    "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "5000",
+      "5k",
+      "5000 whole place",
+      "whole place",
+      "buong place",
+      "exclusive"
+    ],
+    "answer": "Yes! 😊 The ₱5,000 September Special is for the WHOLE private place. Your group will have exclusive use of Camp Enoki during your stay."
+  },
+  {
+    "question": "How many guests are allowed?",
+    "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "ilang tao",
+      "ilang pax",
+      "how many",
+      "maximum guests",
+      "max pax",
+      "guests",
+      "12 pax",
+      "12 people"
+    ],
+    "answer": "The September Special is good for up to 12 pax. 👨‍👩‍👧‍👦"
+  },
+  {
+    "question": "Is there an extra charge for additional guests?",
+    "category": "rates",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "extra person",
+      "additional person",
+      "dagdag tao",
+      "excess pax",
+      "additional guest"
+    ],
+    "answer": "The September Special is advertised for up to 12 pax. Please send us your exact number of guests so we can confirm the arrangement."
+  },
+  {
+    "question": "What time is check-in?",
+    "category": "policies",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "check in",
+      "check-in",
+      "checkin",
+      "anong oras check in",
+      "arrival"
+    ],
+    "answer": "🕑 Check-in is at 2:00 PM."
+  },
+  {
+    "question": "What time is check-out?",
+    "category": "policies",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "check out",
+      "check-out",
+      "checkout",
+      "anong oras check out",
+      "departure"
+    ],
+    "answer": "🕛 Check-out is at 12:00 NN the next day."
+  },
+  {
+    "question": "Is the stay overnight?",
+    "category": "policies",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "overnight",
+      "overnight stay",
+      "tulog",
+      "sleep",
+      "stay"
+    ],
+    "answer": "Yes! 🏕️ The September Special is an overnight stay from 2:00 PM until 12:00 NN the next day."
+  },
+  {
+    "question": "Is there a day tour?",
+    "category": "rates",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
     "keywords": [
       "day tour",
-      "daytour",
+      "daytrip",
       "day trip",
-      "swimming lang",
-      "walk in",
-      "no overnight"
+      "day tour price",
+      "daytime"
     ],
-    "question": "How much is a day tour?",
-    "answer": "Ang day tour rate natin ay P5000.  Ito ay depende sa availability.  Ito ay from 8am till 6pm.  Exclusive use pa rin po ito ng buong lugar.",
-    "answer_tl": "Ang day tour rate natin ay P5000.  Ito ay depende sa availability.  Ito ay from 8am till 6pm.  Exclusive use pa rin po ito ng buong lugar.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 9
+    "answer": "The advertised September Special is for overnight stays. For day-tour availability and rate, please message us with your preferred date and number of guests."
   },
   {
-    "id": "availability",
-    "category": "availability",
-    "keywords": [
-      "available",
-      "availability",
-      "free date",
-      "bakante",
-      "vacant",
-      "open date",
-      "book na",
-      "schedule"
-    ],
-    "question": "Is a specific date available?",
-    "answer": "You can check availability and book directly on our official booking site.\n\nhttps://digitalnomadinph.github.io/camp-enoki-app/",
-    "answer_tl": "You can check availability and book directly on our official booking site.\n\nhttps://digitalnomadinph.github.io/camp-enoki-app/",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "Check a date",
-        "action": "open-booking"
-      }
-    ],
-    "priority": 10
-  },
-  {
-    "id": "directions",
-    "category": "location",
-    "keywords": [
-      "location",
-      "located",
-      "address",
-      "saan",
-      "papuntang",
-      "directions",
-      "how to get there",
-      "where is camp enoki",
-      "waze",
-      "gps",
-      "map"
-    ],
-    "question": "Where is Camp Enoki located and how do we get there?",
-    "answer": "📍 Google Maps\nhttps://share.google/KQmm1q3bjL6twypiU\n🚗 How to Get Here\nhttps://www.facebook.com/share/v/1DJ9X9jRL7/",
-    "answer_tl": "📍 Google Maps\nhttps://share.google/KQmm1q3bjL6twypiU\n🚗 How to Get Here\nhttps://www.facebook.com/share/v/1DJ9X9jRL7/",
-    "language": "auto",
-    "images": [],
-    "videos": [
-      "resort-video-1"
-    ],
-    "buttons": [
-      {
-        "label": "Open in Google Maps",
-        "action": "map",
-        "target": "https://maps.google.com/?q=Camp+Enoki"
-      }
-    ],
-    "priority": 10
-  },
-  {
-    "id": "amenities-list",
+    "question": "What amenities are included?",
     "category": "amenities",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
       "amenities",
+      "inclusions",
+      "included",
+      "kasama",
       "facilities",
-      "pool",
-      "swimming pool",
-      "wifi",
-      "cr",
-      "comfort room",
-      "kitchen",
-      "may pool ba"
+      "ano meron",
+      "what included"
     ],
-    "question": "What amenities are included?",
-    "answer": "✨ Your Own Private Resort with Pool – Exclusive for Your Group Only!\n💙 Rainy Season Promo\n🌙 Overnight Stay\n🕑 Check-in: 2:00 PM\n🕛 Check-out: 12:00 NN (next day)\n🔥 ONLY ₱5,000 (Regular Price: ₱6,500)\n👨‍👩‍👧‍👦 Good for up to 15 guests\n🌿 Why visit during the rainy season?\n✅ Cooler weather\n✅ Cozy glamping vibes\n✅ Peaceful surroundings\n✅ Less crowded tourist spots\n✅ Perfect for families, barkada, couples, WFH & pet lovers\n🏕️ Enjoy the entire property exclusively for your group!\n✔️ No sharing with other guests\n✔️ Peaceful and private\n✔️ Relax at your own pace\n📍 Just 1 minute from the beach & river\n🏖️ Beach access (weather permitting)\n⚠️ During the rainy season, the beach may occasionally be under a red flag, which means swimming is temporarily not allowed for everyone's safety. The good news is you'll still have exclusive access to our private swimming pool, so your getaway can continue rain or shine!\n🌊 River access (subject to weather conditions)\n🏊 PRIVATE DIPPING POOL\n💧 Fresh water every stay\n🚫 No chlorine. No harsh chemicals.\n🐶 Safe for kids and pets\n✨ Gentle on the skin\n🏡 ACCOMMODATIONS\n🔺 3 Air-Conditioned Teepee Huts\n• Good for 3 guests each\n• 4-inch foam mattress\n• Blanket, pillow & bed cover included\n⛺ 2 Camping Tents\n• Good for 2 guests each\n• With Uratex foam\n✨ FREE AMENITIES\n✅ Beach & river access\n✅ Outdoor showers\n✅ Outdoor dining area\n✅ FREE Wi-Fi (Converge Fiber 300 Mbps)\n💻 Perfect for freelancers, WFH & digital nomads\n✅ FREE parking (up to 2 cars)\n✅ FREE 1 gallon of drinking water\n✅ FREE use of griller\n✅ FREE microwave oven & electric kettle\n✅ Gas stove available (LPG only ₱200)\n🐾 Pet-friendly\n🌴 Hammocks, beach chairs, tables & tents\n⚠️ Please Note\nOur air-conditioned teepee huts remain comfortable even during heavy rain. However, our camping tents are traditional outdoor tents, so during heavy rain and strong winds, guests staying in the tents may experience minor inconveniences such as moisture or a few water drips. We regularly maintain our camping equipment and will gladly assist whenever needed. It's all part of the authentic outdoor camping experience.\n🎯 Optional Activities\n🏍️ ATV & UTV Rental\n🍌 Banana Boat",
-    "answer_tl": "✨ Your Own Private Resort with Pool – Exclusive for Your Group Only!\n💙 Rainy Season Promo\n🌙 Overnight Stay\n🕑 Check-in: 2:00 PM\n🕛 Check-out: 12:00 NN (next day)\n🔥 ONLY ₱5,000 (Regular Price: ₱6,500)\n👨‍👩‍👧‍👦 Good for up to 15 guests\n🌿 Why visit during the rainy season?\n✅ Cooler weather\n✅ Cozy glamping vibes\n✅ Peaceful surroundings\n✅ Less crowded tourist spots\n✅ Perfect for families, barkada, couples, WFH & pet lovers\n🏕️ Enjoy the entire property exclusively for your group!\n✔️ No sharing with other guests\n✔️ Peaceful and private\n✔️ Relax at your own pace\n📍 Just 1 minute from the beach & river\n🏖️ Beach access (weather permitting)\n⚠️ During the rainy season, the beach may occasionally be under a red flag, which means swimming is temporarily not allowed for everyone's safety. The good news is you'll still have exclusive access to our private swimming pool, so your getaway can continue rain or shine!\n🌊 River access (subject to weather conditions)\n🏊 PRIVATE DIPPING POOL\n💧 Fresh water every stay\n🚫 No chlorine. No harsh chemicals.\n🐶 Safe for kids and pets\n✨ Gentle on the skin\n🏡 ACCOMMODATIONS\n🔺 3 Air-Conditioned Teepee Huts\n• Good for 3 guests each\n• 4-inch foam mattress\n• Blanket, pillow & bed cover included\n⛺ 2 Camping Tents\n• Good for 2 guests each\n• With Uratex foam\n✨ FREE AMENITIES\n✅ Beach & river access\n✅ Outdoor showers\n✅ Outdoor dining area\n✅ FREE Wi-Fi (Converge Fiber 300 Mbps)\n💻 Perfect for freelancers, WFH & digital nomads\n✅ FREE parking (up to 2 cars)\n✅ FREE 1 gallon of drinking water\n✅ FREE use of griller\n✅ FREE microwave oven & electric kettle\n✅ Gas stove available (LPG only ₱200)\n🐾 Pet-friendly\n🌴 Hammocks, beach chairs, tables & tents\n⚠️ Please Note\nOur air-conditioned teepee huts remain comfortable even during heavy rain. However, our camping tents are traditional outdoor tents, so during heavy rain and strong winds, guests staying in the tents may experience minor inconveniences such as moisture or a few water drips. We regularly maintain our camping equipment and will gladly assist whenever needed. It's all part of the authentic outdoor camping experience.\n🎯 Optional Activities\n🏍️ ATV & UTV Rental\n🍌 Banana Boat",
-    "language": "auto",
-    "images": [],
-    "videos": [
-      "resort-video-3"
-    ],
-    "buttons": [
-      {
-        "label": "View amenities",
-        "action": "scroll",
-        "target": "#amenities"
-      }
-    ],
-    "priority": 8
+    "answer": "🏕️ Your stay includes 3 air-conditioned teepee huts, 4 camping tents with Uratex foam, private pool, free Wi-Fi, free parking for 2 cars, free grill use, free water gallon, hammocks and outdoor spaces. 🐾 Pets are also welcome."
   },
   {
-    "id": "teepee-huts",
+    "question": "How many teepee huts are there?",
     "category": "amenities",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
       "teepee",
-      "tipi",
-      "hut",
-      "tent",
       "teepee hut",
-      "show me the teepee"
+      "teepee huts",
+      "hut",
+      "huts",
+      "how many huts"
     ],
-    "question": "Can I see the teepee huts?",
-    "answer": "You can see the photos and videos of our TeePee huts sa gallery tab po natin.  You may also click the link below::\n\nhttps://drive.google.com/file/d/1Ko9L6a4ReGUswHySLEFWL0071uOYKw6f/view?t=2.538",
-    "answer_tl": "You can see the photos and videos of our TeePee huts sa gallery tab po natin.  You may also click the link below::\n\nhttps://drive.google.com/file/d/1Ko9L6a4ReGUswHySLEFWL0071uOYKw6f/view?t=2.538",
-    "language": "auto",
-    "images": [
-      "resort-photo-15"
-    ],
-    "videos": [
-      "resort-video-3"
-    ],
-    "buttons": [],
-    "priority": 10
+    "answer": "🏕️ We have 3 air-conditioned teepee huts, with up to 3 pax each."
   },
   {
-    "id": "beach-river",
+    "question": "Are the teepee huts air-conditioned?",
     "category": "amenities",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "aircon",
+      "aircon room",
+      "air conditioned",
+      "may aircon",
+      "malamig"
+    ],
+    "answer": "Yes! ❄️ All 3 teepee huts are air-conditioned."
+  },
+  {
+    "question": "How many camping tents are available?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "tent",
+      "tents",
+      "camping tent",
+      "camping",
+      "campsite",
+      "ilang tent"
+    ],
+    "answer": "⛺ We have 4 camping tents with Uratex foam."
+  },
+  {
+    "question": "Do the camping tents have foam?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "uratex",
+      "foam",
+      "mattress",
+      "bed",
+      "higaan"
+    ],
+    "answer": "Yes! 😊 The camping tents have Uratex foam for sleeping comfort."
+  },
+  {
+    "question": "Is there a private swimming pool?",
+    "category": "amenities",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "pool",
+      "swimming pool",
+      "swimming",
+      "may pool",
+      "private pool",
+      "sariling pool"
+    ],
+    "answer": "🏊 Yes! Camp Enoki has a private swimming pool exclusively for your group."
+  },
+  {
+    "question": "Is the pool shared with other guests?",
+    "category": "amenities",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "shared pool",
+      "sharing pool",
+      "public pool",
+      "ibang guest",
+      "other guests"
+    ],
+    "answer": "No. 😊 Camp Enoki is private and exclusive. You will not share the pool with other guests during your stay."
+  },
+  {
+    "question": "Does the pool have chlorine?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "chlorine",
+      "may chlorine",
+      "walang chlorine",
+      "chlorinated"
+    ],
+    "answer": "💦 Our pool is maintained without chlorine."
+  },
+  {
+    "question": "Is Wi-Fi available?",
+    "category": "amenities",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "wifi",
+      "wi-fi",
+      "internet",
+      "net",
+      "may wifi",
+      "internet connection"
+    ],
+    "answer": "📶 Yes! We have free Wi-Fi powered by Converge Fiber 300 Mbps."
+  },
+  {
+    "question": "Is the Wi-Fi fast enough for work?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "converge",
+      "300mbps",
+      "300 mbps",
+      "work from home",
+      "wfh",
+      "online work",
+      "remote work"
+    ],
+    "answer": "Yes! 💻 Camp Enoki has Converge Fiber 300 Mbps Wi-Fi, making it suitable for staying connected and working remotely."
+  },
+  {
+    "question": "Is parking available?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "parking",
+      "may parking",
+      "parking space",
+      "car",
+      "sasakyan"
+    ],
+    "answer": "🚗 Yes! We have free parking that can accommodate up to 2 cars."
+  },
+  {
+    "question": "How many cars can the parking accommodate?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "ilang car",
+      "2 cars",
+      "two cars",
+      "dalawang kotse",
+      "parking cars"
+    ],
+    "answer": "🚗 Our parking area can accommodate up to 2 cars."
+  },
+  {
+    "question": "Is grill use included?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "grill",
+      "ihaw",
+      "barbecue",
+      "bbq",
+      "grilling",
+      "may ihawan",
+      "free grill"
+    ],
+    "answer": "🔥 Yes! Free use of the grill is included with your stay."
+  },
+  {
+    "question": "Is drinking water included?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "water",
+      "tubig",
+      "drinking water",
+      "gallon",
+      "tubig inumin",
+      "free water"
+    ],
+    "answer": "💧 Yes! A free water gallon is included."
+  },
+  {
+    "question": "Are pets allowed?",
+    "category": "policies",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "pet",
+      "pets",
+      "aso",
+      "dog",
+      "dogs",
+      "puppy",
+      "pusa",
+      "cat",
+      "pet friendly"
+    ],
+    "answer": "🐾 Yes! Camp Enoki is pet-friendly. Your fur babies are welcome. 💚"
+  },
+  {
+    "question": "Is Camp Enoki pet-friendly?",
+    "category": "policies",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "pet friendly ba",
+      "dog friendly",
+      "animal friendly",
+      "allowed ba aso",
+      "pwede aso",
+      "pwede pets"
+    ],
+    "answer": "Yes! 🐶🐾 Camp Enoki is pet-friendly."
+  },
+  {
+    "question": "How far is the beach?",
+    "category": "location",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
     "keywords": [
       "beach",
-      "river",
-      "riverside",
-      "swimming area",
-      "tubig",
-      "ilog",
-      "dagat"
+      "dagat",
+      "sea",
+      "seaside",
+      "near beach",
+      "malapit sa beach",
+      "walking distance"
     ],
-    "question": "Show me the beach / river area.",
-    "answer": "Ang ilog na malapit sa area ay good for kayak.  Sa dulo naman ng coastal road ay makikita ang dugtungan ng ilog at dagat.  Pwede pong maligo dito.",
-    "answer_tl": "Ang ilog na malapit sa area ay good for kayak.  Sa dulo naman ng coastal road ay makikita ang dugtungan ng ilog at dagat.  Pwede pong maligo dito.",
-    "language": "auto",
-    "images": [],
-    "videos": [
-      "resort-video-4"
-    ],
-    "buttons": [],
-    "priority": 10
+    "answer": "🏖️ Camp Enoki is near the beach, approximately a 1-minute walk away."
   },
   {
-    "id": "booking-how",
+    "question": "Is the beach within walking distance?",
+    "category": "location",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "walking distance beach",
+      "walk to beach",
+      "lakad",
+      "beach access",
+      "paano pumunta beach"
+    ],
+    "answer": "🏖️ Yes! The beach is approximately a 1-minute walk from Camp Enoki."
+  },
+  {
+    "question": "Can we swim at the beach?",
+    "category": "attractions",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "swimming sa beach",
+      "beach swimming",
+      "pwede ba dagat",
+      "swim beach"
+    ],
+    "answer": "Yes, beach activities are possible depending on weather, waves and local beach conditions. 🌊"
+  },
+  {
+    "question": "What happens if the beach has high waves?",
+    "category": "policies",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "red flag",
+      "malakas alon",
+      "mataas alon",
+      "rough sea",
+      "high waves",
+      "beach closed"
+    ],
+    "answer": "🌊 Beach activities may be affected by high waves or red-flag conditions. In that situation, you can still enjoy the private pool and Camp Enoki facilities."
+  },
+  {
+    "question": "What attractions are nearby?",
+    "category": "attractions",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "attractions",
+      "nearby",
+      "things to do",
+      "activities",
+      "saan pupunta",
+      "tourist spots"
+    ],
+    "answer": "🌊 Nearby activities include beach trips, buggy rides, banana boat rides, ocean banana boat rides and waterfall adventures. Nangoloan Falls is also a possible side trip, subject to weather and availability."
+  },
+  {
+    "question": "Is there a banana boat ride nearby?",
+    "category": "attractions",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "banana boat",
+      "banana boat ride",
+      "banana",
+      "water activity"
+    ],
+    "answer": "🍌 Yes! Banana boat rides are one of the nearby activities available around the area, subject to weather and operator availability."
+  },
+  {
+    "question": "Is the banana boat included in the ₱5,000?",
+    "category": "attractions",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "free banana boat",
+      "included banana boat",
+      "kasama banana boat",
+      "banana boat included"
+    ],
+    "answer": "The banana boat ride is not included in the ₱5,000 accommodation price. It is a nearby activity subject to availability and weather conditions."
+  },
+  {
+    "question": "Is there a buggy ride nearby?",
+    "category": "attractions",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "buggy",
+      "buggy ride",
+      "atv",
+      "off road",
+      "adventure ride"
+    ],
+    "answer": "🏎️ Yes! Buggy rides are one of the nearby adventure activities, subject to availability."
+  },
+  {
+    "question": "Is the buggy ride included?",
+    "category": "attractions",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "buggy included",
+      "free buggy",
+      "kasama buggy"
+    ],
+    "answer": "The buggy ride is not included in the ₱5,000 accommodation price. It is an additional nearby activity, subject to availability."
+  },
+  {
+    "question": "Is Nangoloan Falls nearby?",
+    "category": "attractions",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "falls",
+      "waterfall",
+      "waterfalls",
+      "Nangoloan",
+      "Nangoloan Falls",
+      "side trip"
+    ],
+    "answer": "💦 Yes! Nangoloan Falls is a nearby side-trip option for guests who want a nature adventure. Availability and accessibility may depend on weather conditions."
+  },
+  {
+    "question": "Is Nangoloan Falls included in the package?",
+    "category": "attractions",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "falls included",
+      "free falls",
+      "kasama falls",
+      "waterfall included"
+    ],
+    "answer": "Nangoloan Falls is a side-trip destination and is not part of the ₱5,000 accommodation package."
+  },
+  {
+    "question": "Is Camp Enoki good for families?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "family",
+      "family vacation",
+      "family getaway",
+      "family friendly",
+      "family outing",
+      "kids",
+      "children"
+    ],
+    "answer": "👨‍👩‍👧‍👦 Yes! Camp Enoki is great for family getaways and bonding, with a private pool, huts, camping tents and outdoor spaces."
+  },
+  {
+    "question": "Is Camp Enoki good for barkada?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "barkada",
+      "friends",
+      "friends getaway",
+      "outing",
+      "bonding",
+      "group outing"
+    ],
+    "answer": "👯 Yes! Camp Enoki is perfect for barkada and friends. Enjoy the whole private place with your group and up to 12 pax."
+  },
+  {
+    "question": "Is Camp Enoki good for camping?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "camping",
+      "camping trip",
+      "campsite",
+      "tent",
+      "camp"
+    ],
+    "answer": "🏕️ Yes! Camp Enoki has 4 camping tents with Uratex foam, plus 3 air-conditioned teepee huts."
+  },
+  {
+    "question": "Can we bring our pets?",
+    "category": "policies",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "bring pets",
+      "bring dog",
+      "bring aso",
+      "bring puppy",
+      "fur baby",
+      "fur babies"
+    ],
+    "answer": "🐾 Yes! You can bring your pets. Camp Enoki is pet-friendly."
+  },
+  {
+    "question": "Is Camp Enoki good for couples?",
+    "category": "amenities",
+    "priority": 6,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "couples",
+      "couple",
+      "romantic",
+      "date",
+      "partner"
+    ],
+    "answer": "💚 Yes! Camp Enoki can also be a cozy private escape for couples who want a relaxing getaway surrounded by nature."
+  },
+  {
+    "question": "Is Camp Enoki good for company outings?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "company outing",
+      "team building",
+      "company",
+      "office outing",
+      "group outing"
+    ],
+    "answer": "Yes! 😊 The private setup is suitable for small group getaways, friends, families and bonding activities, with accommodation for up to 12 pax."
+  },
+  {
+    "question": "Is Camp Enoki good during rainy season?",
+    "category": "attractions",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "rainy season",
+      "tag ulan",
+      "panahon ng ulan",
+      "rainy",
+      "ulan",
+      "rainy getaway"
+    ],
+    "answer": "🌧️ Definitely! Camp Enoki is perfect for a cozy rainy-day getaway. Enjoy your private space, air-conditioned huts, camping area, private pool and Wi-Fi even when the weather is wet."
+  },
+  {
+    "question": "What can we do if it rains?",
+    "category": "attractions",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "kapag umulan",
+      "pag umulan",
+      "what if rain",
+      "rain",
+      "umuulan",
+      "ulan"
+    ],
+    "answer": "🌧️ No worries! You can still enjoy your private space, air-conditioned huts, camping area, private pool and Wi-Fi. Outdoor activities may depend on weather conditions."
+  },
+  {
+    "question": "Is Camp Enoki private?",
+    "category": "policies",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "private",
+      "privacy",
+      "exclusive",
+      "exclusive use",
+      "whole place",
+      "shared",
+      "sharing"
+    ],
+    "answer": "💚 Yes! Camp Enoki is private and exclusive. Your group gets the whole place and does not share the area with other guests."
+  },
+  {
+    "question": "Are there other guests during our stay?",
+    "category": "policies",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "other guest",
+      "ibang guest",
+      "may ibang guest",
+      "strangers",
+      "shared",
+      "sharing"
+    ],
+    "answer": "No. 😊 Camp Enoki is private and exclusive to your group during your stay."
+  },
+  {
+    "question": "Where is Camp Enoki located?",
+    "category": "location",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "location",
+      "saan",
+      "where",
+      "nasaan",
+      "address",
+      "lugar",
+      "san felipe",
+      "zambales"
+    ],
+    "answer": "📍 Camp Enoki Private Villa is located in San Felipe, Zambales, near the beach and river."
+  },
+  {
+    "question": "Is Camp Enoki in San Felipe, Zambales?",
+    "category": "location",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "san felipe",
+      "zambales",
+      "san felipe zambales",
+      "resort san felipe"
+    ],
+    "answer": "📍 Yes! Camp Enoki Private Villa is located in San Felipe, Zambales."
+  },
+  {
+    "question": "How do I get to Camp Enoki?",
+    "category": "location",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "directions",
+      "how to get there",
+      "paano pumunta",
+      "paano magpunta",
+      "route",
+      "commute",
+      "driving"
+    ],
+    "answer": "📍 Camp Enoki Private Villa is located in San Felipe, Zambales. Please message us for the exact Google Maps location and directions."
+  },
+  {
+    "question": "Can I see photos of Camp Enoki?",
+    "category": "amenities",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "pics",
+      "photos",
+      "picture",
+      "pictures",
+      "photos please",
+      "send pics",
+      "actual photos"
+    ],
+    "answer": "Sure! 😊 You can see our latest actual photos and videos on our Facebook page. You may also ask us for photos of specific amenities."
+  },
+  {
+    "question": "Can I see the teepee huts?",
+    "category": "amenities",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "teepee photos",
+      "hut photos",
+      "see teepee",
+      "show teepee",
+      "pictures teepee"
+    ],
+    "answer": "Sure! 😊 We can show you photos of our teepee huts. Please check the photos on our Facebook page or ask us for the latest available photos."
+  },
+  {
+    "question": "Can I see the beach and river area?",
+    "category": "amenities",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "beach photo",
+      "river photo",
+      "show beach",
+      "show river",
+      "beach pictures",
+      "river pictures"
+    ],
+    "answer": "🏖️ Yes! We can show you photos of the nearby beach and river area. Please check our Facebook page for actual photos and videos."
+  },
+  {
+    "question": "How do I make a booking?",
     "category": "booking",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
       "book",
       "booking",
       "reserve",
       "reservation",
+      "magbook",
+      "mag-book",
+      "how to book",
       "paano magbook",
-      "how to book"
+      "reservation process"
     ],
-    "question": "How do I make a booking?",
-    "answer": "Tap the \"Book Now\" button below — it'll take you to our official booking site where you can pick your dates and submit your request directly.  Kapat nareceive na po and available ang date, imemessage po namin kayo so you can send your down payment or reservation fee.  The amount depends on you but the minimum is P1000.  The rest po ay payable na sa resort.",
-    "answer_tl": "Tap the \"Book Now\" button below — it'll take you to our official booking site where you can pick your dates and submit your request directly.  Kapat nareceive na po and available ang date, imemessage po namin kayo so you can send your down payment or reservation fee.  The amount depends on you but the minimum is P1000.  The rest po ay payable na sa resort.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "Book Now",
-        "action": "open-booking"
-      }
-    ],
-    "priority": 10
+    "answer": "Sure! 💚 Send us your preferred date and number of guests. We'll check availability and guide you through the reservation process."
   },
   {
-    "id": "pets",
-    "category": "policies",
+    "question": "How can I check availability?",
+    "category": "availability",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
-      "pet",
-      "pets",
-      "dog",
-      "aso",
-      "hayop",
-      "pwede ba mag dala ng aso"
+      "available",
+      "availability",
+      "vacant",
+      "open date",
+      "available date",
+      "may slot",
+      "may bakante"
     ],
-    "question": "Are pets allowed?",
-    "answer": "Yes po.  We are a pet friendly resort.  In fact, Enoki po ay Shitzu daughter ng owner. So we created the camp so Fur Parents like us can enjoy the pool,river and beach while staying at Camp Enoki.",
-    "answer_tl": "Yes po.  We are a pet friendly resort.  In fact, Enoki po ay Shitzu daughter ng owner. So we created the camp so Fur Parents like us can enjoy the pool,river and beach while staying at Camp Enoki.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "priority": 9
+    "answer": "Sure! 😊 Please send your preferred date and number of pax so we can check availability."
   },
   {
-    "id": "checkin-checkout",
-    "category": "policies",
+    "question": "Is my preferred date available?",
+    "category": "availability",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
-      "check in",
-      "checkin",
-      "check out",
-      "checkout",
-      "check-in time",
-      "check-out time",
-      "anong oras ang check in"
+      "available ba",
+      "date available",
+      "available date",
+      "may slot",
+      "vacant ba",
+      "open date"
     ],
-    "question": "What time is check-in and check-out?",
-    "answer": "Check-in is at 2:00 PM and check-out is at 12:00 NN.  In case you needed a different time, as long as it is an early booking, we can check if that hour is possible.",
-    "answer_tl": "Check-in is at 2:00 PM and check-out is at 12:00 NN.  In case you needed a different time, as long as it is an early booking, we can check if that hour is possible.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "priority": 9
+    "answer": "We can check! 😊 Please send your preferred date and number of guests."
   },
   {
-    "id": "cancellation",
-    "category": "policies",
-    "keywords": [
-      "cancel",
-      "cancellation",
-      "refund",
-      "reschedule",
-      "i-cancel",
-      "no show",
-      "weather",
-      "rain",
-      "ulan"
-    ],
-    "question": "What is your cancellation policy?",
-    "answer": "Bookings are confirmed only once the downpayment is received, and ALL downpayments are non-refundable — cancellations for any reason forfeit the downpayment, and no-shows forfeit all payments made. You may rebook once, free of a new downpayment, if you ask at least 7 days before your check-in date; the new date must be used within 6 months and any price difference is on the guest. Camp Enoki is a pool resort and stays open in the rain, so weather isn't a valid reason for a cancellation, refund, or rebooking, and there are no refunds for early check-out either.",
-    "answer_tl": "Ang booking ay kina-confirm lang pagka-receive ng downpayment, at LAHAT ng downpayment ay hindi na po nire-refund — ang pag-cancel sa kahit anong dahilan ay mawawala ang downpayment, at ang no-show ay mawawala lahat ng bayad. Pwede kayong mag-rebook ng isang beses, kung sasabihin niyo at least 7 araw bago ang check-in; gagamitin within 6 months at ang price difference ay sagot ng guest. Bukas kami kahit umuulan (pool resort kami), kaya hindi valid ang panahon bilang dahilan para mag-cancel, mag-refund, o mag-rebook, at wala ring refund kung maaga ang check-out.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "priority": 8
-  },
-  {
-    "id": "payment",
-    "category": "policies",
-    "keywords": [
-      "payment",
-      "gcash",
-      "bank transfer",
-      "downpayment",
-      "paano magbayad",
-      "paraan ng bayad",
-      "gcash number"
-    ],
-    "question": "How do we pay?",
-    "answer": "We accept GCash (0947 998 4309) and bank transfer. Your booking is confirmed only once we receive the downpayment, with the balance payable upon arrival. Please note all downpayments are non-refundable.\n\nMeron din po tayo bank transfer options, just let us know.",
-    "answer_tl": "We accept GCash (0947 998 4309) and bank transfer. Your booking is confirmed only once we receive the downpayment, with the balance payable upon arrival. Please note all downpayments are non-refundable.\n\nMeron din po tayo bank transfer options, just let us know.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "priority": 8
-  },
-  {
-    "id": "attractions-nearby",
-    "category": "attractions",
-    "keywords": [
-      "nearby",
-      "attractions",
-      "tourist spot",
-      "malapit na lugar",
-      "puntahan"
-    ],
-    "question": "What attractions are nearby?",
-    "answer": "Camp Enoki is close to several waterfalls, viewpoints, and local eateries. Sa dulo po ng coastal road tuwing hapon ay maraming mobile vendor dahil kilala po ang dulo ng coastal road for a good spot for sunset.  \n\nYou can also schedule a visit to Nangoloan Falls.  Recommended po bisitahin ang falls tuwing June to March.",
-    "answer_tl": "Camp Enoki is close to several waterfalls, viewpoints, and local eateries. Sa dulo po ng coastal road tuwing hapon ay maraming mobile vendor dahil kilala po ang dulo ng coastal road for a good spot for sunset.  \n\nYou can also schedule a visit to Nangoloan Falls.  Recommended po bisitahin ang falls tuwing June to March.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "See nearby attractions",
-        "action": "scroll",
-        "target": "#attractions"
-      }
-    ],
-    "priority": 7
-  },
-  {
-    "id": "contact-staff",
+    "question": "How can I contact Camp Enoki?",
     "category": "contact",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
     "keywords": [
-      "contact number",
-      "phone number",
-      "tawag sa staff",
-      "send a message",
-      "facebook page"
+      "contact",
+      "contact us",
+      "phone",
+      "telephone",
+      "number",
+      "message",
+      "messenger"
     ],
-    "question": "How can I contact the staff directly?",
-    "answer": "You can call us directly at 09479984309",
-    "answer_tl": "You can call us directly at 09479984309",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View contact info",
-        "action": "scroll",
-        "target": "#contact"
-      }
-    ],
-    "priority": 6
+    "answer": "📲 You can contact Camp Enoki through our Facebook page or call/message +63 947 998 4309."
   },
   {
-    "id": "wifi",
-    "category": "amenities",
+    "question": "What is your Facebook page?",
+    "category": "contact",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
     "keywords": [
-      "wifi",
-      "internet",
-      "signal",
-      "may wifi ba"
+      "facebook",
+      "fb",
+      "facebook page",
+      "fb page",
+      "camp enoki facebook"
     ],
-    "question": "Is there WiFi?",
-    "answer": "Hindi po lahat ng resort sa San Felipe ay meron wifi and lucky po tayo na isa tayo sa meron Converge Fiber 300mbps.  Pasok para sa mga freelancer, work from home, nomad or sa mga gusto pa rin connected sa internet habang nagbabakasyon at pahinga.",
-    "answer_tl": "Hindi po lahat ng resort sa San Felipe ay meron wifi and lucky po tayo na isa tayo sa meron Converge Fiber 300mbps.  Pasok para sa mga freelancer, work from home, nomad or sa mga gusto pa rin connected sa internet habang nagbabakasyon at pahinga.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "priority": 6
+    "answer": "📱 Our Facebook page is Facebook.com/CampEnoki. You can message us there for inquiries, availability and bookings."
   },
   {
-    "id": "activities",
-    "category": "amenities",
+    "question": "Is the September Special limited?",
+    "category": "rates",
+    "priority": 8,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "limited",
+      "limited slots",
+      "limited promo",
+      "promo slots",
+      "until when",
+      "how long promo"
+    ],
+    "answer": "🌧️ The September Special is a limited promotional rate. Availability is subject to the remaining booking dates."
+  },
+  {
+    "question": "Is the ₱5,000 September rate still available?",
+    "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "still 5000",
+      "5000 pa ba",
+      "5000 pa",
+      "same price",
+      "promo still",
+      "promo available"
+    ],
+    "answer": "🌧️ Yes, the September Special is ₱5,000, subject to availability. Send us your preferred date and number of guests so we can check."
+  },
+  {
+    "question": "Is ₱5,000 per person?",
+    "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "per person",
+      "per pax",
+      "per head",
+      "5000 per person",
+      "5000 per pax"
+    ],
+    "answer": "No. 😊 The ₱5,000 September Special is for the WHOLE private place, good for up to 12 pax."
+  },
+  {
+    "question": "Is ₱5,000 for the whole resort?",
+    "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "whole resort",
+      "whole villa",
+      "whole place",
+      "buong resort",
+      "buong villa",
+      "exclusive villa"
+    ],
+    "answer": "Yes! 💚 The September Special of ₱5,000 is for the whole Camp Enoki Private Villa, overnight, good for up to 12 pax."
+  },
+  {
+    "question": "What is the best reason to book Camp Enoki?",
+    "category": "general",
+    "priority": 6,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "worth it",
+      "sulit",
+      "sulit ba",
+      "why camp enoki",
+      "bakit camp enoki"
+    ],
+    "answer": "💚 Private. Exclusive. Relaxing. For ₱5,000 during the September Special, your group gets the whole place, private pool, huts, camping tents, Wi-Fi and more. Perfect for family and friends!"
+  },
+  {
+    "question": "What activities can we do?",
+    "category": "attractions",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
     "keywords": [
       "activities",
-      "atv",
-      "kayak",
-      "jetski",
-      "banana boat",
-      "karaoke",
-      "videoke",
-      "add-ons",
-      "extras"
+      "things to do",
+      "what can we do",
+      "anong pwede gawin",
+      "gawain",
+      "activities nearby"
     ],
-    "question": "What activities or add-ons do you offer?",
-    "answer": "We offer add-ons like karaoke, ATV, kayak, jetski, and banana boat rides (rates and availability at the resort).  Pwede nyo po check ang book now to see the prices of our add ons.",
-    "answer_tl": "We offer add-ons like karaoke, ATV, kayak, jetski, and banana boat rides (rates and availability at the resort).  Pwede nyo po check ang book now to see the prices of our add ons.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View activity photos",
-        "action": "map",
-        "target": "https://drive.google.com/drive/folders/1ySaWSu9JI384Ui05K1v3Uz_I1NeGtSWH?usp=sharing"
-      }
-    ],
-    "priority": 7
+    "answer": "😊 Enjoy the private pool, camping, grilling, relaxing and Wi-Fi at Camp Enoki. Nearby activities include beach trips, buggy rides, banana boat rides and waterfall adventures, subject to availability and weather."
   },
   {
-    "id": "extra-guests",
+    "question": "What is included in the ₱5,000 package?",
     "category": "rates",
+    "priority": 10,
+    "lang": "auto",
+    "media": [],
     "keywords": [
-      "extra guest",
-      "extra guests",
-      "extra pax",
-      "additional person",
-      "additional guest",
-      "additional guests",
-      "sobra sa pax",
-      "additional guest fee"
+      "what included",
+      "included in 5000",
+      "kasama sa 5000",
+      "5000 inclusions",
+      "package inclusions"
     ],
-    "question": "Is there a fee for extra guests?",
-    "answer": "wala po extra pay but we limit the guest to 20pax only to ensure yung comfort and convenience nyo while staying with us.",
-    "answer_tl": "wala po extra pay but we limit the guest to 20pax only to ensure yung comfort and convenience nyo while staying with us.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "priority": 7
+    "answer": "For ₱5,000, you get the whole private place overnight, including 3 air-conditioned teepee huts, 4 camping tents with Uratex foam, private pool, Wi-Fi, parking for 2 cars, grill use and a water gallon. 🏕️💚"
   },
   {
-    "priority": 5,
+    "question": "What makes Camp Enoki different from other resorts?",
+    "category": "general",
+    "priority": 6,
+    "lang": "auto",
+    "media": [],
     "keywords": [
-      "hm"
+      "difference",
+      "unique",
+      "special",
+      "why camp enoki",
+      "other resorts"
     ],
-    "images": [],
-    "videos": [],
-    "buttons": [],
-    "language": "auto",
-    "category": "rates",
-    "question": "hm",
-    "answer": "Rates differs by season.  During Rainy Season June 1 to September 30, the price is P5500 per night.  Any day after that is P6500 per night",
-    "answer_tl": "Rates differs by season.  During Rainy Season June 1 to September 30, the price is P5500 per night.  Any day after that is P6500 per night",
-    "photo": "",
-    "video": "",
-    "id": "faq-mtk64xaadq8u"
+    "answer": "💚 Camp Enoki gives your group a private and exclusive getaway. You get the whole place, private pool, cozy teepee huts, camping tents, Wi-Fi and a pet-friendly environment."
+  },
+  {
+    "question": "Can we bring food?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "food",
+      "bring food",
+      "outside food",
+      "baon",
+      "luto",
+      "cooking"
+    ],
+    "answer": "Yes! 😊 You may bring your food for your stay. We also provide free use of the grill."
+  },
+  {
+    "question": "Can we grill barbecue?",
+    "category": "amenities",
+    "priority": 7,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "barbecue",
+      "bbq",
+      "ihaw",
+      "grill food",
+      "barbeque"
+    ],
+    "answer": "🔥 Yes! You can grill during your stay. Free use of the grill is included."
+  },
+  {
+    "question": "Is the resort suitable for a rainy-day getaway?",
+    "category": "attractions",
+    "priority": 9,
+    "lang": "auto",
+    "media": [],
+    "keywords": [
+      "rainy day",
+      "rainy getaway",
+      "rain getaway",
+      "rain vacation",
+      "cozy rainy"
+    ],
+    "answer": "🌧️ Absolutely! Cozy up in the private villa, enjoy the pool, camping area and Wi-Fi, and spend quality time with family or friends. Outdoor activities will depend on weather conditions."
   }
 ]
