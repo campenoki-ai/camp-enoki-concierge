@@ -322,8 +322,14 @@
       fields: [
         { key: "name", label: "Name", type: "text" },
         { key: "description", label: "Description", type: "textarea" },
-        { key: "capacity", label: "Capacity (pax)", type: "number" },
-        { key: "extraPaxFee", label: "Extra pax fee (₱)", type: "number" },
+        {
+          key: "capacityMin",
+          label: "Minimum pax (optional)",
+          type: "number",
+          hint: 'Set this to advertise a range instead of one number — e.g. minimum 15 with capacity 20 shows "Good for 15 to 20 pax" on the site. Leave at 0 to just show the capacity.',
+        },
+        { key: "capacity", label: "Capacity (max pax)", type: "number" },
+        { key: "extraPaxFee", label: "Extra pax fee (₱)", type: "number", hint: "Leave at 0 if there's no extra charge — it's then hidden from the public rates card instead of showing ₱0." },
         { key: "overnight", label: "Overnight rate (₱)", type: "number" },
         { key: "daytour", label: "Day tour rate (₱)", type: "number" },
         { key: "image", label: "Rates Photo", type: "image" },

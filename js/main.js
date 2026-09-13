@@ -137,9 +137,15 @@
       // r.image is normally a Media-tab id (looked up below), but Admin's Rates
       // photo field also accepts a direct upload/URL — fall back to using it as-is.
       const imgSrc = media[r.image]?.src || (r.image && r.image !== "" ? r.image : null);
-      const meta = settings.offerDayTour
-        ? `Day tour: ₱${r.daytour.toLocaleString()} · Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`
-        : `Good for ${r.capacity} pax · +₱${r.extraPaxFee}/extra pax`;
+      // capacityMin is optional: set it to advertise a range ("15 to 20 pax")
+      // rather than a single ceiling. Extra-pax fee is only worth showing when
+      // there actually is one — "+₱0/extra pax" just reads like a bug to a guest.
+      const paxText = r.capacityMin && r.capacityMin < r.capacity ? `${r.capacityMin} to ${r.capacity} pax` : `${r.capacity} pax`;
+      const parts = [];
+      if (settings.offerDayTour) parts.push(`Day tour: ₱${r.daytour.toLocaleString()}`);
+      parts.push(`Good for ${paxText}`);
+      if (r.extraPaxFee > 0) parts.push(`+₱${r.extraPaxFee}/extra pax`);
+      const meta = parts.join(" · ");
       mount.appendChild(
         el("div", { class: "card rate-card" }, [
           el("div", { class: "rate-card-info" }, [
