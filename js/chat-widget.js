@@ -5,7 +5,6 @@
  * store directly, so the AI layer stays swappable.
  */
 (function (global) {
-  const WELCOMED_KEY = "ce_chat_welcomed";
   const CONVERSATION_ID_KEY = "ce_chat_conversation_id";
   const REPLY_POLL_MS = 8000;
   let panelEl, messagesEl, inputEl, fabEl;
@@ -236,13 +235,16 @@
     return "en";
   }
 
+  /** Greet whenever the panel would otherwise open empty. This used to be gated
+   *  on a sessionStorage flag, but that flag outlives a page reload while the
+   *  messages (DOM only) do not — so any guest who refreshed, or left and came
+   *  back, opened the chat to a blank box with no greeting and no prompt. */
   function showWelcomeIfNeeded() {
-    if (sessionStorage.getItem(WELCOMED_KEY)) return;
+    if (messagesEl.children.length) return;
     const lang = detectDefaultLang();
     const text = global.CampEnokiI18n.t("welcome", lang);
     messagesEl.appendChild(el("div", { class: "msg bot" }, text));
     scrollToBottom();
-    sessionStorage.setItem(WELCOMED_KEY, "1");
   }
 
   function openPanel() {
