@@ -1634,5 +1634,28 @@
       }
     ],
     "priority": 9
+  },
+  {
+    "id": "do-you-have-a-generator-during",
+    "category": "general",
+    "keywords": [
+      "generator",
+      "brownout",
+      "power outage",
+      "blackout",
+      "electricity backup",
+      "may generator ba",
+      "generator availability",
+      "power supply",
+      "emergency power",
+      "backup power"
+    ],
+    "question": "do you have a generator during brownout?",
+    "answer": "As of now, September of 2026, we do not have generators yet.  We do have 4 insdustrial grade solar lamp to ensure lighting during brownout.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
   }
 ]
