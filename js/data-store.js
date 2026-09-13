@@ -95,6 +95,21 @@
     return "faq-" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
   }
 
+  /** Hand-made or externally-generated import files routinely have no `id` on
+   *  their entries (or reuse one). Storing those as-is leaves several records
+   *  sharing `id: undefined`, and since every lookup is `find(x => x.id === id)`,
+   *  Edit/Delete and the chat's follow-up answers all then act on whichever
+   *  entry happens to be first. Give every entry its own id up front instead. */
+  function assignUniqueIds(list, makeId) {
+    const seen = new Set();
+    return list.map((entry) => {
+      let id = entry.id;
+      while (!id || seen.has(id)) id = makeId();
+      seen.add(id);
+      return { ...entry, id };
+    });
+  }
+
   async function addFaq(entry) {
     const overlay = getOverlay();
     const withId = { priority: 5, keywords: [], images: [], videos: [], buttons: [], language: "auto", ...entry, id: entry.id || nextFaqId() };
@@ -136,19 +151,19 @@
    *  the imported set becomes the full list; 'merge' just adds/updates by id. */
   async function importFaqJson(list, mode = "merge") {
     if (!Array.isArray(list)) throw new Error("Import must be a JSON array of FAQ entries");
+    const withIds = assignUniqueIds(list, nextFaqId);
     if (mode === "replace") {
       const base = await load("faq");
       setOverlay({
-        added: list.filter((f) => !base.some((b) => b.id === f.id)),
-        edited: Object.fromEntries(list.filter((f) => base.some((b) => b.id === f.id)).map((f) => [f.id, f])),
-        deleted: base.map((f) => f.id).filter((id) => !list.some((f) => f.id === id)),
+        added: withIds.filter((f) => !base.some((b) => b.id === f.id)),
+        edited: Object.fromEntries(withIds.filter((f) => base.some((b) => b.id === f.id)).map((f) => [f.id, f])),
+        deleted: base.map((f) => f.id).filter((id) => !withIds.some((f) => f.id === id)),
       });
     } else {
-      for (const entry of list) {
-        const id = entry.id || nextFaqId();
-        const existing = (await getFaqs()).find((f) => f.id === id);
-        if (existing) await updateFaq(id, entry);
-        else await addFaq({ ...entry, id });
+      for (const entry of withIds) {
+        const existing = (await getFaqs()).find((f) => f.id === entry.id);
+        if (existing) await updateFaq(entry.id, entry);
+        else await addFaq(entry);
       }
     }
   }
@@ -220,19 +235,19 @@
 
     async function importJson(list, mode = "merge") {
       if (!Array.isArray(list)) throw new Error("Import must be a JSON array");
+      const withIds = assignUniqueIds(list, nextId);
       if (mode === "replace") {
         const base = await load(name);
         saveOverlay({
-          added: list.filter((item) => !base.some((b) => b.id === item.id)),
-          edited: Object.fromEntries(list.filter((item) => base.some((b) => b.id === item.id)).map((item) => [item.id, item])),
-          deleted: base.map((item) => item.id).filter((id) => !list.some((item) => item.id === id)),
+          added: withIds.filter((item) => !base.some((b) => b.id === item.id)),
+          edited: Object.fromEntries(withIds.filter((item) => base.some((b) => b.id === item.id)).map((item) => [item.id, item])),
+          deleted: base.map((item) => item.id).filter((id) => !withIds.some((item) => item.id === id)),
         });
       } else {
-        for (const item of list) {
-          const id = item.id || nextId();
-          const existing = (await getAll()).find((x) => x.id === id);
-          if (existing) await update(id, item);
-          else await add({ ...item, id });
+        for (const item of withIds) {
+          const existing = (await getAll()).find((x) => x.id === item.id);
+          if (existing) await update(item.id, item);
+          else await add(item);
         }
       }
     }
