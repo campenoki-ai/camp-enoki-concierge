@@ -278,7 +278,8 @@
     const lsKey = `ce_${name}_patch`;
 
     async function get() {
-      const base = ensureBaseIds(await load(name), idPrefix);
+      // Singletons are a single config object, not a list of records — no ids here.
+      const base = await load(name);
       const patch = readJson(lsKey, {});
       return { ...base, ...patch };
     }
