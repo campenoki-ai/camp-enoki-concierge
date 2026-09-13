@@ -74,14 +74,23 @@
     }
     const questionTokens = new Set(tokenize(entry.question));
 
+    // Loose matching is a rescue for queries with almost nothing to go on
+    // ("kano"), and it is only safe there. On a longer question there is
+    // already real signal, and a stray fragment does more harm than good:
+    // "can we decorate?" contains "rate" and was confidently answered with
+    // the rate card instead of being handed to the AI.
+    const allowLooseMatch = qTokens.length <= MAX_TOKENS_FOR_LOOSE_MATCH;
+
     for (const t of qTokens) {
       if (keywordTokens.has(t)) score += 3;
       else if (questionTokens.has(t)) score += 1;
-      else if (partialKeywordHit(t, keywordTokens)) score += 3;
+      else if (allowLooseMatch && partialKeywordHit(t, keywordTokens)) score += 3;
     }
 
     return score;
   }
+
+  const MAX_TOKENS_FOR_LOOSE_MATCH = 2;
 
   // Guests routinely type a clipped or run-together form of a keyword — "kano"
   // for "magkano", "avail" for "availability". Treat one containing the other
