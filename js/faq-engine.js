@@ -59,8 +59,12 @@
       // Only single-word keywords contribute standalone token matches — a word
       // that's merely PART of a multi-word phrase (e.g. "time" inside
       // "check-in time") shouldn't score as a strong match on its own.
+      // A hyphenated keyword has no spaces but still splits into fragments, and
+      // those fragments are exactly as misleading: "mag-book" used to register
+      // "mag" on its own, so "mag kano" scored the booking entry over rates.
       if (kwParts.length === 1) {
-        tokenize(kw).forEach((t) => keywordTokens.add(t));
+        const kwTokens = tokenize(kw);
+        if (kwTokens.length === 1) keywordTokens.add(kwTokens[0]);
       }
     }
 
@@ -73,9 +77,54 @@
     for (const t of qTokens) {
       if (keywordTokens.has(t)) score += 3;
       else if (questionTokens.has(t)) score += 1;
+      else if (partialKeywordHit(t, keywordTokens)) score += 3;
     }
 
     return score;
+  }
+
+  // Guests routinely type a clipped or run-together form of a keyword — "kano"
+  // for "magkano", "avail" for "availability". Treat one containing the other
+  // as a match, but only for tokens long enough that the overlap means
+  // something; below this a 3-letter fragment matches half the knowledge base.
+  const MIN_PARTIAL_LEN = 4;
+
+  function partialKeywordHit(token, keywordTokens) {
+    if (token.length < MIN_PARTIAL_LEN) return false;
+    for (const kw of keywordTokens) {
+      if (kw.length < MIN_PARTIAL_LEN) continue;
+      if (kw.includes(token) || token.includes(kw)) return true;
+      if (isOneEditApart(token, kw)) return true;
+    }
+    return false;
+  }
+
+  // Phone typing drops and doubles letters constantly — "pano" for "paano",
+  // "mgkano" for "magkano", "availabe" for "available". One edit is enough to
+  // cover that without pulling in genuinely different words; the length floor
+  // keeps short words (where one edit changes the meaning) out of it.
+  const MIN_FUZZY_LEN = 5;
+
+  function isOneEditApart(a, b) {
+    if (Math.max(a.length, b.length) < MIN_FUZZY_LEN) return false;
+    if (Math.abs(a.length - b.length) > 1) return false;
+    if (a === b) return true;
+    const [short, long] = a.length <= b.length ? [a, b] : [b, a];
+    let i = 0;
+    let j = 0;
+    let edited = false;
+    while (i < short.length && j < long.length) {
+      if (short[i] === long[j]) {
+        i++;
+        j++;
+        continue;
+      }
+      if (edited) return false;
+      edited = true;
+      if (short.length === long.length) i++; // substitution
+      j++; // insertion in `long`
+    }
+    return true;
   }
 
   /**

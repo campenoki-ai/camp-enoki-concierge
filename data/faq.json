@@ -12,7 +12,10 @@
       "presyo",
       "magkano po",
       "overnight",
-      "overnight price"
+      "overnight price",
+      "pila",
+      "bayad",
+      "singil"
     ],
     "question": "How much does an overnight stay cost?",
     "answer": "🌧️ SEPTEMBER SPECIAL! ₱5,000 ONLY for the whole Camp Enoki Private Villa overnight stay, good for 15 to 20 pax. 💚",
@@ -89,7 +92,11 @@
       "max pax",
       "guests",
       "15 pax",
-      "20 pax"
+      "20 pax",
+      "ilan",
+      "ilang",
+      "pax",
+      "kapasidad"
     ],
     "question": "How many guests are allowed?",
     "answer": "The September Special is good for 15 to 20 pax. 👨‍👩‍👧‍👦",
@@ -1093,7 +1100,10 @@
       "address",
       "lugar",
       "san felipe",
-      "zambales"
+      "zambales",
+      "san",
+      "nasan",
+      "lokasyon"
     ],
     "question": "Where is Camp Enoki located?",
     "answer": "📍 Camp Enoki Private Villa is located in San Felipe, Zambales, near the beach and river.",
@@ -1142,7 +1152,13 @@
       "paano magpunta",
       "route",
       "commute",
-      "driving"
+      "driving",
+      "pumunta",
+      "paano",
+      "pano",
+      "papunta",
+      "byahe",
+      "daan"
     ],
     "question": "How do I get to Camp Enoki?",
     "answer": "📍 Camp Enoki Private Villa is located in San Felipe, Zambales. Please message us for the exact Google Maps location and directions.",
@@ -1270,7 +1286,10 @@
       "open date",
       "available date",
       "may slot",
-      "may bakante"
+      "may bakante",
+      "bakante",
+      "slot",
+      "bukas"
     ],
     "question": "How can I check availability?",
     "answer": "Sure! 😊 Please send your preferred date and number of pax so we can check availability.",
