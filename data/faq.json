@@ -1851,5 +1851,93 @@
     "videos": [],
     "buttons": [],
     "priority": 5
+  },
+  {
+    "id": "hello",
+    "category": "general",
+    "keywords": [
+      "resort rates",
+      "presyo",
+      "cheapest rooms",
+      "budget accommodation",
+      "affordable stays",
+      "package deals",
+      "discounts",
+      "promo rates",
+      "room prices",
+      "magkano"
+    ],
+    "question": "Hello",
+    "answer": "Hi, Ano po maipaglilingkod ko?  Tanong lang po, try ko sagutin sa abot ng makakaya ko.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "meron-pong-lutuan",
+    "category": "general",
+    "keywords": [
+      "kitchen",
+      "cooking facilities",
+      "lutuan",
+      "may kusina ba",
+      "self-catering",
+      "pwede ba magluto",
+      "cooking area",
+      "equipped kitchen"
+    ],
+    "question": "meron pong lutuan?",
+    "answer": "Meron po tayong LPG store.  Meron na rin pong mga kaldero, kawali at gamit pang luto.  Meron din po tayo ihawan.  Sa LPG, 200 per night extra po.  Wala naman pong bayad sa mga kaldero at ihawan huwag lamang pong masisira.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "gaano-kalalim",
+    "category": "general",
+    "keywords": [
+      "water depth",
+      "depth",
+      "gaano kalalim",
+      "kalalim ng tubig",
+      "how deep",
+      "diving depth",
+      "pool depth",
+      "snorkeling depth"
+    ],
+    "question": "gaano kalalim",
+    "answer": "Kayo po ang mamimili ng lalim.  Maximum is 5.5 feet.  For overnight, we only refill the pool once so please clarify kung gaano po kalalim ang need nyo.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "gaano-kalalim-swimming-pool",
+    "category": "general",
+    "keywords": [
+      "swimming pool depth",
+      "pool depth",
+      "gaano kalalim ang pool",
+      "lalim ng pool",
+      "safe swimming depth",
+      "pool safety",
+      "kid friendly pool",
+      "shallow pool",
+      "deep end pool",
+      "pool specifications"
+    ],
+    "question": "gaano kalalim swimming pool",
+    "answer": "Kayo po ang mamimili ng lalim.  Maximum is 5.5 feet.  For overnight, we only refill the pool once so please clarify kung gaano po kalalim ang need nyo.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
   }
 ]
