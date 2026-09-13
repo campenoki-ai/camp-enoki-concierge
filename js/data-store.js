@@ -81,7 +81,7 @@
 
   /** Merged FAQ list = base data/faq.json + overlay (added/edited/deleted). */
   async function getFaqs() {
-    const base = await load("faq");
+    const base = ensureBaseIds(await load("faq"), "faq");
     const overlay = getOverlay();
     const deleted = new Set(overlay.deleted);
     const merged = base
@@ -110,6 +110,16 @@
     });
   }
 
+  /** Same idea for a base data/*.json that arrives without ids — a hand-edited
+   *  file, or one a previous buggy publish wrote out. Everything downstream
+   *  (edit, delete, answerById, the next publish) keys off `id`, so records
+   *  sharing a blank one silently act on each other. The fallback is derived
+   *  from position rather than random so it stays the same across reloads. */
+  function ensureBaseIds(list, prefix) {
+    if (!Array.isArray(list) || list.every((item) => item && item.id)) return list;
+    return list.map((item, i) => (item && item.id ? item : { ...item, id: `${prefix}-auto-${i}` }));
+  }
+
   async function addFaq(entry) {
     const overlay = getOverlay();
     const withId = { priority: 5, keywords: [], images: [], videos: [], buttons: [], language: "auto", ...entry, id: entry.id || nextFaqId() };
@@ -119,7 +129,7 @@
   }
 
   async function updateFaq(id, patch) {
-    const base = await load("faq");
+    const base = ensureBaseIds(await load("faq"), "faq");
     const overlay = getOverlay();
     const isBase = base.some((f) => f.id === id);
     if (isBase) {
@@ -153,7 +163,7 @@
     if (!Array.isArray(list)) throw new Error("Import must be a JSON array of FAQ entries");
     const withIds = assignUniqueIds(list, nextFaqId);
     if (mode === "replace") {
-      const base = await load("faq");
+      const base = ensureBaseIds(await load("faq"), "faq");
       setOverlay({
         added: withIds.filter((f) => !base.some((b) => b.id === f.id)),
         edited: Object.fromEntries(withIds.filter((f) => base.some((b) => b.id === f.id)).map((f) => [f.id, f])),
@@ -193,7 +203,7 @@
     }
 
     async function getAll() {
-      const base = await load(name);
+      const base = ensureBaseIds(await load(name), idPrefix);
       const o = overlay();
       const deleted = new Set(o.deleted);
       const merged = base.filter((item) => !deleted.has(item.id)).map((item) => (o.edited[item.id] ? { ...item, ...o.edited[item.id] } : item));
@@ -210,7 +220,7 @@
     }
 
     async function update(id, patch) {
-      const base = await load(name);
+      const base = ensureBaseIds(await load(name), idPrefix);
       const o = overlay();
       if (base.some((item) => item.id === id)) {
         o.edited[id] = { ...(o.edited[id] || {}), ...patch };
@@ -237,7 +247,7 @@
       if (!Array.isArray(list)) throw new Error("Import must be a JSON array");
       const withIds = assignUniqueIds(list, nextId);
       if (mode === "replace") {
-        const base = await load(name);
+        const base = ensureBaseIds(await load(name), idPrefix);
         saveOverlay({
           added: withIds.filter((item) => !base.some((b) => b.id === item.id)),
           edited: Object.fromEntries(withIds.filter((item) => base.some((b) => b.id === item.id)).map((item) => [item.id, item])),
@@ -268,7 +278,7 @@
     const lsKey = `ce_${name}_patch`;
 
     async function get() {
-      const base = await load(name);
+      const base = ensureBaseIds(await load(name), idPrefix);
       const patch = readJson(lsKey, {});
       return { ...base, ...patch };
     }
