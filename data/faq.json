@@ -1939,5 +1939,51 @@
     "videos": [],
     "buttons": [],
     "priority": 5
+  },
+  {
+    "id": "rates",
+    "category": "general",
+    "keywords": [
+      "rates",
+      "pricing",
+      "cost",
+      "price",
+      "how much",
+      "presyo",
+      "magkano",
+      "room rates",
+      "accommodation cost",
+      "booking price"
+    ],
+    "question": "Rates",
+    "answer": "Our rates depend on the season! 🌧️\n\nDuring **Rainy Season (June 1 - September 30)**: ₱5,500 per night\n\nDuring **Peak Season (October 1 - May 31)**: ₱6,500 per night\n\nThese rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. We also have special promos, so feel free to ask! 💚",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "paano-pag-umulan",
+    "category": "general",
+    "keywords": [
+      "paano kung umuulan",
+      "umulan",
+      "ulan",
+      "rainy day activities",
+      "indoor activities",
+      "weather",
+      "cancellation policy",
+      "kung umuulan ano gagawin",
+      "rainy season",
+      "ulan sa resort"
+    ],
+    "question": "paano pag umulan",
+    "answer": "🌧️ Walang problema! Pwede mo pang mag-enjoy sa iyong private space, air-conditioned huts, camping area, private pool, at Wi-Fi. Pero ang outdoor activities ay depende sa weather conditions. 😊",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
   }
 ]
