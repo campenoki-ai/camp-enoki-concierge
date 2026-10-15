@@ -18,7 +18,7 @@
       "singil"
     ],
     "question": "How much does an overnight stay cost?",
-    "answer": "🌧️ SEPTEMBER SPECIAL! ₱5,000 ONLY for the whole Camp Enoki Private Villa overnight stay, good for 15 to 20 pax. 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -29,57 +29,9 @@
         "target": "#rates"
       }
     ],
-    "priority": 10
-  },
-  {
-    "id": "how-much-is-the-september-special",
-    "category": "rates",
-    "keywords": [
-      "september promo",
-      "september special",
-      "september rate",
-      "promo",
-      "special promo",
-      "september"
-    ],
-    "question": "How much is the September Special?",
-    "answer": "🌧️ Our SEPTEMBER SPECIAL is only ₱5,000 for the whole private place, overnight, good for 15 to 20 pax. 🏕️💚",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
-  },
-  {
-    "id": "is-the-peso5-000-price-for",
-    "category": "rates",
-    "keywords": [
-      "5000",
-      "5k",
-      "5000 whole place",
-      "whole place",
-      "buong place",
-      "exclusive"
-    ],
-    "question": "Is the ₱5,000 price for the whole place?",
-    "answer": "Yes! 😊 The ₱5,000 September Special is for the WHOLE private place. Your group will have exclusive use of Camp Enoki during your stay.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
+    "priority": 10,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "how-many-guests-are-allowed",
@@ -99,7 +51,7 @@
       "kapasidad"
     ],
     "question": "How many guests are allowed?",
-    "answer": "The September Special is good for 15 to 20 pax. 👨‍👩‍👧‍👦",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -110,7 +62,9 @@
         "target": "#rates"
       }
     ],
-    "priority": 10
+    "priority": 10,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "is-there-an-extra-charge-for",
@@ -201,7 +155,7 @@
       "daytime"
     ],
     "question": "Is there a day tour?",
-    "answer": "The advertised September Special is for overnight stays. For day-tour availability and rate, please message us with your preferred date and number of guests.",
+    "answer": "No daytour as of this moment but feel free to ask our staff as they might be able to check schedules accordingly.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -212,7 +166,9 @@
         "target": "#rates"
       }
     ],
-    "priority": 8
+    "priority": 8,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "what-amenities-are-included",
@@ -252,7 +208,7 @@
       "how many huts"
     ],
     "question": "How many teepee huts are there?",
-    "answer": "🏕️ We have 3 air-conditioned teepee huts, with up to 3 pax each.",
+    "answer": "🏕️ We have 3 air-conditioned teepee huts, with up to 3 to 4 pax each depending on body size.   We also have 2 teepee huts with foam and fan. \n\nWe also have to large tents that can accommodate 4 to 6 pax.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -263,7 +219,9 @@
         "target": "#amenities"
       }
     ],
-    "priority": 10
+    "priority": 10,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "are-the-teepee-huts-air-conditioned",
@@ -1379,105 +1337,6 @@
     "priority": 8
   },
   {
-    "id": "is-the-september-special-limited",
-    "category": "rates",
-    "keywords": [
-      "limited",
-      "limited slots",
-      "limited promo",
-      "promo slots",
-      "until when",
-      "how long promo"
-    ],
-    "question": "Is the September Special limited?",
-    "answer": "🌧️ The September Special is a limited promotional rate. Availability is subject to the remaining booking dates.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 8
-  },
-  {
-    "id": "is-the-peso5-000-september-rate",
-    "category": "rates",
-    "keywords": [
-      "still 5000",
-      "5000 pa ba",
-      "5000 pa",
-      "same price",
-      "promo still",
-      "promo available"
-    ],
-    "question": "Is the ₱5,000 September rate still available?",
-    "answer": "🌧️ Yes, the September Special is ₱5,000, subject to availability. Send us your preferred date and number of guests so we can check.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
-  },
-  {
-    "id": "is-peso5-000-per-person",
-    "category": "rates",
-    "keywords": [
-      "per person",
-      "per pax",
-      "per head",
-      "5000 per person",
-      "5000 per pax"
-    ],
-    "question": "Is ₱5,000 per person?",
-    "answer": "No. 😊 The ₱5,000 September Special is for the WHOLE private place, good for 15 to 20 pax.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
-  },
-  {
-    "id": "is-peso5-000-for-the-whole",
-    "category": "rates",
-    "keywords": [
-      "whole resort",
-      "whole villa",
-      "whole place",
-      "buong resort",
-      "buong villa",
-      "exclusive villa"
-    ],
-    "question": "Is ₱5,000 for the whole resort?",
-    "answer": "Yes! 💚 The September Special of ₱5,000 is for the whole Camp Enoki Private Villa, overnight, good for 15 to 20 pax.",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
-  },
-  {
     "id": "what-is-the-best-reason-to",
     "category": "general",
     "keywords": [
@@ -1519,30 +1378,6 @@
       }
     ],
     "priority": 9
-  },
-  {
-    "id": "what-is-included-in-the-peso5",
-    "category": "rates",
-    "keywords": [
-      "what included",
-      "included in 5000",
-      "kasama sa 5000",
-      "5000 inclusions",
-      "package inclusions"
-    ],
-    "question": "What is included in the ₱5,000 package?",
-    "answer": "For ₱5,000, you get the whole private place overnight, including 3 air-conditioned teepee huts, 4 camping tents with Uratex foam, private pool, Wi-Fi, parking for 2 cars, grill use and a water gallon. 🏕️💚",
-    "language": "auto",
-    "images": [],
-    "videos": [],
-    "buttons": [
-      {
-        "label": "View full rates",
-        "action": "scroll",
-        "target": "#rates"
-      }
-    ],
-    "priority": 10
   },
   {
     "id": "what-makes-camp-enoki-different-from",
@@ -1815,7 +1650,9 @@
     "images": [],
     "videos": [],
     "buttons": [],
-    "priority": 5
+    "priority": 5,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "pwede-magdala-ng-tent",
@@ -1985,5 +1822,22 @@
     "videos": [],
     "buttons": [],
     "priority": 5
+  },
+  {
+    "priority": 5,
+    "keywords": [
+      "night watch",
+      "security guard"
+    ],
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "language": "auto",
+    "category": "ammenities",
+    "question": "Meron security guard",
+    "answer": "Wala po security card ng October so take it at your own risk.  However, starting November 1 onwards, we will implement a night watch para magbantay sa premises while you are sleeping.  However, you are still liable for any loss due to negligence.  Always keep your personals belongings with you.",
+    "photo": "",
+    "video": "",
+    "id": "faq-mv92ieo5v5dh"
   }
 ]
