@@ -1839,5 +1839,140 @@
     "photo": "",
     "video": "",
     "id": "faq-mv92ieo5v5dh"
+  },
+  {
+    "id": "ano-po-yung-nightwatch",
+    "category": "general",
+    "keywords": [
+      "nightwatch",
+      "night watch",
+      "night shift security",
+      "security guards",
+      "night time staff",
+      "gabi na bantay",
+      "night patrol",
+      "overnight monitoring",
+      "security night",
+      "bantay gabi"
+    ],
+    "question": "ano po yung nightwatch",
+    "answer": "Night Watch. A night watch is on duty from 10:00 PM to 6:00 AM to help deter intrusion and to respond to concerns. The night watch is a deterrent and assistance measure only. It does not guarantee against theft, loss, or intrusion, and it does not make the resort the custodian of guests' personal belongings. Ito ay upang maiwasan lamang ang maaring pag gawa ng kriminalidad pero ito ay hindi garantiya ng safety ng guest.  Dagdag lamang ito sa hakbang at gawain ng resort na mapa igting ang seguridad ng resort.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "bat-iba-rates-nakalagay-sa-website",
+    "category": "general",
+    "keywords": [
+      "rate discrepancy",
+      "bakit iba rates",
+      "website rates vs booking",
+      "promo rates difference",
+      "price mismatch",
+      "rate variation",
+      "bakit nag-vary rates",
+      "website pricing accuracy",
+      "rate confusion",
+      "iba rates inquiry"
+    ],
+    "question": "bat iba rates nakalagay sa website at sa reply ng ai",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "hm-sa-november-to-may",
+    "category": "general",
+    "keywords": [
+      "november to may weather",
+      "dry season philippines",
+      "best time visit resort",
+      "cool months philippines",
+      "weather november may",
+      "tourist season philippines",
+      "tag-init panahon",
+      "best months travel ph",
+      "climate november hanggang may"
+    ],
+    "question": "hm sa november to may",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "magkano-rate-ng-november",
+    "category": "general",
+    "keywords": [
+      "november rates",
+      "november price",
+      "how much november",
+      "november accommodation cost",
+      "magkano november",
+      "rate november",
+      "november booking",
+      "presyo november"
+    ],
+    "question": "magkano rate ng november",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "18-pax-rates",
+    "category": "general",
+    "keywords": [
+      "group rates 18 people",
+      "18 pax package",
+      "group booking 18 guests",
+      "bulk rates resort",
+      "group discount philippines",
+      "18 person group rate",
+      "wholesale rates resort",
+      "group accommodation rates",
+      "group package price",
+      "group namin rates"
+    ],
+    "question": "18 pax rates",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
+  },
+  {
+    "id": "booking-for-2-person",
+    "category": "general",
+    "keywords": [
+      "booking for two",
+      "booking two persons",
+      "paano mag-book ng dalawa",
+      "mag-book ng couple",
+      "couple booking",
+      "reservation for 2",
+      "book two guests",
+      "dalawang tao booking",
+      "how to book for two people",
+      "couples accommodation"
+    ],
+    "question": "Booking for 2 person",
+    "answer": "We do accept lower pax or kubo, so please mention it to our staff the lower pax rate and the date.",
+    "language": "auto",
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "priority": 5
   }
 ]
