@@ -51,7 +51,7 @@
       "kapasidad"
     ],
     "question": "How many guests are allowed?",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500  Exclusive Lease for 22 hourr.  We can accommodate 15-20 pax.  Exclusive private place for your group only💚  The place is near the river and beach.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -1952,5 +1952,25 @@
     "videos": [],
     "buttons": [],
     "priority": 5
+  },
+  {
+    "priority": 5,
+    "keywords": [
+      "hotel",
+      "food",
+      "sell food",
+      "guard",
+      "receptionist"
+    ],
+    "images": [],
+    "videos": [],
+    "buttons": [],
+    "language": "auto",
+    "category": "amenneities",
+    "question": "Hotel po ba kayo?",
+    "answer": "HIndi po kami hotel or lodging in.  Wala po kami guard or receptionise.  Wala rin po tayo servant sa area.  Ang caretaker po ay magbibilay lamang sa inyo ng susi at ipapakita na ang buong property ay walang sira.  Ito po ay short term lease of vacation house.  You lease the entire place for your group.  We do not rent per hut or cottage.  The entire place is under your autonomous countrol like an owner for 22hours.",
+    "photo": "",
+    "video": "",
+    "id": "faq-mvnm70op2ebx"
   }
 ]
