@@ -25,9 +25,9 @@
   },
   {
     "id": "parking",
-    "name": "Free Parking",
+    "name": "Free Parking (unattended)",
     "icon": "🚗",
-    "description": "Sa parking po natin, kasya ang 2 sasakyan sa tabi ng coastal road and another 2 vehicle sa tapat ng gate."
+    "description": "Sa parking po natin, kasya ang 1 sasakyan sa loob.  There are also spaces outside but park at your own risk. "
   },
   {
     "id": "bonfire",
