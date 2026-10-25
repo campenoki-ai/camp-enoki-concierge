@@ -18,7 +18,7 @@
       "singil"
     ],
     "question": "How much does an overnight stay cost?",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-25 pax. This new rate includes the night watch from 10pm to 6am. Night watch is just for deterrence and not a guarantee to prevent crime related incidents.  We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.  This is a private lease of the entire place.  We are not a hotel or lodging in.  We also do not serve food or provide servants and security guard.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -51,7 +51,7 @@
       "kapasidad"
     ],
     "question": "How many guests are allowed?",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500  Exclusive Lease for 22 hourr.  We can accommodate 15-20 pax.  Exclusive private place for your group only💚  The place is near the river and beach.",
+    "answer": "15 to 20 pax",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -77,7 +77,7 @@
       "additional guest"
     ],
     "question": "Is there an extra charge for additional guests?",
-    "answer": "The September Special is advertised for 15 to 20 pax. Please send us your exact number of guests so we can confirm the arrangement.",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.  This is a private lease of the entire place.  We are not a hotel or lodging in.  We also do not serve food or provide servants and security guard.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -88,7 +88,9 @@
         "target": "#rates"
       }
     ],
-    "priority": 7
+    "priority": 7,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "what-time-is-check-in",
@@ -1521,7 +1523,7 @@
       "group package rates"
     ],
     "question": "More than 20 pax",
-    "answer": "Depending on body size, we can accomodate up to 25pax",
+    "answer": "Max is 20pax",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -1569,7 +1571,7 @@
       "budget"
     ],
     "question": "magkano",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-25 pax. This new rate includes the night watch from 10pm to 6am. Night watch is just for deterrence and not a guarantee to prevent crime related incidents.  We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.  This is a private lease of the entire place.  We are not a hotel or lodging in.  We also do not serve food or provide servants and security guard.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -1684,7 +1686,9 @@
     "images": [],
     "videos": [],
     "buttons": [],
-    "priority": 5
+    "priority": 5,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "meron-pong-lutuan",
@@ -1767,7 +1771,7 @@
       "booking price"
     ],
     "question": "Rates",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-25 pax. This new rate includes the night watch from 10pm to 6am. Night watch is just for deterrence and not a guarantee to prevent crime related incidents.  We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.  This is a private lease of the entire place.  We are not a hotel or lodging in.  We also do not serve food or provide servants and security guard.",
     "language": "auto",
     "images": [],
     "videos": [],
@@ -1855,12 +1859,14 @@
       "iba rates inquiry"
     ],
     "question": "bat iba rates nakalagay sa website at sa reply ng ai",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.",
     "language": "auto",
     "images": [],
     "videos": [],
     "buttons": [],
-    "priority": 5
+    "priority": 5,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "hm-sa-november-to-may",
@@ -1898,12 +1904,14 @@
       "presyo november"
     ],
     "question": "magkano rate ng november",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.  This is a private lease of the entire place.  We are not a hotel or lodging in.  We also do not serve food or provide servants and security guard.",
     "language": "auto",
     "images": [],
     "videos": [],
     "buttons": [],
-    "priority": 5
+    "priority": 5,
+    "photo": "",
+    "video": ""
   },
   {
     "id": "18-pax-rates",
@@ -1921,7 +1929,7 @@
       "group namin rates"
     ],
     "question": "18 pax rates",
-    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax. This new rate includes the night watch from 10pm to 6am. We also have special promos, so feel free to ask! 💚",
+    "answer": "New rates as of October 15, 2026.  Our rates depend on the season! 🌧️ During **Rainy Season (June 1 – October  30)**: ₱8,500 per night During **Peak Season (October 1 - May 31)**: ₱9,500 per night These rates are for the whole Camp Enoki Private Villa, which can accommodate 15-20 pax.  This is a private lease of the entire place.  We are not a hotel or lodging in.  We also do not serve food or provide servants and security guard.",
     "language": "auto",
     "images": [],
     "videos": [],
